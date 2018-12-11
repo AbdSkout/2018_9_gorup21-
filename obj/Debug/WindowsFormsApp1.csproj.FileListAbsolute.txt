@@ -1,0 +1,71 @@
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\abdalsk\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form5.resources
+C:\Users\abdalsk\Downloads\New folder\2018_9_gorup21--hakton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form5.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\מוחמד אבו מוח\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\here\test\bin\Debug\WindowsFormsApp1.exe.config
+C:\here\test\bin\Debug\WindowsFormsApp1.exe
+C:\here\test\bin\Debug\WindowsFormsApp1.pdb
+C:\here\test\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\here\test\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\here\test\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\here\test\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\here\test\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\here\test\obj\Debug\WindowsFormsApp1.Form5.resources
+C:\here\test\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\here\test\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\here\test\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\here\test\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\here\test\obj\Debug\WindowsFormsApp1.exe
+C:\here\test\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\abd\Desktop\Githere\test\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\abd\Desktop\Githere\test\bin\Debug\WindowsFormsApp1.exe
+C:\Users\abd\Desktop\Githere\test\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.Form5.resources
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.exe
+C:\Users\abd\Desktop\Githere\test\obj\Debug\WindowsFormsApp1.pdb
