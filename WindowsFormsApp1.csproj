@@ -88,6 +88,18 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -110,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +154,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\snakesandladdersboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\play1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\play2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\p1.png" />
+    <Content Include="img\p2.png" />
+    <Content Include="img\p3.png" />
+    <Content Include="img\p4.png" />
+    <Content Include="img\p5.png" />
+    <Content Include="img\p6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
