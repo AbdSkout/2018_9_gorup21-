@@ -19,9 +19,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
-        {
+        {  /*
             int c = 0;
             Random rnd = new Random();
             c = rnd.Next(1, 7);
@@ -44,6 +44,7 @@ namespace WindowsFormsApp1
 
             }
             time++;
+            */
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -54,5 +55,17 @@ namespace WindowsFormsApp1
         private void Form8_Load(object sender, EventArgs e)
         {
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
 }

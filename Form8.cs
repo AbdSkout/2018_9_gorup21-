@@ -13,7 +13,10 @@ namespace WindowsFormsApp1
     public partial class Form8 : Form
     {
 
-        int x = 21, y = 467, sumx = 0,dx=67;
+        int x = 21, y = 467, helpx, x1, sumx = 0, dx = 67;
+        int player1_score = 0;
+        int player2_score = 0;
+        int time = 0;
         bool Y1 = false;
        
         public Form8()
@@ -31,6 +34,16 @@ namespace WindowsFormsApp1
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -43,26 +56,57 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string a = textBox1.Text;
-            int n = a[0] - '0' ;
+            int c = 0;
+            Random rnd = new Random();
+            c = rnd.Next(1, 7);
+            label5.Text = "the random number is : " + c.ToString();
+            pictureBox2.Image = Image.FromFile(@"C: \Users\abd\Desktop\Githere\Test7\img\p" + c.ToString() + ".png");
+
+
+            if (time % 2 == 0)//we want to update the score of the first player
+            {
+                player1_score += c;
+                //UPDATE THE NEW WHERE
+                label3.Text = player1_score.ToString();
+            }
+            else //we want to update the score of the srcond player
+            {
+
+                player2_score += c;
+                //UPDATE THE NEW WHERE
+                label4.Text = player2_score.ToString();
+
+            }
+            time++;
+            
+            int n = c;
             sumx = sumx + n;
-            if (sumx < 10 || sumx == 10)
+            if (sumx < 9 || sumx == 9)
             {
                 n = n * dx;
                 x = x + n;
             }
-            else if (sumx > 10)
+            else if (sumx > 9)
             {
                 y = y - 49;
-                n = n - (sumx - 10);
+                x1 = 9 - (sumx - n);
+                helpx = n - x1;
+                dx = dx * -1;
+                x = x + (helpx - x1 - 1) * dx;
+                sumx = helpx - 1;
 
-                x = x + ((sumx - 10)*dx);
-               // dx = -1 * dx;
-              //  n = n *dx;
-               // x = x + n;
-              //  sumx = 0;
+
+
             }
             pictureBox1.Location = new Point(x, y);
+
+
+
+
+
         }
+
     }
-}
+            
+        }
+    

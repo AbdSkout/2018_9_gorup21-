@@ -138,3 +138,21 @@ C:\Users\מוחמד אבו מוח\Documents\GitHub\Test07\obj\Debug\WindowsForms
 C:\Users\מוחמד אבו מוח\Documents\GitHub\Test07\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\מוחמד אבו מוח\Documents\GitHub\Test07\obj\Debug\WindowsFormsApp1.exe
 C:\Users\מוחמד אבו מוח\Documents\GitHub\Test07\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form5.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form7.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form8.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Form9.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.exe
+C:\Users\abd\Desktop\Githere\Test7\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\abd\Desktop\Githere\Test7\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\abd\Desktop\Githere\Test7\bin\Debug\WindowsFormsApp1.exe
+C:\Users\abd\Desktop\Githere\Test7\bin\Debug\WindowsFormsApp1.pdb
