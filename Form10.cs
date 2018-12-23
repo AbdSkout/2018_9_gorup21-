@@ -69,6 +69,7 @@ namespace WindowsFormsApp1
                 // Now we set that button's backcolor
                 gameButtons[buttonToChangeIndex].BackColor = newBackColor;
                 int temp = VerticalCheck(sender, buttonToChangeIndex, newBackColor);
+               temp = Horizontalcheck(sender, buttonToChangeIndex, newBackColor);
                 if (temp == 1)
                 {
                     label6.Visible = true;
@@ -89,6 +90,101 @@ namespace WindowsFormsApp1
                 // Flip our blue flag
                 blue = !blue;
             }
+        }
+        public int Horizontalcheck(object sender, int Index, Color color)
+        {
+            var pressedButton = (Button)sender;
+            int count = 0;
+            int flag = 0;
+            if (color == Color.Red)
+            {
+                for (int i = Index; flag == 0 && i > 42; i++)
+                {
+
+
+
+                    if (i < 42 && this.gameButtons[i].BackColor != Color.Blue)
+                    {
+                        count++;
+                        if (i % 7 == 0)
+                        {
+                            flag++;
+                        }
+                        if (count == 4)
+                        {
+                            return 1;
+                        }
+                    }
+                    else
+                        return 0;
+
+                    if (flag == 1)
+                    {
+                        for (int j = (Index-1); flag == 1 && j>=0; j--)
+                        {
+                            if (i < 42 && this.gameButtons[j].BackColor != Color.Blue) {
+                                count++;
+
+                                if (count == 4)
+                                {
+                                    return 1;
+                                }
+                                else
+                                    return 0;
+                            }
+
+                        }
+
+                    }
+                }
+            }
+            if (color == Color.Blue)
+            {
+                for (int i = Index; flag == 0 && i > 42; i++)
+                {
+
+
+
+                    if (i < 42 && this.gameButtons[i].BackColor != Color.Red)
+                    {
+                        count++;
+                        if (i % 7 == 0)
+                        {
+                            flag++;
+                        }
+                        if (count == 4)
+                        {
+                            return 2;
+                        }
+                    }
+                    else
+                        return 0;
+                    if (flag == 1)
+                    {
+                        for (int j = (Index - 1); flag == 1 && j >= 0; j--)
+                        {
+                            if (i < 42 && this.gameButtons[i].BackColor != Color.Red)
+                            {
+                                count++;
+                                if (i % 7 == 0)
+                                {
+                                    return 0;
+                                }
+                                if (count == 4)
+                                {
+                                    return 2;
+                                }
+                                else
+                                    return 0;
+                            }
+
+                        }
+
+                    }
+                }
+
+            }
+            return 0;
         }
         public int VerticalCheck(object sender,int index,Color color)//checking vertical 4 in row of the same color
         {
