@@ -128,7 +128,80 @@ namespace WindowsFormsApp1
             }
             time++;
         }
-       
+        private int nextstep(int currentscore)
+        {
+            label6.Text = "from " + currentscore.ToString() + " ";
+            switch (currentscore)
+            {
+                case 2:
+                    label6.Text += "up to 38";
+                    return 38;
+                case 7:
+                    label6.Text += "up to 14";
+                    return 14;
+                case 8:
+                    label6.Text += "up to 31";
+                    return 31;
+                case 15:
+                    label6.Text += "up to 26";
+                    return 26;
+                case 16:
+                    label6.Text += "down to 6";
+                    return 6;
+                case 21:
+                    label6.Text += "up to 42";
+                    return 42;
+                case 28:
+                    label6.Text += "up to 84";
+                    return 84;
+                case 36:
+                    label6.Text += "up to 44";
+                    return 44;
+                case 46:
+                    label6.Text += "down to 25";
+                    return 25;
+                case 49:
+                    label6.Text += "down to 11";
+                    return 11;
+                case 51:
+                    label6.Text += "up to 67";
+                    return 67;
+                case 62:
+                    label6.Text += "down to 19";
+                    return 19;
+                case 64:
+                    label6.Text += "down to 60";
+                    return 60;
+                case 71:
+                    label6.Text += "up to 91";
+                    return 91;
+                case 74:
+                    label6.Text += "down to 53";
+                    return 53;
+                case 78:
+                    label6.Text += "up to 98";
+                    return 98;
+                case 87:
+                    label6.Text += "up to 94";
+                    return 94;
+                case 89:
+                    label6.Text += "down to 68";
+                    return 68;
+                case 92:
+                    label6.Text += "down to 88";
+                    return 88;
+                case 95:
+                    label6.Text += "down to 75";
+                    return 75;
+                case 99:
+                    label6.Text += "down to 80";
+                    return 80;
+
+                default:
+                    label6.Text = "up to " + currentscore.ToString();
+                    return currentscore;
+            }
+        }
 
     }
 }
