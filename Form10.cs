@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
 
                 int temp = VerticalCheck(mat, matRow, matCol);
                
-                if (temp == 1)
+                if (temp == 1)//if we have red color then it prints it in label6 and chnges the size and color to red
                 {
                     label6.Visible = true;
                     label6.ForeColor = Color.Red;
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
                     label6.Font = new Font("Arial", 15, FontStyle.Regular);
                     label6.Text = "Red Wins!!";
                 }
-                if (temp == 2)
+                if (temp == 2)//if we have blue color then it prints it in label6 and chnges the size and color to blue
                 {
                     label6.Visible = true;
                     label6.ForeColor = Color.Blue;
