@@ -75,15 +75,77 @@ namespace WindowsFormsApp1
 
                 if (newBackColor == Color.Red)
                 {
-                    mat[matRow, matCol] = 1;
+                    mat[matRow, matCol] = 1;//1 is for the red color
                 }
                 else if (newBackColor == Color.Blue)
                 {
-                    mat[matRow, matCol] = 2;
+                    mat[matRow, matCol] = 2;//2 is for the blue color
                 }
+
+                int temp = VerticalCheck(mat, matRow, matCol);
+               
+                if (temp == 1)
+                {
+                    label6.Visible = true;
+                    label6.ForeColor = Color.Red;
+                    label6.Size= new System.Drawing.Size(100, 100);
+                    label6.Font = new Font("Arial", 15, FontStyle.Regular);
+                    label6.Text = "Red Wins!!";
+                }
+                if (temp == 2)
+                {
+                    label6.Visible = true;
+                    label6.ForeColor = Color.Blue;
+                    label6.Size = new System.Drawing.Size(100, 100);
+                    label6.Font = new Font("Arial", 15, FontStyle.Regular);
+                    label6.Text = "Blue Wins!!";
+                }
+                
                 // Flip our blue flag
                 blue = !blue;
             }
+        }
+        public int VerticalCheck(int [,] mat,int Row,int Col)
+        {
+            int count = 0;
+            if (mat[Row, Col] == 1)//checking if the color was send red and cheking in this func a vertical check if we have four 1's
+            {
+
+                for (int i = Row; i <6; i++)//we get the row and the col of the last element that has been entered and then we check  each row of the same col and the same with the blue
+                {
+                    if (mat[i, Col] == 1) {
+                        count++;
+                        if (count == 4)//if we reach four reds in a col which are constive then return 2 which is the color red for us 
+                        {
+                            return 1;
+                        }
+                    }
+                    else
+                    {
+                        count = 0;
+                    }
+                }
+            }
+            if (mat[Row, Col] == 2)//checking if the color was send red and cheking in this func a vertical check if we have four 1's
+            {
+
+                for (int i = Row; i < 6; i++)
+                {
+                    if (mat[i, Col] == 2)
+                    {
+                        count++;
+                        if (count == 4)//if we reach four blues in a col which are constive then return 2 which is the color blue for us 
+                        {
+                            return 2;
+                        }
+                    }
+                    else
+                    {
+                        count = 0;
+                    }
+                }
+            }
+            return 0;
         }
         private void button1_Click(object sender, EventArgs e)
         {
