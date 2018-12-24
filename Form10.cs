@@ -13,8 +13,9 @@ namespace WindowsFormsApp1
     public partial class Form10 : Form
     {
         Button[] gameButtons = new Button[42]; //array of buttons for markers(red and blue)
-        bool blue = true; //blue is set to true if the next marker is to be a blue
 
+        bool blue = true; //blue is set to true if the next marker is to be a blue
+        int[,] mat = new int[6, 7];//our mat that we are gonna use to determine who won
         public Form10()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace WindowsFormsApp1
         {
             this.Text = "Connect 4";
             this.BackColor = Color.BlueViolet;
-          
+
             for (int i = 0; i < gameButtons.Length; i++)
             {
                 int index = i;
@@ -39,6 +40,7 @@ namespace WindowsFormsApp1
                 this.gameButtons[i].Text = Convert.ToString(index);//showing index of a box
                 this.gameButtons[i].UseVisualStyleBackColor = false;//true shows the button ,false shows the frame
                 this.gameButtons[i].Visible = true;//shows the button
+
 
                 gameButtons[i].Click += (sender1, ex) => this.ButtonHasBeenPressed(sender1, index); //sending the the clicked button with index from 0-42
                 this.Controls.Add(gameButtons[i]);
@@ -68,169 +70,20 @@ namespace WindowsFormsApp1
 
                 // Now we set that button's backcolor
                 gameButtons[buttonToChangeIndex].BackColor = newBackColor;
-                int temp = VerticalCheck(sender, buttonToChangeIndex, newBackColor);
-               temp = Horizontalcheck(sender, buttonToChangeIndex, newBackColor);
-                if (temp == 1)
-                {
-                    label6.Visible = true;
-                    label6.ForeColor = Color.Red;
-                    label6.Size= new System.Drawing.Size(100, 100);
-                    label6.Font = new Font("Arial", 15, FontStyle.Regular);
-                    label6.Text = "Red Wins!!";
-                }
-                if (temp == 2)
-                {
-                    label6.Visible = true;
-                    label6.ForeColor = Color.Blue;
-                    label6.Size = new System.Drawing.Size(100, 100);
-                    label6.Font = new Font("Arial", 15, FontStyle.Regular);
-                    label6.Text = "Blue Wins!!";
-                }
+                int matCol = buttonToChangeIndex % 7;//taking the col of the of the button that now changed color
+                int matRow = buttonToChangeIndex / 7;//taking the row of the of the button that has changed color
 
+                if (newBackColor == Color.Red)
+                {
+                    mat[matRow, matCol] = 1;
+                }
+                else if (newBackColor == Color.Blue)
+                {
+                    mat[matRow, matCol] = 2;
+                }
                 // Flip our blue flag
                 blue = !blue;
             }
-        }
-        public int Horizontalcheck(object sender, int Index, Color color)
-        {
-            var pressedButton = (Button)sender;
-            int count = 0;
-            int flag = 0;
-            if (color == Color.Red)
-            {
-                for (int i = Index; flag == 0 && i > 42; i++)
-                {
-
-
-
-                    if (i < 42 && this.gameButtons[i].BackColor != Color.Blue)
-                    {
-                        count++;
-                        if (i % 7 == 0)
-                        {
-                            flag++;
-                        }
-                        if (count == 4)
-                        {
-                            return 1;
-                        }
-                    }
-                    else
-                        return 0;
-
-                    if (flag == 1)
-                    {
-                        for (int j = (Index-1); flag == 1 && j>=0; j--)
-                        {
-                            if (i < 42 && this.gameButtons[j].BackColor != Color.Blue) {
-                                count++;
-
-                                if (count == 4)
-                                {
-                                    return 1;
-                                }
-                                else
-                                    return 0;
-                            }
-
-                        }
-
-                    }
-                }
-            }
-            if (color == Color.Blue)
-            {
-                for (int i = Index; flag == 0 && i > 42; i++)
-                {
-
-
-
-                    if (i < 42 && this.gameButtons[i].BackColor != Color.Red)
-                    {
-                        count++;
-                        if (i % 7 == 0)
-                        {
-                            flag++;
-                        }
-                        if (count == 4)
-                        {
-                            return 2;
-                        }
-                    }
-                    else
-                        return 0;
-                    if (flag == 1)
-                    {
-                        for (int j = (Index - 1); flag == 1 && j >= 0; j--)
-                        {
-                            if (i < 42 && this.gameButtons[i].BackColor != Color.Red)
-                            {
-                                count++;
-                                if (i % 7 == 0)
-                                {
-                                    return 0;
-                                }
-                                if (count == 4)
-                                {
-                                    return 2;
-                                }
-                                else
-                                    return 0;
-                            }
-
-                        }
-
-                    }
-                }
-
-            }
-            return 0;
-        }
-        public int VerticalCheck(object sender,int index,Color color)//checking vertical 4 in row of the same color
-        {
-            var pressedButton = (Button)sender;
-            
-            
-            int count = 0;//counter if we reach 4 of the same color
-            if (color == Color.Red)
-            {
-                for(int i = index; i < 42; i += 7)
-                {
-                    if ( i<42 && this.gameButtons[i].BackColor!=Color.Blue)//checking for the red color and cheking  all the col of last index to check if there is a 4 in a col
-                    {
-                        count++;
-                        if (count == 4)
-                        {
-                            return 1;
-                        }
-                    }
-                    else
-                    {
-                        count = 0;
-                    }
-                }
-               
-            }
-            if (color == Color.Blue)
-            {
-                for (int i = index; i < 42; i += 7)
-                {
-                    if (i < 42 && this.gameButtons[i].BackColor != Color.Red)//checking for the blue color and cheking  all the col of last index to check if there is a 4 in a col 
-                    {
-                        count++;
-                        if (count == 4)
-                        {
-                            return 2;
-                        }
-                    }
-                    else
-                    {
-                        count = 0;
-                    }
-                }
-                
-            }
-            return 0;
         }
         private void button1_Click(object sender, EventArgs e)
         {
