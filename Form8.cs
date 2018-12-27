@@ -13,12 +13,17 @@ namespace WindowsFormsApp1
     public partial class Form8 : Form
     {
 
-        int x = 21, y = 467, sumx = 0,dx=67;
+        int x = 21, y = 467, helpx, x1, sumx = 0, dx = 67;
         bool Y1 = false;
        
         public Form8()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -46,23 +51,39 @@ namespace WindowsFormsApp1
             string a = textBox1.Text;
             int n = a[0] - '0' ;
             sumx = sumx + n;
-            if (sumx < 10 || sumx == 10)
+
+            if (sumx < 9 || sumx == 9)
             {
-                n = n * dx;
-                x = x + n;
+                label1.Text = "we in if";
+                //n = n * dx;
+                //x = x + n;
+                while (n!=0)
+                {
+                    
+                    x = x + dx;
+                    pictureBox1.Location = new Point(x, y);
+                    n = n - 1;
+                    System.Threading.Thread.Sleep(500);
+
+
+
+                }
+
+
             }
-            else if (sumx > 10)
+            else if (sumx > 9)
             {
                 y = y - 49;
-                n = n - (sumx - 10);
+                x1 = 9 - (sumx - n);
+                helpx = n - x1;
+                dx = dx * -1;
+                x = x + (helpx - x1 - 1) * dx;
+                sumx = helpx - 1;
 
-                x = x + ((sumx - 10)*dx);
-               // dx = -1 * dx;
-              //  n = n *dx;
-               // x = x + n;
-              //  sumx = 0;
+
+
             }
-            pictureBox1.Location = new Point(x, y);
+           // pictureBox1.Location = new Point(x, y);
         }
     }
 }

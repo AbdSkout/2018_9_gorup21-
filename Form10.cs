@@ -38,7 +38,8 @@ namespace WindowsFormsApp1
             dx = tableLayoutPanel1.Width / 10;//give us the distance for example distance between the [0,0] and [1,0]
             x = tableLayoutPanel1.Location.X;//the x of the start point
             y = tableLayoutPanel1.Location.Y + 9 * tableLayoutPanel1.Height / 10;//the y of the start ppoint
-                    matrix[0, 0] = new Point(x , y );
+            label7.Text = dx.ToString();
+            matrix[0, 0] = new Point(x , y );
             for (int i = 0; i < 10; i++)
             {
                 if (i % 2 == 1)
@@ -46,7 +47,7 @@ namespace WindowsFormsApp1
 
                     for (int j = 0; j < 10; j++)
                     {
-                        matrix[j, i] = new Point(x+9*tableLayoutPanel1.Width/10 - j * dx, y - i * dy);
+                        matrix[j, i] = new Point(x+9*dx -j * dx, y - i * dy);
 
                     }
                     matrix[0, i] = new Point(x+9 * dx, y - i * dy);
@@ -73,49 +74,48 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+            int oldscore;
             int c = 0;
             Random rnd = new Random();
             c = rnd.Next(1, 7);
             label5.Text = "the random number is : " + c.ToString();
-            pictureBox1.Image = Image.FromFile(@"C:\Users\user\Documents\GitHub\2018_9_gorup21-\img\p" + c.ToString() + ".png");
+            pictureBox1.Image = Image.FromFile(@"C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\img\p" + c.ToString() + ".png");
 
 
             if (time % 2 == 0)//we want to update the score of the first player
             {
-                player1_score += c;
-                //UPDATE THE NEW WHERE
-                //player1_score = nextstep(player1_score);
-                label3.Text = player1_score.ToString();
-                textBox1.Text = label6.Text + System.Environment.NewLine + textBox1.Text;
+                oldscore = 0;
 
-                if (player1_score < 100)
-                    if (player1_score % 10 != 0)
-                    {
-                        if ((player1_score / 10) % 2 == 1)
+
+                while (oldscore <=c )
+                {
+                    //UPDATE THE NEW WHERE
+                    
+                    label3.Text = player1_score.ToString();
+                    textBox1.Text = label6.Text + System.Environment.NewLine + textBox1.Text;
+                    asd:
+                    if (player1_score < 100)
+                        if (player1_score % 10 != 0)
                         {
-                        panel5.Location = matrix[(player1_score) % 10-1, player1_score / 10];
+                            panel5.Location = matrix[(player1_score) % 10 - 1, player1_score / 10];
                         }
                         else
                         {
-                            panel5.Location = matrix[(player1_score) % 10-1, player1_score / 10];
-
+                            panel5.Location = matrix[9, player1_score / 10 - 1];
                         }
-                    }
-                    else
+                    System.Threading.Thread.Sleep(300);
+                    if (oldscore == c)
                     {
-                        if ((player1_score / 10) % 2 == 1)
-                        {
-                            panel5.Location = matrix[9, player1_score / 10-1];
-
-                        }
-                        else if ((player1_score / 10) % 2 == 0)
-                        { 
-                            panel5.Location = matrix[9, (player1_score / 10)-1];
-                        }
-
-                        
+                        player1_score = nextstep(player1_score);
+                        oldscore++;
+                        goto asd;
                     }
+                    oldscore++;
+                    player1_score++;
+
+
+
+                }
 
             }
             else //we want to update the score of the srcond player
@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
         }
         private int nextstep(int currentscore)
         {
-            label6.Text = "from " + currentscore.ToString() + " ";
+            label6.Text ="from " + currentscore.ToString()+" ";
             switch (currentscore)
             {
                 case 2:
@@ -198,10 +198,19 @@ namespace WindowsFormsApp1
                     return 80;
 
                 default:
-                    label6.Text = "up to " + currentscore.ToString();
+                    label6.Text = "up to "+currentscore.ToString();
                     return currentscore;
             }
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }
