@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
         private void Form10_Load(object sender, EventArgs e)
         {
             this.Text = "Connect 4";
-            this.BackColor = Color.BlueViolet;
+            this.BackColor = Color.Turquoise;
 
             for (int i = 0; i < gameButtons.Length; i++)
             {
@@ -37,8 +37,7 @@ namespace WindowsFormsApp1
                 this.gameButtons[i].Name = "btn" + (index + 1);
                 this.gameButtons[i].Size = new System.Drawing.Size(50, 50);
                 this.gameButtons[i].TabIndex = i;
-                this.gameButtons[i].Text = Convert.ToString(index);//showing index of a box
-                this.gameButtons[i].UseVisualStyleBackColor = false;//true shows the button ,false shows the frame
+                this.gameButtons[i].UseVisualStyleBackColor = true;//true shows the button ,false shows the frame
                 this.gameButtons[i].Visible = true;//shows the button
 
 
@@ -52,7 +51,7 @@ namespace WindowsFormsApp1
             var pressedButton = (Button)sender;
 
             // Only do something if they clicked a "neutral" button
-            if (pressedButton.BackColor == Color.BlueViolet)
+            if (pressedButton.BackColor == Color.Turquoise)
             {
                 // The backcolor will be set based on whether or not blue is true or false
                 var newBackColor = blue ? Color.Blue : Color.Red;
@@ -63,7 +62,7 @@ namespace WindowsFormsApp1
                 // From where the user clicked, look down at each button below (index + 7)
                 // until we find the last button that has a BlanchedAlmond backcolor
                 while (buttonToChangeIndex + 7 < gameButtons.Count() &&
-                       gameButtons[buttonToChangeIndex + 7].BackColor == Color.BlueViolet)
+                       gameButtons[buttonToChangeIndex + 7].BackColor == Color.Turquoise)
                 {
                     buttonToChangeIndex += 7; // Set to the index to point to this button
                 }
@@ -104,6 +103,20 @@ namespace WindowsFormsApp1
                     label6.Size = new System.Drawing.Size(100, 100);
                     label6.Font = new Font("Arial", 15, FontStyle.Regular);
                     label6.Text = "Red Wins!!";
+                    DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                    if (result==DialogResult.Yes)
+                    {
+                        Application.Restart();
+
+
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        this.Hide();
+                        Form3 f3 = new Form3();
+                        f3.ShowDialog();
+
+                    }
                 }
                 if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
                 {
@@ -112,6 +125,20 @@ namespace WindowsFormsApp1
                     label6.Size = new System.Drawing.Size(100, 100);
                     label6.Font = new Font("Arial", 15, FontStyle.Regular);
                     label6.Text = "Blue Wins!!";
+                    DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        Application.Restart();
+
+
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        this.Hide();
+                        Form3 f3 = new Form3();
+                        f3.ShowDialog();
+
+                    }
                 }
 
                 // Flip our blue flag
