@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         Button[] gameButtons = new Button[42]; //array of buttons for markers(red and blue)
 
-        bool blue = true; //blue is set to true if the next marker is to be a blue
+        bool blue = false; //blue is set to false if the next marker is red
         int[,] mat = new int[6, 7];//our mat that we are gonna use to determine who won
         public Form10()
         {
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
             if (pressedButton.BackColor == Color.BlueViolet)
             {
                 // The backcolor will be set based on whether or not blue is true or false
-                var newBackColor = blue ? Color.Red : Color.Blue;
+                var newBackColor = blue ? Color.Blue : Color.Red;
 
                 // Get the index of the button that the user clicked
                 var buttonToChangeIndex = index;
@@ -82,17 +82,30 @@ namespace WindowsFormsApp1
                     mat[matRow, matCol] = 2;//2 is for the blue color
                 }
 
-                int temp = VerticalCheck(mat, matRow, matCol);
-               
-                if (temp == 1)//if we have red color then it prints it in label6 and chnges the size and color to red
+                int Player = 0;//we will check the value of our player by the returened value from our check functions
+                
+                Player = DiagonalCheck(mat, matRow, matCol);//first we check diagonal
+                if (Player == 0)//if didn't work we will check vertical
+                {
+                    Player = VerticalCheck(mat, matRow, matCol);
+                }
+                if(Player == 0)//if both didn't change the player value then we will check horizontally else then we don't have four of the same color constantly 
+                {
+                    //horizontal check function here
+                }
+
+
+
+
+                if (Player == 1)//if we have red color then it prints it in label6 and chnges the size and color to red
                 {
                     label6.Visible = true;
                     label6.ForeColor = Color.Red;
-                    label6.Size= new System.Drawing.Size(100, 100);
+                    label6.Size = new System.Drawing.Size(100, 100);
                     label6.Font = new Font("Arial", 15, FontStyle.Regular);
                     label6.Text = "Red Wins!!";
                 }
-                if (temp == 2)//if we have blue color then it prints it in label6 and chnges the size and color to blue
+                if (Player == 2)//if we have blue color then it prints it in label6 and chnges the size and color to blue
                 {
                     label6.Visible = true;
                     label6.ForeColor = Color.Blue;
@@ -100,24 +113,30 @@ namespace WindowsFormsApp1
                     label6.Font = new Font("Arial", 15, FontStyle.Regular);
                     label6.Text = "Blue Wins!!";
                 }
-                
+
                 // Flip our blue flag
                 blue = !blue;
             }
         }
-        public int VerticalCheck(int [,] mat,int Row,int Col)
+        public int VerticalCheck(int[,] mat, int Row, int Col)
         {
+            int player = 2;//it is set to the blue color else it will be set to red if the last player is red
+            if (blue == false)
+            {
+                player = 1;
+            }
             int count = 0;
-            if (mat[Row, Col] == 1)//checking if the color was send red and cheking in this func a vertical check if we have four 1's
+
+            if (mat[Row, Col] == player)//checking if the color was send red and cheking in this func a vertical check if we have four 1's
             {
 
-                for (int i = Row; i <6; i++)//we get the row and the col of the last element that has been entered and then we check  each row of the same col and the same with the blue
+                for (int i = Row; i < 6; i++)//we get the row and the col of the last element that has been entered and then we check  each row of the same col and the same with the blue
                 {
-                    if (mat[i, Col] == 1) {
+                    if (mat[i, Col] == player) {
                         count++;
                         if (count == 4)//if we reach four reds in a col which are constive then return 2 which is the color red for us 
                         {
-                            return 1;
+                            return player;
                         }
                     }
                     else
@@ -126,26 +145,146 @@ namespace WindowsFormsApp1
                     }
                 }
             }
-            if (mat[Row, Col] == 2)//checking if the color was send red and cheking in this func a vertical check if we have four 1's
-            {
 
-                for (int i = Row; i < 6; i++)
+            return 0;
+        }
+        public int DiagonalCheck(int[,] mat, int Row, int Col)// a function that checks the diagonal of four colors
+        {
+            int player = 2;//it is set to the blue color else it will be set to red if the last player is red
+            if (blue == false)
+            {
+                player = 1;
+            }
+            bool FourInDiag;
+            int i = Math.Abs(Row - Col);
+            int j=0;
+            FourInDiag = Checkfour(mat, i, j);//we send the the row of the first index in the dignaol line the index is in it
+            //and we have three options either the rows are bigger or they are equal or the oppiste 
+            //and the three cases are covered and are send to the check four function which cheks if we have a four of the same color in the diagonal line
+
+            if (FourInDiag == true)
+            {
+                return player;
+            }
+            if (Row + Col < 7)
+            {
+                j = Row + Col;
+                i = 0;
+                FourInDiag = Checkfour(mat, i, j);
+                if (FourInDiag == true)
                 {
-                    if (mat[i, Col] == 2)
+                    return player;
+                }
+            }
+            
+                 
+
+
+            return 0;
+        }
+        public bool Checkfour(int [,]mat,int Row,int Col)//checks four in dignoal in the four ways
+        {
+        int count = 0;
+        int player = 2;//the player is set to the blue color else it will be set to red if the last player is red
+        if (blue == false)
+        {
+            player = 1;
+        }
+
+        int i = Row, j = Col;
+
+                while (i < 6 && j  <7 && i >= 0 && j >= 0)
+                {
+                    if (mat[i, j] == player)//four down right
                     {
                         count++;
-                        if (count == 4)//if we reach four blues in a col which are constive then return 2 which is the color blue for us 
-                        {
-                            return 2;
-                        }
+
                     }
                     else
-                    {
-                        count = 0;
-                    }
+                    { count = 0; }
+                    j++;
+                    i++;
                 }
-            }
-            return 0;
+                if (count == 4)
+                    return true;
+                else
+                {
+                    count = 0;
+                    i = Row;
+                    j = Col;
+                }
+                while (i < 6 && j < 7 && i >= 0 && j >= 0)
+                    {
+                        if (mat[i, j] == player)//four up left
+                        {
+
+                            count++;
+
+                        }
+                        else
+                        { count = 0; }
+                        j--;
+                        i--;
+                }
+
+                if (count == 4)
+                    return true;
+                else
+                {
+                    count = 0;
+                    i = Row;
+                    j = Col;
+                }
+                while (i < 6 && j < 7 && i >= 0 && j >= 0)
+                {
+                    if (mat[i, j] == player)//four down left
+                    {
+
+                        count++;
+
+                    }
+                    else
+                    { count = 0; }
+                    j--;
+                    i++;
+                }
+
+                if (count == 4)
+                    return true;
+                else
+                {
+                    count = 0;
+                    i = Row;
+                    j = Col;
+                }
+                while (i < 6 && j < 7 && i >= 0 && j >= 0)
+                {
+                    if (mat[i, j] == player)//four up right
+                    {
+
+                        count++;
+
+                    }
+                    else
+                    { count = 0; }
+                    j++;
+                    i--;
+                }
+
+                if (count == 4)
+                    return true;
+                else
+                {
+                    count = 0;
+                    i = Row;
+                    j = Col;
+                }
+
+
+
+
+            
+            return false;
         }
         private void button1_Click(object sender, EventArgs e)
         {
