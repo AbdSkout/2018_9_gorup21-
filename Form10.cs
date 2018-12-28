@@ -91,13 +91,13 @@ namespace WindowsFormsApp1
                 }
                 if(Player == 0)//if both didn't change the player value then we will check horizontally else then we don't have four of the same color constantly 
                 {
-                    //horizontal check function here
+                    Player = horizontalCheck(mat, matRow, matCol);//horizontal check function here
                 }
 
 
 
 
-                if (Player == 1)//if we have red color then it prints it in label6 and chnges the size and color to red
+                if (Player == 1)//if we have red color then it prints it in label6 and changes the size and color to red
                 {
                     label6.Visible = true;
                     label6.ForeColor = Color.Red;
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
                     label6.Font = new Font("Arial", 15, FontStyle.Regular);
                     label6.Text = "Red Wins!!";
                 }
-                if (Player == 2)//if we have blue color then it prints it in label6 and chnges the size and color to blue
+                if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
                 {
                     label6.Visible = true;
                     label6.ForeColor = Color.Blue;
@@ -117,6 +117,63 @@ namespace WindowsFormsApp1
                 // Flip our blue flag
                 blue = !blue;
             }
+        }
+        public int horizontalCheck(int[,] mat,int Row,int Col)
+        {
+            int count = 0;
+            int flag = 0;//if the flag had changed it sims like we have another color that cut thesequence.
+            int check=Col;
+            int player = 2;//it is set to the blue color else it will be set to red if the last player is red
+            if (blue == false)
+            {
+                player = 1;
+            }
+
+            if (mat[Row, Col] == player)//checking if the color was send red and cheking in this func a horizontal check if we have four 1's
+            {
+                if (check != 6)//if the player choice was one of the last right squares we cant count squares from there.
+                {
+                    if (mat[Row, (check + 1)] == player)
+                    {
+                        for (int i = Col; i < 7 && flag==0; i++)
+                        {
+                            if (mat[Row, i] == player)
+                            {
+                                count++;
+                            }
+                            else
+                                flag++;
+
+                            if (count == 4)
+                            {
+                                return player;
+                            }
+                        }
+                    }
+                }
+                if (check != 0)//if the player choice was one of the last left squares we cant count squares from there.
+                {
+                    if (mat[Row, (check - 1)] == player)
+                    {
+                        for (int i = Col; i >= 0 && flag==0; i--)
+                        {
+                            if (mat[Row, i] == player)
+                            {
+                                count++;
+                            }
+                            else
+                                flag++;
+
+                            if (count == 4)
+                            {
+                                return player;
+                            }
+                        }
+                        count = 0;
+                    }
+                }
+            }
+            return 0;
         }
         public int VerticalCheck(int[,] mat, int Row, int Col)
         {
