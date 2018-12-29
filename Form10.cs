@@ -186,7 +186,7 @@ namespace WindowsFormsApp1
                 {
                     if (mat[Row, (check - 1)] == player)
                     {
-                        for (int i = Col; i >= 0 && flag==0; i--)
+                        for (int i = Col; i >= 0 && flag==1; i--)
                         {
                             if (mat[Row, i] == player)
                             {
