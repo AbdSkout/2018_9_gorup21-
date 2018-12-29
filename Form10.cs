@@ -102,17 +102,36 @@ namespace WindowsFormsApp1
 
                 if (Player == 1)//if we have red color then it prints it in label6 and changes the size and color to red and added a popup question box to know if the player wants to continue or not
                 {
-                    label6.Visible = true;
-                    label6.ForeColor = Color.Red;
-                    label6.Size = new System.Drawing.Size(100, 100);
-                    label6.Font = new Font("Arial", 15, FontStyle.Regular);
-                    label6.Text = "Red Wins!!";
-                    
-                    
-                    DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-                    if (result==DialogResult.Yes)
+                    timer1.Stop();
+
+                    if (ticks < 10)
                     {
-                        Application.Restart();
+                        label4.Text = (ticks * 1000).ToString();//score is bigger under one minute
+                    }
+                    else if (ticks < 60)
+                    {
+                        label4.Text = (ticks * 100).ToString();//score is bigger under one minute
+
+                    }
+                    else if (ticks < 120)
+                    {
+                        label4.Text = (ticks * 10).ToString();//score out it decress
+
+                    }
+                    else
+                    {
+                        label4.Text = ticks.ToString();//score out the same one
+
+                    }
+                    pictureBox2.Visible = false;//not showing the img of red cicrlce
+                    pictureBox1.Visible = true;//showing image of winner
+
+                    DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.Hide();
+                        Form10 f10 = new Form10();
+                        f10.ShowDialog();
 
 
                     }
@@ -126,21 +145,41 @@ namespace WindowsFormsApp1
                 }
                 if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
                 {
-                    label6.Visible = true;
-                    label6.ForeColor = Color.Blue;
-                    label6.Size = new System.Drawing.Size(100, 100);
-                    label6.Font = new Font("Arial", 15, FontStyle.Regular);
-                    label6.Text = "Blue Wins!!";
+                    timer1.Stop();
+
+                    if (ticks < 10)//scores
+                    {
+                        label5.Text = (ticks * 1000).ToString();//score is bigger under one minute
+                    }
+                    else if (ticks < 60)
+                    {
+                        label5.Text = (ticks * 100).ToString();//score is bigger under one minute
+
+                    }
+                    else if (ticks < 120)
+                    {
+                        label5.Text = (ticks * 10).ToString();//score out it decress
+
+                    }
+                    else
+                    {
+                        label5.Text = ticks.ToString();//score out the same one
+
+                    }
+                    pictureBox3.Visible = false;//not showing the img of blue cicrlce
+                    pictureBox4.Visible = true;//showing image of winner
+
                     DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        Application.Restart();
+                        this.Hide();
+                        Form10 f10 = new Form10();
+                        f10.ShowDialog();
 
 
                     }
                     else if (result == DialogResult.No)
                     {
-                        
                         this.Hide();
                         Form3 f3 = new Form3();
                         f3.ShowDialog();
@@ -391,6 +430,11 @@ namespace WindowsFormsApp1
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
