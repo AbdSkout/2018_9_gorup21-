@@ -182,6 +182,7 @@ namespace WindowsFormsApp1
                         }
                     }
                 }
+                flag = 1;
                 if (check != 0)//if the player choice was one of the last left squares we cant count squares from there.
                 {
                     if (mat[Row, (check - 1)] == player)
