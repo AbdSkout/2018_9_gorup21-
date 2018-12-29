@@ -17,6 +17,9 @@ namespace WindowsFormsApp1
 
         bool blue = false; //blue is set to false if the next marker is red
         int[,] mat = new int[6, 7];//our mat that we are gonna use to determine who won
+        //Making a tick for the score
+        private int ticks,mins=0,secs=0;
+        
         public Form10()
         {
             InitializeComponent();
@@ -25,8 +28,8 @@ namespace WindowsFormsApp1
         private void Form10_Load(object sender, EventArgs e)
         {
             this.Text = "Connect 4";
-            this.BackColor = Color.Turquoise;
-
+            this.BackColor = Color.SlateGray;
+            timer1.Start();
             for (int i = 0; i < gameButtons.Length; i++)
             {
                 int index = i;
@@ -52,7 +55,7 @@ namespace WindowsFormsApp1
             var pressedButton = (Button)sender;
 
             // Only do something if they clicked a "neutral" button
-            if (pressedButton.BackColor == Color.Turquoise)
+            if (pressedButton.BackColor == Color.SlateGray)
             {
                 // The backcolor will be set based on whether or not blue is true or false
                 var newBackColor = blue ? Color.Blue : Color.Red;
@@ -63,7 +66,7 @@ namespace WindowsFormsApp1
                 // From where the user clicked, look down at each button below (index + 7)
                 // until we find the last button that has a BlanchedAlmond backcolor
                 while (buttonToChangeIndex + 7 < gameButtons.Count() &&
-                       gameButtons[buttonToChangeIndex + 7].BackColor == Color.Turquoise)
+                       gameButtons[buttonToChangeIndex + 7].BackColor == Color.SlateGray)
                 {
                     buttonToChangeIndex += 7; // Set to the index to point to this button
                 }
@@ -394,6 +397,52 @@ namespace WindowsFormsApp1
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ticks++;
+            if (ticks < 10)
+            {
+                label7.Text = "0" + mins.ToString() + ":" +"0" + ticks.ToString();
+            }
+            else if (ticks>=10 && ticks <60)
+            {
+                secs = ticks;
+                label7.Text = "0" + mins.ToString()+ ":" + secs.ToString();
+            }
+            else if (ticks>=60)
+            {
+                secs = ticks % 60;
+                mins = ticks / 60;
+                mins = mins % 60;
+                if (mins < 10)
+                {
+                    if (secs < 10)
+                    {
+                        label7.Text = "0" + mins.ToString() + ":" + "0" + secs.ToString();
+                    }
+                    else if (secs >= 10 && secs < 60)
+                    {
+                        
+                        label7.Text = "0" + mins.ToString() + ":" + secs.ToString();
+                    }
+                }
+                else
+                {
+                    if (secs < 10)
+                    {
+                        label7.Text = mins.ToString() + ":" + "0" + secs.ToString();
+                    }
+                    else if (secs >= 10 && secs < 60)
+                    {
+                        
+                        label7.Text =  mins.ToString() + ":" + secs.ToString();
+                    }
+                }
+
+            }
 
         }
     }
