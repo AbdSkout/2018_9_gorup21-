@@ -14,8 +14,8 @@ namespace WindowsFormsApp1
     {
         int player1_score = 1;
         int player2_score = 1;
-        static int help;
-        static int sumx = 1,sumy=1;
+        static int helpx,helpy;
+        static int sumx = 1, sumy = 1;
         static int time = 0;
         static int c = 0;
         int flag_pc = 0;
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
         public Form10(string str)
         {
             InitializeComponent();
-            label2.Text =str;
+            label2.Text = str;
             if (str == "pc")
                 flag_pc = 1;
         }
@@ -36,16 +36,16 @@ namespace WindowsFormsApp1
 
         private void Form10_Load(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Location = new Point(panel1.Location.X,panel1.Location.Y);//in order to be the panel and the tablepanel in the same location
+            tableLayoutPanel1.Location = new Point(panel1.Location.X, panel1.Location.Y);//in order to be the panel and the tablepanel in the same location
             tableLayoutPanel1.Width = panel1.Width;//in order to be the width of the panel equal to the tablepanle 
-            tableLayoutPanel1.Height= panel1.Height;//in order to be the height of the panel equal to the tablepanle 
+            tableLayoutPanel1.Height = panel1.Height;//in order to be the height of the panel equal to the tablepanle 
 
-            int x, y,dx,dy;
-            dy=tableLayoutPanel1.Height / 10;//give us the distance for example distance between the [0,0] and [0,1]
+            int x, y, dx, dy;
+            dy = tableLayoutPanel1.Height / 10;//give us the distance for example distance between the [0,0] and [0,1]
             dx = tableLayoutPanel1.Width / 10;//give us the distance for example distance between the [0,0] and [1,0]
             x = tableLayoutPanel1.Location.X;//the x of the start point
             y = tableLayoutPanel1.Location.Y + 9 * tableLayoutPanel1.Height / 10;//the y of the start ppoint
-            matrix[0, 0] = new Point(x , y );
+            matrix[0, 0] = new Point(x, y);
             for (int i = 0; i < 10; i++)
             {
                 if (i % 2 == 1)
@@ -53,10 +53,10 @@ namespace WindowsFormsApp1
 
                     for (int j = 0; j < 10; j++)
                     {
-                        matrix[j, i] = new Point(x+9*tableLayoutPanel1.Width/10 - j * dx, y - i * dy);
+                        matrix[j, i] = new Point(x + 9 * tableLayoutPanel1.Width / 10 - j * dx, y - i * dy);
 
                     }
-                    matrix[0, i] = new Point(x+9 * dx, y - i * dy);
+                    matrix[0, i] = new Point(x + 9 * dx, y - i * dy);
                 }
                 else
                 {
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
                     {
                         matrix[j, i] = new Point(x + j * dx, y - i * dy);
                     }
-                    matrix[0, i] = new Point(0, y - i* dy);
+                    matrix[0, i] = new Point(0, y - i * dy);
 
                 }
             }
@@ -83,8 +83,9 @@ namespace WindowsFormsApp1
             panel5.Visible = true;
             panel6.Visible = true;
             
+
             Random rnd = new Random();
-            c =rnd.Next(1, 7);
+            c = rnd.Next(1, 7);
             label5.Text = "the random number is : " + c.ToString();
             pictureBox1.Image = Image.FromFile(@"C: \Users\abd\Desktop\Githere\Test07\img\p" + c.ToString() + ".png");
 
@@ -95,31 +96,29 @@ namespace WindowsFormsApp1
                 pictureBox3.Visible = true;
 
                 sumx = c + sumx;
-                help = sumx - c;
+                helpx= sumx - c;
                 timer1.Start();
-                if (flag_pc == 1)
-                {
-                   
-                }
+               
             }
-           
+
             else
             {
                 pictureBox2.Visible = true;
                 pictureBox3.Visible = false;
                 label3.Text = "we out ";
                 sumy = c + sumy;
-                help = sumy - c;
+                helpy = sumy - c;
                 timer2.Start();
 
             }
+           
 
-            
-            time++;
+            if(flag_pc!=1)
+               time++;
         }
         private int nextstep(int currentscore)
         {
-            label6.Text ="from " + currentscore.ToString()+" ";
+            label6.Text = "from " + currentscore.ToString() + " ";
             switch (currentscore)
             {
                 case 2:
@@ -187,7 +186,7 @@ namespace WindowsFormsApp1
                     return 80;
 
                 default:
-                    label6.Text = "up to "+currentscore.ToString();
+                    label6.Text = "up to " + currentscore.ToString();
                     return currentscore;
             }
         }
@@ -199,18 +198,18 @@ namespace WindowsFormsApp1
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            panel6.Location = matrix[help % 10, help / 10];
-            help++;
+            panel6.Location = matrix[helpy % 10, helpy / 10];
+            helpy++;
             c--;
-            if (help == sumy)
+            if (helpy == sumy)
             {
-                help = nextstep(help) - 1;
-                if (sumy != (help + 1))
+                helpy = nextstep(helpy) - 1;
+                if (sumy != (helpy + 1))
                 {
                     c++;
 
@@ -242,34 +241,59 @@ namespace WindowsFormsApp1
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            timer3.Stop();
-            button1_Click_1(sender, e);
-            
-            
+
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-              panel5.Location = matrix[help % 10, help / 10];
-            help++;
+            panel5.Location = matrix[helpx% 10, helpx / 10];
+            helpx++;
             c--;
-            if (help == sumx)
+            if (helpx == sumx)
             {
-                help = nextstep(help) - 1;
-                if (sumx != (help + 1))
+                helpx = nextstep(helpx) - 1;
+                if (sumx != (helpx + 1))
                 {
                     c++;
-                    
+
                 }
 
             }
             if (c == 0)
             {
                 sumx = nextstep(sumx);
+               
+
                 timer1.Stop();
+                if (flag_pc == 1)
+                    nextpc();
 
             }
 
+
+        }
+
+
+
+
+        public void nextpc()
+        {
+            panel5.Visible = true;
+            panel6.Visible = true;
+
+
+            Random rnd = new Random();
+            c = rnd.Next(1, 7);
+            label5.Text = "the random number is : " + c.ToString();
+            pictureBox1.Image = Image.FromFile(@"C: \Users\abd\Desktop\Githere\Test07\img\p" + c.ToString() + ".png");
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = false;
+            label3.Text = "we out ";
+            sumy = c + sumy;
+            helpy = sumy - c;
+            timer2.Start();
 
         }
     }
