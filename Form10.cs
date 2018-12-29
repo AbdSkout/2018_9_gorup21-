@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,13 +97,15 @@ namespace WindowsFormsApp1
 
 
 
-                if (Player == 1)//if we have red color then it prints it in label6 and changes the size and color to red
+                if (Player == 1)//if we have red color then it prints it in label6 and changes the size and color to red and added a popup question box to know if the player wants to continue or not
                 {
                     label6.Visible = true;
                     label6.ForeColor = Color.Red;
                     label6.Size = new System.Drawing.Size(100, 100);
                     label6.Font = new Font("Arial", 15, FontStyle.Regular);
                     label6.Text = "Red Wins!!";
+                    
+                    
                     DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                     if (result==DialogResult.Yes)
                     {
@@ -134,6 +137,7 @@ namespace WindowsFormsApp1
                     }
                     else if (result == DialogResult.No)
                     {
+                        
                         this.Hide();
                         Form3 f3 = new Form3();
                         f3.ShowDialog();
@@ -378,6 +382,16 @@ namespace WindowsFormsApp1
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
