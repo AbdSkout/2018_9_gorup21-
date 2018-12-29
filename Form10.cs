@@ -14,12 +14,19 @@ namespace WindowsFormsApp1
     {
         int player1_score = 1;
         int player2_score = 1;
-        int time = 0;
-            Point[,] matrix = new Point[10, 10];
+        static int help;
+        static int sumx = 1,sumy=1;
+        static int time = 0;
+        static int c = 0;
+        int flag_pc = 0;
+        Point[,] matrix = new Point[10, 10];
 
-        public Form10()
+        public Form10(string str)
         {
             InitializeComponent();
+            label2.Text =str;
+            if (str == "pc")
+                flag_pc = 1;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -38,7 +45,6 @@ namespace WindowsFormsApp1
             dx = tableLayoutPanel1.Width / 10;//give us the distance for example distance between the [0,0] and [1,0]
             x = tableLayoutPanel1.Location.X;//the x of the start point
             y = tableLayoutPanel1.Location.Y + 9 * tableLayoutPanel1.Height / 10;//the y of the start ppoint
-            label7.Text = dx.ToString();
             matrix[0, 0] = new Point(x , y );
             for (int i = 0; i < 10; i++)
             {
@@ -47,7 +53,7 @@ namespace WindowsFormsApp1
 
                     for (int j = 0; j < 10; j++)
                     {
-                        matrix[j, i] = new Point(x+9*dx -j * dx, y - i * dy);
+                        matrix[j, i] = new Point(x+9*tableLayoutPanel1.Width/10 - j * dx, y - i * dy);
 
                     }
                     matrix[0, i] = new Point(x+9 * dx, y - i * dy);
@@ -74,58 +80,41 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int oldscore;
-            int c = 0;
+            panel5.Visible = true;
+            panel6.Visible = true;
+            
             Random rnd = new Random();
-            c = rnd.Next(1, 7);
+            c =rnd.Next(1, 7);
             label5.Text = "the random number is : " + c.ToString();
-            pictureBox1.Image = Image.FromFile(@"C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\img\p" + c.ToString() + ".png");
+            pictureBox1.Image = Image.FromFile(@"C: \Users\abd\Desktop\Githere\Test07\img\p" + c.ToString() + ".png");
 
 
             if (time % 2 == 0)//we want to update the score of the first player
             {
-                oldscore = 0;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = true;
 
-
-                while (oldscore <=c )
+                sumx = c + sumx;
+                help = sumx - c;
+                timer1.Start();
+                if (flag_pc == 1)
                 {
-                    //UPDATE THE NEW WHERE
-                    
-                    label3.Text = player1_score.ToString();
-                    textBox1.Text = label6.Text + System.Environment.NewLine + textBox1.Text;
-                    asd:
-                    if (player1_score < 100)
-                        if (player1_score % 10 != 0)
-                        {
-                            panel5.Location = matrix[(player1_score) % 10 - 1, player1_score / 10];
-                        }
-                        else
-                        {
-                            panel5.Location = matrix[9, player1_score / 10 - 1];
-                        }
-                    System.Threading.Thread.Sleep(300);
-                    if (oldscore == c)
-                    {
-                        player1_score = nextstep(player1_score);
-                        oldscore++;
-                        goto asd;
-                    }
-                    oldscore++;
-                    player1_score++;
-
-
-
+                   
                 }
-
             }
-            else //we want to update the score of the srcond player
+           
+            else
             {
-
-                player2_score += c;
-                //UPDATE THE NEW WHERE
-                label4.Text = player2_score.ToString();
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+                label3.Text = "we out ";
+                sumy = c + sumy;
+                help = sumy - c;
+                timer2.Start();
 
             }
+
+            
             time++;
         }
         private int nextstep(int currentscore)
@@ -211,6 +200,77 @@ namespace WindowsFormsApp1
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            panel6.Location = matrix[help % 10, help / 10];
+            help++;
+            c--;
+            if (help == sumy)
+            {
+                help = nextstep(help) - 1;
+                if (sumy != (help + 1))
+                {
+                    c++;
+
+                }
+
+            }
+            if (c == 0)
+            {
+                sumy = nextstep(sumy);
+                timer2.Stop();
+
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            timer3.Stop();
+            button1_Click_1(sender, e);
+            
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+              panel5.Location = matrix[help % 10, help / 10];
+            help++;
+            c--;
+            if (help == sumx)
+            {
+                help = nextstep(help) - 1;
+                if (sumx != (help + 1))
+                {
+                    c++;
+                    
+                }
+
+            }
+            if (c == 0)
+            {
+                sumx = nextstep(sumx);
+                timer1.Stop();
+
+            }
+
+
         }
     }
 }

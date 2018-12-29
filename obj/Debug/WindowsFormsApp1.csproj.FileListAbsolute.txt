@@ -142,47 +142,4 @@ C:\Users\user\Documents\GitHub\Test07\obj\Debug\WindowsFormsApp1.Form10.resource
 C:\Users\abd\Desktop\Githere\Test07\obj\Debug\WindowsFormsApp1.Form10.resources
 C:\Users\abd\Desktop\Githere\Test07\obj\Debug\WindowsFormsApp1.Form9.resources
 C:\Users\abd\Desktop\Githere\Test07\obj\Debug\WindowsFormsApp1.Form11.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\bin\Debug\WindowsFormsApp1.exe.config
-C:\Users\abdalsk\Downloads\Test07-sneak\bin\Debug\WindowsFormsApp1.exe
-C:\Users\abdalsk\Downloads\Test07-sneak\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form10.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form11.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form2.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form3.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form4.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form5.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form6.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form7.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form8.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Form9.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.exe
-C:\Users\abdalsk\Downloads\Test07-sneak\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\bin\Debug\WindowsFormsApp1.exe.config
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\bin\Debug\WindowsFormsApp1.exe
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form10.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form11.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form2.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form3.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form4.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form5.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form6.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form7.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form8.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Form9.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.exe
-C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form10.resources
-C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form11.resources
-C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form8.resources
-C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form9.resources
+C:\Users\abd\Desktop\Githere\Test07\obj\Debug\WindowsFormsApp1.Form12.resources
