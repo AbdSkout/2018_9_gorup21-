@@ -225,6 +225,7 @@ namespace WindowsFormsApp1
                     }
                 }
                 flag = 1;
+                count = 0;
                 if (check != 0)//if the player choice was one of the last left squares we cant count squares from there.
                 {
                     if (mat[Row, (check - 1)] == player)
@@ -301,6 +302,15 @@ namespace WindowsFormsApp1
             {
                 j = Row + Col;
                 i = 0;
+                FourInDiag = Checkfour(mat, i, j);
+                if (FourInDiag == true)
+                {
+                    return player;
+                }
+            }else if(Row+Col>6)
+            {
+                j = 6;
+                i = Col - (7 - Row - 1);
                 FourInDiag = Checkfour(mat, i, j);
                 if (FourInDiag == true)
                 {
