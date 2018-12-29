@@ -182,3 +182,7 @@ C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.csp
 C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.exe
 C:\Users\abd\Desktop\hw3a\New folder\Test07-sneak\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form10.resources
+C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form11.resources
+C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form8.resources
+C:\Users\abd\Desktop\Githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form9.resources

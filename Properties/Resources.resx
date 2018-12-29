@@ -121,14 +121,17 @@
   <data name="aa6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aa6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="playpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="a3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="milyj_kot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\milyj_kot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="animated-dog-png-hd-cute-dog-clipart-image-320" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\animated-dog-png-hd-cute-dog-clipart-image-320.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +142,13 @@
   <data name="snakesandladdersboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\snakesandladdersboard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="playpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="milyj_kot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\milyj_kot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="play2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\play2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="animated-dog-png-hd-cute-dog-clipart-image-320" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\animated-dog-png-hd-cute-dog-clipart-image-320.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="walrus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\walrus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

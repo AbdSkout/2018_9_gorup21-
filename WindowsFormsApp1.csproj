@@ -191,6 +191,7 @@
     <Content Include="img\p5.png" />
     <Content Include="img\p6.png" />
     <Content Include="img\snakes-ladders-board.jpg" />
+    <None Include="img\walrus.png" />
     <None Include="Resources\animated-dog-png-hd-cute-dog-clipart-image-320.png" />
     <None Include="Resources\milyj_kot.png" />
     <None Include="Resources\a3.jpg" />
