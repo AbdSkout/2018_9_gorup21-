@@ -22,11 +22,11 @@ namespace WindowsFormsApp1
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
 
-        public Form10(string str)
+        public Form10(string player2_namer)
         {
             InitializeComponent();
-            label2.Text = str;
-            if (str == "pc")
+            label2.Text = player2_namer;
+            if (player2_namer == "pc")
                 flag_pc = 1;
         }
 
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
             move = 1;
 
             Random rnd = new Random();
-            c = rnd.Next(1, 7);
+            c = rnd.Next(1, 7);//random number
             label5.Text = "the random number is : " + c.ToString();
             pictureBox1.Image = Image.FromFile(@"C:\Users\user\Documents\GitHub\2018_9_gorup21-\img\p" + c.ToString() + ".png");
 
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
             {
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = true;
-
+                
                 
                 helpx = sumx;
                 sumx = c + sumx;
