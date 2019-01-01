@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         int player1_score = 1;
         int player2_score = 1;
         static int helpx,helpy;
-        static int sumx = 97, sumy = 98;
+        static int sumx = 1, sumy = 1;
         static int time = 0;
         static int c = 0;
         static int move = 0;//move show us to go ajead or go back
@@ -285,9 +285,43 @@ namespace WindowsFormsApp1
             specialAbility special = new specialAbility();
             special.ShowDialog();
 
-            int oldscore;
-            int c = 0, k = 0;
+            //int c = 0, k = 0;
             c = Convert.ToInt16(special.chose.Text);
+            if (time % 2 == 0)//we want to update the score of the first player
+            {
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = true;
+
+
+                helpx = sumx;
+                sumx = c + sumx;
+                if (sumx > 100)
+                    sumx = 200 - sumx;
+                timer1.Start();
+
+            }
+
+            else
+            {
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+                label3.Text = "we out ";
+
+                helpy = sumy;
+                sumy = c + sumy;
+                if (sumy > 100)
+                    sumy = 200 - sumy;
+                timer2.Start();
+
+            }
+            if (sumx == 100)
+            {
+                DialogResult result = MessageBox.Show("player1 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+            if (sumy == 100)
+            {
+                DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
