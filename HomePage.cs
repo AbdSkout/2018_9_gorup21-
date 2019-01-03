@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             string username, password;
-            StreamReader file = new StreamReader(@"C:\here\text.txt");
+            StreamReader file = new StreamReader("text.txt");
             username = file.ReadLine();
             
 
@@ -140,7 +140,7 @@ file.Close();
         }
         static bool check(string name)
         {
-            StreamReader Read = new StreamReader(@"C:\here\text.txt");
+            StreamReader Read = new StreamReader("text.txt");
             string user = Read.ReadLine();
 
 

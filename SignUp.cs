@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
             else if(textBox1.Text != "" && textBox2.Text != "" && textBox4.Text != "" && textBox3.Text != "" && comboBox1.Text != "")
             {
-                StreamWriter write = new StreamWriter(@"C:\here\text.txt", true);
+                StreamWriter write = new StreamWriter("text.txt", true);
                 write.WriteLine(textBox1.Text);
                 write.WriteLine(textBox2.Text);
                 write.WriteLine(comboBox1.Text);
@@ -117,7 +117,7 @@ namespace WindowsFormsApp1
 
        static bool check(string name)
         {
-            StreamReader Read = new StreamReader(@"C:\here\text.txt");
+            StreamReader Read = new StreamReader("text.txt");
             string user = Read.ReadLine();
 
             if (user == name)
