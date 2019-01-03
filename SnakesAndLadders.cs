@@ -69,7 +69,6 @@ namespace WindowsFormsApp1
 
                 }
             }
-
             panel5.Location = matrix[0, 0];//put the first player in the beginning in the [0,0]
             button2.Enabled = false;
             button2.Visible = false;
@@ -311,7 +310,7 @@ namespace WindowsFormsApp1
         {
             specialAbility special = new specialAbility();
             special.ShowDialog();
-
+            move = 1;
             //int c = 0, k = 0;
             c = Convert.ToInt16(special.chose.Text);
             if (time % 2 == 0)//we want to update the score of the first player
@@ -389,6 +388,7 @@ namespace WindowsFormsApp1
                 timer1.Stop();
                 if (flag_pc == 1)
                 {
+                    move = 1;
                     nextpc();
                 }
                 else
