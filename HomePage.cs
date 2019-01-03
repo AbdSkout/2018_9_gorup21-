@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class HomePage : Form
     {
-        public Form1()
+        public HomePage()
         {
             InitializeComponent();
         }
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
                         else if (textBox2.Text == "admin")
                         {
                         this.Hide();
-                        Form5 f5 = new Form5();
+                        AdminPage f5 = new AdminPage();
                         f5.Show();
 
                         }
@@ -77,7 +77,7 @@ file.Close();
             if(label3.Text== "right password!") {
                 
                 this.Hide();
-                Form4 f4 = new Form4();
+                UserPage f4 = new UserPage();
                 f4.Show();
             }
 
@@ -90,7 +90,7 @@ file.Close();
             if (check(name))
             {
                 this.Hide();
-                Form6 f6 = new Form6(name);
+                ForgotPassword f6 = new ForgotPassword(name);
                 f6.ShowDialog();
             }
             else
@@ -104,7 +104,7 @@ file.Close();
         {
             //StreamWriter write = new StreamWriter(@"C:\Users\abdalsk\Desktop\a",true);
             this.Hide();
-            Form2 f2 = new Form2();
+            SignUp f2 = new SignUp();
             f2.ShowDialog();
 
 
@@ -134,7 +134,7 @@ file.Close();
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 f3 = new Form3();
+            GuestPage f3 = new GuestPage();
             f3.Show();
 
         }

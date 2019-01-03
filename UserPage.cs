@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class UserPage : Form
     {
-        public Form3()
+        public UserPage()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -27,10 +27,30 @@ namespace WindowsFormsApp1
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f1 = new Form1();
+            HomePage f1 = new HomePage();
             f1.Show();
         }
     }

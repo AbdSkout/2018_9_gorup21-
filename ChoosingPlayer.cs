@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form12 : Form
+    public partial class ChoosingPlayer : Form
     {
 
         static string player2;
-        public Form12()
+        public ChoosingPlayer()
         {
             InitializeComponent();
         }
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form10 f10 = new Form10("pc");
+            SnakesAndLadders f10 = new SnakesAndLadders("pc");
             f10.Show();
 
 
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
             if (button3.Visible == true)
             {
                 this.Hide();
-                Form10 f10 = new Form10(textBox1.Text);
+                SnakesAndLadders f10 = new SnakesAndLadders(textBox1.Text);
                 f10.Show();
                 
             }

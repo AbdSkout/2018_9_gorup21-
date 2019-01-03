@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form12
+    partial class ChoosingPlayer
     {
         /// <summary>
         /// Required designer variable.
