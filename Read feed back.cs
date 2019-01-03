@@ -15,25 +15,34 @@ namespace WindowsFormsApp1
     public partial class Read_feed_back : Form
     {
         string read;
+        StreamReader file = new StreamReader("feedback.txt");
+
         public Read_feed_back()
         {
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+       
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            StreamReader file = new StreamReader("feedback.txt");
+                
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
             read = file.ReadLine();
-            listBox1.Items.Add("Name :" + read);
+            textBox1.Text = read;
+            read = file.ReadLine();
+            textBox2.Text =read;
+            read = file.ReadLine();
 
-            while (read != "")
-            {
-                read = file.ReadLine();
-                listBox1.Items.Add("feed is :" + read);
-                read = file.ReadLine();
-                listBox1.Items.Add("Name:" + read);
-            }
+            if (textBox1.Text == "")
+
+                textBox2.Text = "No feed back";
+
+               
 
         }
     }

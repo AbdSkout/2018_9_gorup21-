@@ -130,6 +130,9 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Read feed back.resx">
+      <DependentUpon>Read feed back.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SnakesAndLadders.resx">
       <DependentUpon>SnakesAndLadders.cs</DependentUpon>
     </EmbeddedResource>
