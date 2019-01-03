@@ -184,6 +184,7 @@
     <None Include="Resources\playpng.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\1fa94b55757637f71c0f932d1f55101f.jpg" />
     <Content Include="img\p1.png" />
     <Content Include="img\p2.png" />
     <Content Include="img\p3.png" />
