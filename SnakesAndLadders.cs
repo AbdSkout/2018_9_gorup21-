@@ -356,6 +356,13 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserPage f1 = new UserPage();
+            f1.Show();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
 
