@@ -34,7 +34,9 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             StreamWriter write = new StreamWriter("feedback.txt", true);
+            write.WriteLine(Program.username);
             write.WriteLine(richTextBox1.Text);
+            write.WriteLine("***");
             write.Close();
             this.Hide();
             
