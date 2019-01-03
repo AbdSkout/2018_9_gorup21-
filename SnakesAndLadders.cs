@@ -12,11 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class SnakesAndLadders : Form
     {
-        int player1_score = 1;
-        int player2_score = 1;
-        static int helpx,helpy;
+        static int helpx, helpy;
         static int sumx = 1, sumy = 1;
         static int time = 0;
+        static int specail1 = 0;
+        static int specail2 = 0;
         static int c = 0;
         static int move = 0;//move show us to go ajead or go back
         int flag_pc = 0;
@@ -80,6 +80,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             panel5.Visible = true;
             panel6.Visible = true;
             button1.Enabled = false;
@@ -95,18 +96,38 @@ namespace WindowsFormsApp1
             {
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = true;
-                
-                
+                if (specail2 <= 2 && time / 2 > 2)
+                {
+                    
+                    button2.Enabled = true;
+                    button2.Visible = true;
+                }
+                else
+                {
+                    button2.Enabled = false;
+                    button2.Visible = false;
+                }
+
                 helpx = sumx;
                 sumx = c + sumx;
                 if (sumx > 100)
                     sumx = 200 - sumx;
                 timer1.Start();
-               
+
             }
 
             else
             {
+                if (specail1 <= 2 && time / 2 > 2)
+                {
+                    button2.Enabled = true;
+                    button2.Visible = true;
+                }
+                else
+                {
+                    button2.Enabled = false;
+                    button2.Visible = false;
+                }
                 pictureBox2.Visible = true;
                 pictureBox3.Visible = false;
                 label3.Text = "we out ";
@@ -128,8 +149,12 @@ namespace WindowsFormsApp1
             }
 
 
-            if (flag_pc!=1)
-               time++;
+            if (flag_pc != 1)
+                time++;
+            else
+            {
+                time += 2;
+            }
         }
         private int nextstep(int currentscore)
         {
@@ -255,7 +280,7 @@ namespace WindowsFormsApp1
             helpy += move;
             c--;
             //-----------------------------------------------------------------------
-            
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -322,12 +347,18 @@ namespace WindowsFormsApp1
             {
                 DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             }
+            if (flag_pc != 1) 
+                time++;
+            else
+            {
+                time += 2;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            if (helpx == 100) 
+            if (helpx == 100)
             {
                 move = -1;
             }
@@ -362,7 +393,7 @@ namespace WindowsFormsApp1
                 {
                     button1.Enabled = true;
                 }
-                return ;
+                return;
             }
             if (c == -1)
             {
@@ -371,38 +402,7 @@ namespace WindowsFormsApp1
             helpx += move;
             c--;
 
-            /*
-                 panel5.Location = matrix[helpx% 10, helpx / 10];
-             helpx++;
-             c--;
-             if (helpx == sumx)
-             {
-                 helpx = nextstep(helpx) - 1;
-                 if (sumx != (helpx + 1))
-                 {
-                     c++;
-
-                 }
-
-             }
-             if (c == 0)
-             {
-                 sumx = nextstep(sumx);
-
-
-                 timer1.Stop();
-                 if (flag_pc == 1)
-                     nextpc();
-                 else
-                 {
-                 button1.Enabled = true;
-                 }
-
-             }
-             */
-
-
-        }
+        } 
 
 
 
