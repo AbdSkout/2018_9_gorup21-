@@ -24,13 +24,22 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Connect4 f2 = new Connect4();
+            f2.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
             HomePage f1 = new HomePage();
+            f1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChoosingPlayer f1 = new ChoosingPlayer();
             f1.Show();
         }
     }
