@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Read_feed_back());
+            Application.Run(new ChoosingPlayer());
         }
     }
 }
