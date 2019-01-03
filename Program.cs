@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     static class Program
     {
-        public static string user;
+        public static string username="yaser";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
 
         private void Form10_Load(object sender, EventArgs e)
         {
+            label1.Text = Program.username;
             tableLayoutPanel1.Location = new Point(panel1.Location.X, panel1.Location.Y);//in order to be the panel and the tablepanel in the same location
             tableLayoutPanel1.Width = panel1.Width;//in order to be the width of the panel equal to the tablepanle 
             tableLayoutPanel1.Height = panel1.Height;//in order to be the height of the panel equal to the tablepanle 
@@ -70,7 +71,8 @@ namespace WindowsFormsApp1
             }
 
             panel5.Location = matrix[0, 0];//put the first player in the beginning in the [0,0]
-
+            button2.Enabled = false;
+            button2.Visible = false;
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
