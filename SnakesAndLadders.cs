@@ -12,8 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class SnakesAndLadders : Form
     {
-        int player1_score = 1;
-        int player2_score = 1;
+        
         static int helpx,helpy;
         static int sumx = 1, sumy = 1;
         static int time = 0;

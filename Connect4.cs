@@ -282,58 +282,8 @@ namespace WindowsFormsApp1
             return 0;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            ticks++;
-            if (ticks < 10)
-            {
-                label7.Text = "0" + mins.ToString() + ":" + "0" + ticks.ToString();
-            }
-            else if (ticks >= 10 && ticks < 60)
-            {
-                secs = ticks;
-                label7.Text = "0" + mins.ToString() + ":" + secs.ToString();
-            }
-            else if (ticks >= 60)
-            {
-                secs = ticks % 60;
-                mins = ticks / 60;
-                mins = mins % 60;
-                if (mins < 10)
-                {
-                    if (secs < 10)
-                    {
-                        label7.Text = "0" + mins.ToString() + ":" + "0" + secs.ToString();
-                    }
-                    else if (secs >= 10 && secs < 60)
-                    {
 
-                        label7.Text = "0" + mins.ToString() + ":" + secs.ToString();
-                    }
-                }
-                else
-                {
-                    if (secs < 10)
-                    {
-                        label7.Text = mins.ToString() + ":" + "0" + secs.ToString();
-                    }
-                    else if (secs >= 10 && secs < 60)
-                    {
-
-                        label7.Text = mins.ToString() + ":" + secs.ToString();
-                    }
-                }
-
-            }
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            HomePage f1 = new HomePage();
-            f1.Show();
-        }
+ 
 
         public int DiagonalCheck(int[,] mat, int Row, int Col)// a function that checks the diagonal of four colors
         {
@@ -483,5 +433,57 @@ namespace WindowsFormsApp1
 
             return false;
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage f1 = new HomePage();
+            f1.Show();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ticks++;
+            if (ticks < 10)
+            {
+                label7.Text = "0" + mins.ToString() + ":" + "0" + ticks.ToString();
+            }
+            else if (ticks >= 10 && ticks < 60)
+            {
+                secs = ticks;
+                label7.Text = "0" + mins.ToString() + ":" + secs.ToString();
+            }
+            else if (ticks >= 60)
+            {
+                secs = ticks % 60;
+                mins = ticks / 60;
+                mins = mins % 60;
+                if (mins < 10)
+                {
+                    if (secs < 10)
+                    {
+                        label7.Text = "0" + mins.ToString() + ":" + "0" + secs.ToString();
+                    }
+                    else if (secs >= 10 && secs < 60)
+                    {
+
+                        label7.Text = "0" + mins.ToString() + ":" + secs.ToString();
+                    }
+                }
+                else
+                {
+                    if (secs < 10)
+                    {
+                        label7.Text = mins.ToString() + ":" + "0" + secs.ToString();
+                    }
+                    else if (secs >= 10 && secs < 60)
+                    {
+
+                        label7.Text = mins.ToString() + ":" + secs.ToString();
+                    }
+                }
+
+            }
+
+        }
     }
+       
 }
