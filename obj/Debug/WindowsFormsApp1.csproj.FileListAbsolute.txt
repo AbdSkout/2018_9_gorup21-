@@ -91,3 +91,5 @@ C:\Users\abdalsk\Desktop\merge yaser\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.
 C:\Users\abdalsk\Desktop\merge yaser\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\abdalsk\Desktop\merge yaser\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\abdalsk\Desktop\merge yaser\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.feedback.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Connect4.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.feedback.resources
