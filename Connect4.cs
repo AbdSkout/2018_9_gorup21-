@@ -281,10 +281,6 @@ namespace WindowsFormsApp1
 
             return 0;
         }
-
-
- 
-
         public int DiagonalCheck(int[,] mat, int Row, int Col)// a function that checks the diagonal of four colors
         {
             int player = 2;//it is set to the blue color else it will be set to red if the last player is red
@@ -439,6 +435,42 @@ namespace WindowsFormsApp1
             HomePage f1 = new HomePage();
             f1.Show();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             ticks++;
@@ -485,5 +517,4 @@ namespace WindowsFormsApp1
 
         }
     }
-       
 }
