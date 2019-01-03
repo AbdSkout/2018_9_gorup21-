@@ -65,6 +65,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Read feed back.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Read feed back.Designer.cs">
+      <DependentUpon>Read feed back.cs</DependentUpon>
+    </Compile>
     <Compile Include="SnakesAndLadders.cs">
       <SubType>Form</SubType>
     </Compile>
