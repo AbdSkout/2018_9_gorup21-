@@ -19,12 +19,20 @@ namespace WindowsFormsApp1
 
         private void Form3_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD:GuestPage.cs
 
         }
 
+=======
+
+        }
+
+>>>>>>> connect4:GuestPage.cs
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Connect4 f10 = new Connect4();
+            f10.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

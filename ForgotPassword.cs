@@ -84,5 +84,13 @@ namespace WindowsFormsApp1
             HomePage f1 = new HomePage();
             f1.Show();
         }
+<<<<<<< HEAD
+=======
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> connect4
     }
 }
