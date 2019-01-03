@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
             Random rnd = new Random();
             c = rnd.Next(1, 7);//random number
             label5.Text = "the random number is : " + c.ToString();
-            pictureBox1.Image = Image.FromFile(@"C:\Users\user\Documents\GitHub\2018_9_gorup21-\img\p" + c.ToString() + ".png");
+            pictureBox1.Image = Image.FromFile(@"C:\Users\abdalsk\Desktop\githere\2018_9_gorup21-\img\p" + c.ToString() + ".png");
 
 
             if (time % 2 == 0)//we want to update the score of the first player
@@ -416,7 +416,7 @@ namespace WindowsFormsApp1
             Random rnd = new Random();
             c = rnd.Next(1, 7);
             label5.Text = "the random number is : " + c.ToString();
-            pictureBox1.Image = Image.FromFile(@"C:\Users\user\Documents\GitHub\2018_9_gorup21-\img\p" + c.ToString() + ".png");
+            pictureBox1.Image = Image.FromFile(@"C:\Users\abdalsk\Desktop\githere\2018_9_gorup21-\img\p" + c.ToString() + ".png");
             pictureBox2.Visible = true;
             pictureBox3.Visible = false;
             label3.Text = "we out ";

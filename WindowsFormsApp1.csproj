@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,17 +53,17 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connect4.cs">
+    <Compile Include="SnakesAndLadders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connect4.Designer.cs">
-      <DependentUpon>Connect4.cs</DependentUpon>
+    <Compile Include="SnakesAndLadders.Designer.cs">
+      <DependentUpon>SnakesAndLadders.cs</DependentUpon>
     </Compile>
-    <Compile Include="ScorePage.cs">
+    <Compile Include="ChoosingPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ScorePage.Designer.cs">
-      <DependentUpon>ScorePage.cs</DependentUpon>
+    <Compile Include="ChoosingPlayer.Designer.cs">
+      <DependentUpon>ChoosingPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
@@ -96,14 +97,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="specialAbility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="specialAbility.Designer.cs">
+      <DependentUpon>specialAbility.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Connect4.resx">
-      <DependentUpon>Connect4.cs</DependentUpon>
+    <EmbeddedResource Include="SnakesAndLadders.resx">
+      <DependentUpon>SnakesAndLadders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ScorePage.resx">
-      <DependentUpon>ScorePage.cs</DependentUpon>
+    <EmbeddedResource Include="ChoosingPlayer.resx">
+      <DependentUpon>ChoosingPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
@@ -130,6 +137,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="specialAbility.resx">
+      <DependentUpon>specialAbility.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,17 +166,28 @@
     <None Include="Resources\playpng.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\red player.png" />
-    <None Include="img\Winner-PNG-Clipart-Image-01.png" />
-    <None Include="img\205-2059050_award-label-winner-icon-svg-vector-public-domain-icon-winner-png.png" />
-    <None Include="img\blue player.png" />
-    <None Include="img\1fa94b55757637f71c0f932d1f55101f.jpg" />
     <Content Include="img\p1.png" />
     <Content Include="img\p2.png" />
     <Content Include="img\p3.png" />
     <Content Include="img\p4.png" />
     <Content Include="img\p5.png" />
     <Content Include="img\p6.png" />
+    <Content Include="img\snakes-ladders-board.jpg" />
+    <None Include="Resources\Dh52vVmXUAAS3uI.png" />
+    <None Include="Resources\85171939-versus-screen-vs-letters-competition-vs-match-game-martial-battle-vs-sport-.jpg" />
+    <None Include="Resources\تنزيل.png" />
+    <None Include="Resources\vs.jpg" />
+    <None Include="Resources\2pa1.png" />
+    <None Include="Resources\2pa.png" />
+    <None Include="Resources\walrus.png" />
+    <None Include="Resources\img_220788.png" />
+    <None Include="Resources\pc.png" />
+    <None Include="Resources\pc_background.jpg" />
+    <None Include="Resources\animated-dog-png-hd-cute-dog-clipart-image-320.png" />
+    <None Include="Resources\milyj_kot.png" />
+    <None Include="Resources\a3.jpg" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\aa6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

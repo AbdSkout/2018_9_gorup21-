@@ -53,19 +53,11 @@
             // 
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(145, 192);
-<<<<<<< HEAD:ForgotPassword.Designer.cs
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> connect4:ForgotPassword.Designer.cs
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(208, 22);
             this.textBox2.TabIndex = 12;
             this.textBox2.Visible = false;
-<<<<<<< HEAD:ForgotPassword.Designer.cs
-=======
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
->>>>>>> connect4:ForgotPassword.Designer.cs
             // 
             // label3
             // 
@@ -80,11 +72,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(16, 117);
-<<<<<<< HEAD:ForgotPassword.Designer.cs
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> connect4:ForgotPassword.Designer.cs
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 28);
             this.button1.TabIndex = 10;
@@ -116,11 +104,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(91, 52);
-<<<<<<< HEAD:ForgotPassword.Designer.cs
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> connect4:ForgotPassword.Designer.cs
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 22);
             this.textBox1.TabIndex = 7;
@@ -149,11 +133,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-<<<<<<< HEAD:ForgotPassword.Designer.cs
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
-            this.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> connect4:ForgotPassword.Designer.cs
             this.Name = "Form6";
             this.Text = "Form6";
             this.Load += new System.EventHandler(this.Form6_Load);
