@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Read_feed_back : Form
     {
+        int c = 0;
         string read;
         StreamReader file = new StreamReader("feedback.txt");
 
@@ -41,8 +42,18 @@ namespace WindowsFormsApp1
             if (textBox1.Text == "")
 
                 textBox2.Text = "No feed back";
-
+            c++;
                
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
