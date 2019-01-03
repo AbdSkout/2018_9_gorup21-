@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.IO;
 namespace WindowsFormsApp1
 {
-    public partial class Form6 : Form
+    public partial class ForgotPassword : Form
     {
         string answer;
         string password;
         string username;
-        public Form6(string name)
+        public ForgotPassword(string name)
         {
             InitializeComponent();
             username = name;
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f1 = new Form1();
+            HomePage f1 = new HomePage();
             f1.Show();
         }
     }

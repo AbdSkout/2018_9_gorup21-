@@ -11,10 +11,10 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class SignUp : Form
     {
        static bool Flag = false;
-        public Form2()
+        public SignUp()
         {
             InitializeComponent();
         }
@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
             if (Flag)
             {
                 this.Hide();
-                Form1 f1 = new Form1();
+                HomePage f1 = new HomePage();
                 f1.ShowDialog();
             }
 

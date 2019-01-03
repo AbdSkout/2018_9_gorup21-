@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form10 : Form
+    public partial class SnakesAndLadders : Form
     {
         int player1_score = 1;
         int player2_score = 1;
@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
 
-        public Form10(string player2_namer)
+        public SnakesAndLadders(string player2_namer)
         {
             InitializeComponent();
             label2.Text = player2_namer;
