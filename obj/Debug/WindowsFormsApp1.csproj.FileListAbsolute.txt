@@ -1,13 +1,6 @@
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.exe
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form10.resources
-C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form2.resources
-C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form3.resources
-C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form4.resources
-C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form5.resources
-C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form6.resources
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form7.resources
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form8.resources
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form9.resources
@@ -55,3 +48,11 @@ C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.csproj.GenerateResource
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.exe
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.HomePage.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Connect4.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.SignUp.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.GuestPage.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.UserPage.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.AdminPage.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ForgotPassword.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ScorePage.resources
