@@ -45,6 +45,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -56,13 +57,13 @@
             this.columnHeader2.Text = "Scores";
             this.columnHeader2.Width = 202;
             // 
-            // Form14
+            // ScorePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 477);
             this.Controls.Add(this.listView1);
-            this.Name = "Form14";
+            this.Name = "ScorePage";
             this.Text = "Form14";
             this.Load += new System.EventHandler(this.Form14_Load);
             this.ResumeLayout(false);
