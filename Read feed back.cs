@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
     {
         int c = 0;
         string read;
+        string feed;
         
 
         public Read_feed_back()
@@ -34,18 +35,31 @@ namespace WindowsFormsApp1
         {
 
             StreamReader file = new StreamReader("feedback.txt");
+            button1.Visible = true;
             int i = 0;
-            while (i < (c * 3))
+            feed = "";
+            while (i < c)
             {
-                file.ReadLine();
-                i++;
+                read=file.ReadLine();
+                if (read == "***")
+                    i++;
+                if (read =="")
+                    break;
 
             }
             read = file.ReadLine();
             textBox1.Text = read;
-            read = file.ReadLine();
-            textBox2.Text =read;
-            read = file.ReadLine();
+            while (read != "***" && read!=null)
+            {
+                
+                read = file.ReadLine();
+                if(read!="***")
+                 feed = feed + read;
+
+            }
+             textBox2.Text =feed;
+             
+            
 
             if (textBox1.Text == "")
             {
@@ -72,25 +86,40 @@ namespace WindowsFormsApp1
         {
             StreamReader other = new StreamReader("feedback.txt");
             int i = 0;
-            if(c>0)
-              c--;
+            feed = "";
 
-            while (i < (3 * (c-1)))
+            
+
+            if (c >= 2)
+                c--;
+
+            else
+            {
+                button1.Visible = false;
+
+            }
+            while (i < (c-1))
             {
                 read = other.ReadLine();
-                i++;
+                if (read == "***")
+                    i++;
             }
-
-            if (c < 0)
-                c = 0;
             read = other.ReadLine();
             textBox1.Text = read;
-            read = other.ReadLine();
-            textBox2.Text = read;
-            read = other.ReadLine();
 
-            
-            
+
+            while (read != "***" && read != null)
+            {
+
+                read = other.ReadLine();
+                if (read != "***")
+                    feed = feed + read;
+
+            }
+            textBox2.Text = feed;
+
+
+
 
         }
     }
