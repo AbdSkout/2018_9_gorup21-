@@ -8,6 +8,7 @@ namespace WindowsFormsApp1
 {
     static class Program
     {
+        public static string username;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Connect4());
+            Application.Run(new Read_feed_back());
         }
     }
 }

@@ -78,6 +78,7 @@ file.Close();
                 
                 this.Hide();
                 UserPage f4 = new UserPage();
+                Program.username = username;
                 f4.Show();
             }
 

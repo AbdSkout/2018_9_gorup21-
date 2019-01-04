@@ -12,11 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class SnakesAndLadders : Form
     {
-        int player1_score = 1;
-        int player2_score = 1;
-        static int helpx,helpy;
+        static int helpx, helpy;
         static int sumx = 1, sumy = 1;
         static int time = 0;
+        static int specail1 = 0;
+        static int specail2 = 0;
         static int c = 0;
         static int move = 0;//move show us to go ajead or go back
         int flag_pc = 0;
@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
 
         private void Form10_Load(object sender, EventArgs e)
         {
+            label1.Text = Program.username;
             tableLayoutPanel1.Location = new Point(panel1.Location.X, panel1.Location.Y);//in order to be the panel and the tablepanel in the same location
             tableLayoutPanel1.Width = panel1.Width;//in order to be the width of the panel equal to the tablepanle 
             tableLayoutPanel1.Height = panel1.Height;//in order to be the height of the panel equal to the tablepanle 
@@ -68,9 +69,9 @@ namespace WindowsFormsApp1
 
                 }
             }
-
             panel5.Location = matrix[0, 0];//put the first player in the beginning in the [0,0]
-
+            button2.Enabled = false;
+            button2.Visible = false;
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -80,6 +81,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             panel5.Visible = true;
             panel6.Visible = true;
             button1.Enabled = false;
@@ -88,25 +90,45 @@ namespace WindowsFormsApp1
             Random rnd = new Random();
             c = rnd.Next(1, 7);//random number
             label5.Text = "the random number is : " + c.ToString();
-            pictureBox1.Image = Image.FromFile(@"C:\Users\abdalsk\Desktop\githere\2018_9_gorup21-\img\p" + c.ToString() + ".png");
+            pictureBox1.Image = Image.FromFile("p" + c.ToString() + ".png");
 
 
             if (time % 2 == 0)//we want to update the score of the first player
             {
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = true;
-                
-                
+                if (specail2 <= 2 && time / 2 > 2)
+                {
+                    
+                    button2.Enabled = true;
+                    button2.Visible = true;
+                }
+                else
+                {
+                    button2.Enabled = false;
+                    button2.Visible = false;
+                }
+
                 helpx = sumx;
                 sumx = c + sumx;
                 if (sumx > 100)
                     sumx = 200 - sumx;
                 timer1.Start();
-               
+
             }
 
             else
             {
+                if (specail1 <= 2 && time / 2 > 2)
+                {
+                    button2.Enabled = true;
+                    button2.Visible = true;
+                }
+                else
+                {
+                    button2.Enabled = false;
+                    button2.Visible = false;
+                }
                 pictureBox2.Visible = true;
                 pictureBox3.Visible = false;
                 label3.Text = "we out ";
@@ -128,8 +150,12 @@ namespace WindowsFormsApp1
             }
 
 
-            if (flag_pc!=1)
-               time++;
+            if (flag_pc != 1)
+                time++;
+            else
+            {
+                time += 2;
+            }
         }
         private int nextstep(int currentscore)
         {
@@ -255,7 +281,7 @@ namespace WindowsFormsApp1
             helpy += move;
             c--;
             //-----------------------------------------------------------------------
-            
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -284,7 +310,7 @@ namespace WindowsFormsApp1
         {
             specialAbility special = new specialAbility();
             special.ShowDialog();
-
+            move = 1;
             //int c = 0, k = 0;
             c = Convert.ToInt16(special.chose.Text);
             if (time % 2 == 0)//we want to update the score of the first player
@@ -322,12 +348,25 @@ namespace WindowsFormsApp1
             {
                 DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             }
+            if (flag_pc != 1) 
+                time++;
+            else
+            {
+                time += 2;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserPage f1 = new UserPage();
+            f1.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            if (helpx == 100) 
+            if (helpx == 100)
             {
                 move = -1;
             }
@@ -356,13 +395,14 @@ namespace WindowsFormsApp1
                 timer1.Stop();
                 if (flag_pc == 1)
                 {
+                    move = 1;
                     nextpc();
                 }
                 else
                 {
                     button1.Enabled = true;
                 }
-                return ;
+                return;
             }
             if (c == -1)
             {
@@ -371,38 +411,7 @@ namespace WindowsFormsApp1
             helpx += move;
             c--;
 
-            /*
-                 panel5.Location = matrix[helpx% 10, helpx / 10];
-             helpx++;
-             c--;
-             if (helpx == sumx)
-             {
-                 helpx = nextstep(helpx) - 1;
-                 if (sumx != (helpx + 1))
-                 {
-                     c++;
-
-                 }
-
-             }
-             if (c == 0)
-             {
-                 sumx = nextstep(sumx);
-
-
-                 timer1.Stop();
-                 if (flag_pc == 1)
-                     nextpc();
-                 else
-                 {
-                 button1.Enabled = true;
-                 }
-
-             }
-             */
-
-
-        }
+        } 
 
 
 
@@ -416,10 +425,10 @@ namespace WindowsFormsApp1
             Random rnd = new Random();
             c = rnd.Next(1, 7);
             label5.Text = "the random number is : " + c.ToString();
-            pictureBox1.Image = Image.FromFile(@"C:\Users\abdalsk\Desktop\githere\2018_9_gorup21-\img\p" + c.ToString() + ".png");
+            pictureBox1.Image = Image.FromFile("p" + c.ToString() + ".png");
             pictureBox2.Visible = true;
             pictureBox3.Visible = false;
-            label3.Text = "we out ";
+            
             sumy = c + sumy;
             helpy = sumy - c;
             timer2.Start();

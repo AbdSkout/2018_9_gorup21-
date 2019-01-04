@@ -44,7 +44,9 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            feedback feed = new feedback();
+            feed.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
