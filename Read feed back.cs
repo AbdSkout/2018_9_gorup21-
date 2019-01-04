@@ -64,6 +64,7 @@ namespace WindowsFormsApp1
             if (textBox1.Text == "")
             {
                 textBox2.Text = "No feed back";
+                button2.Visible = false;
 
             }
             else
@@ -85,6 +86,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             StreamReader other = new StreamReader("feedback.txt");
+            button2.Visible = true;
             int i = 0;
             feed = "";
 
