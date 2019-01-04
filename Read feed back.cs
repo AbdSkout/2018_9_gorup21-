@@ -126,5 +126,15 @@ namespace WindowsFormsApp1
 
             }
           }
+
+        private void Read_feed_back_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

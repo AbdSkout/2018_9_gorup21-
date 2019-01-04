@@ -154,3 +154,4 @@ C:\Users\abd\Desktop\after\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.Gen
 C:\Users\abd\Desktop\after\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\abd\Desktop\after\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\abd\Desktop\after\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Read_feed_back.resources
