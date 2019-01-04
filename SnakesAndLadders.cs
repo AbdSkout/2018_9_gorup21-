@@ -428,7 +428,7 @@ namespace WindowsFormsApp1
             pictureBox1.Image = Image.FromFile("p" + c.ToString() + ".png");
             pictureBox2.Visible = true;
             pictureBox3.Visible = false;
-            label3.Text = "we out ";
+            
             sumy = c + sumy;
             helpy = sumy - c;
             timer2.Start();
