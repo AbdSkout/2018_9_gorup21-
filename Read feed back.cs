@@ -85,44 +85,46 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             StreamReader other = new StreamReader("feedback.txt");
             button2.Visible = true;
             int i = 0;
-            feed = "";
-
-            
-
-            if (c >= 2)
-                c--;
-
-            else
+            if (c <= 1)
             {
+                textBox2.Text = "No feed back";
+                textBox1.Text = "";
                 button1.Visible = false;
 
             }
-            while (i < (c-1))
-            {
-                read = other.ReadLine();
-                if (read == "***")
-                    i++;
-            }
-            read = other.ReadLine();
-            textBox1.Text = read;
-
-
-            while (read != "***" && read != null)
+            else
             {
 
+                feed = "";
+                c--;
+
+                while (i < (c - 1))
+                {
+                    read = other.ReadLine();
+                    if (read == "***")
+                        i++;
+                }
                 read = other.ReadLine();
-                if (read != "***")
-                    feed = feed + read;
+                textBox1.Text = read;
+
+
+                while (read != "***" && read != null)
+                {
+
+                    read = other.ReadLine();
+                    if (read != "***")
+                        feed = feed + read;
+
+                }
+                textBox2.Text = feed;
+
+                
 
             }
-            textBox2.Text = feed;
-
-
-
-
-        }
+          }
     }
 }
