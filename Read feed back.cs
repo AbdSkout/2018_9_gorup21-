@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     {
         int c = 0;
         string read;
-        StreamReader file = new StreamReader("feedback.txt");
+        
 
         public Read_feed_back()
         {
@@ -33,6 +33,14 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
 
+            StreamReader file = new StreamReader("feedback.txt");
+            int i = 0;
+            while (i < (c * 3))
+            {
+                file.ReadLine();
+                i++;
+
+            }
             read = file.ReadLine();
             textBox1.Text = read;
             read = file.ReadLine();
@@ -40,11 +48,14 @@ namespace WindowsFormsApp1
             read = file.ReadLine();
 
             if (textBox1.Text == "")
-
+            {
                 textBox2.Text = "No feed back";
-            c++;
-               
 
+            }
+            else
+            {
+                c++;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,6 +65,32 @@ namespace WindowsFormsApp1
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StreamReader other = new StreamReader("feedback.txt");
+            int i = 0;
+            if(c>0)
+              c--;
+
+            while (i < (3 * (c-1)))
+            {
+                read = other.ReadLine();
+                i++;
+            }
+
+            if (c < 0)
+                c = 0;
+            read = other.ReadLine();
+            textBox1.Text = read;
+            read = other.ReadLine();
+            textBox2.Text = read;
+            read = other.ReadLine();
+
+            
+            
 
         }
     }
