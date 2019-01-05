@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 yaser
 1234
 waht your  middle name ?
@@ -17,5 +18,40 @@ qwe
 what your mother name ?
 asd
 asd
+=======
+abd
+abd
+waht your  middle name ?
+abd
+abd
+0
+***
+zed
+1
+waht your  middle name ?
+2
+3
+0
+***
+adam
+1
+waht your  middle name ?
+2
+3
+0
+***
+aa
+aa
+what your mother name ?
+aaa
+aa
+0
+***
+a
+a
+waht your  middle name ?
+a
+a
+>>>>>>> 6e779ca1e1ffa0a833fb8f97c6aac1c1c1a4d5cd
 0
 ***
