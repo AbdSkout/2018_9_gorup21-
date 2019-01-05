@@ -105,5 +105,23 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Program.username == null)
+            {
+                GuestPage g = new GuestPage();
+                this.Hide();
+                g.Show();
+
+            }
+            else
+            {
+                this.Hide();
+                UserPage u = new UserPage();
+                u.Show();
+            }
+
+        }
     }
 }
