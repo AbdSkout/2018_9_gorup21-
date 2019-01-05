@@ -64,6 +64,7 @@ namespace WindowsFormsApp1
                         label3.Visible = true;
                         label3.Text = "right password!";
                         break;
+                       
                     }
 
 
@@ -143,6 +144,7 @@ file.Close();
             this.Hide();
             GuestPage f3 = new GuestPage();
             f3.Show();
+
 
         }
         static bool check(string name)
