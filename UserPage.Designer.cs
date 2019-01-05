@@ -44,7 +44,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(627, 181);
+            this.label2.Location = new System.Drawing.Point(627, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(347, 44);
             this.label2.TabIndex = 9;
@@ -55,7 +55,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(759, 233);
+            this.button2.Location = new System.Drawing.Point(752, 247);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 126);
             this.button2.TabIndex = 8;
@@ -67,7 +67,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(143, 181);
+            this.label1.Location = new System.Drawing.Point(143, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 44);
             this.label1.TabIndex = 7;
@@ -78,7 +78,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(206, 233);
+            this.button1.Location = new System.Drawing.Point(206, 247);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 126);
             this.button1.TabIndex = 6;
