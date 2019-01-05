@@ -24,6 +24,10 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Connect4 f = new Connect4();
+            this.Hide();
+
+            f.ShowDialog();
 
         }
 
@@ -34,6 +38,11 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ChoosingPlayer f = new ChoosingPlayer();
+            this.Hide();
+
+            f.ShowDialog();
+
 
         }
 

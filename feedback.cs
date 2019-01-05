@@ -38,7 +38,9 @@ namespace WindowsFormsApp1
             write.WriteLine(richTextBox1.Text);
             write.WriteLine("***");
             write.Close();
+            UserPage f1 = new UserPage();
             this.Hide();
+            f1.ShowDialog();
             
 
 

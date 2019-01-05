@@ -22,11 +22,11 @@ namespace WindowsFormsApp1
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
 
-        public SnakesAndLadders(string player2_namer)
+        public SnakesAndLadders(string player2_name)
         {
             InitializeComponent();
-            label2.Text = player2_namer;
-            if (player2_namer == "pc")
+            label2.Text = player2_name;
+            if (player2_name == "pc")
                 flag_pc = 1;
         }
 
@@ -358,9 +358,20 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            UserPage f1 = new UserPage();
-            f1.Show();
+            if (Program.username == null)
+            {
+                this.Hide();
+                GuestPage f1 = new GuestPage();
+                f1.Show();
+
+            }
+            else
+            {
+                this.Hide();
+                UserPage f1 = new UserPage();
+                f1.Show();
+            }
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
