@@ -222,6 +222,7 @@ namespace WindowsFormsApp1
                                 return player;
                             }
                         }
+                        count--;
                     }
                 }
                 flag = 1;
