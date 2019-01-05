@@ -141,9 +141,16 @@ namespace WindowsFormsApp1
                     else if (result == DialogResult.No)
                     {
                         this.Hide();
-                        GuestPage f3 = new GuestPage();
-                        f3.ShowDialog();
-
+                        if (Program.username == null)
+                        {
+                            GuestPage f3 = new GuestPage();
+                            f3.ShowDialog();
+                        }
+                        else
+                        {
+                            UserPage f3 = new UserPage();
+                            f3.ShowDialog();
+                        }
                     }
                 }
                 if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
@@ -184,8 +191,16 @@ namespace WindowsFormsApp1
                     else if (result == DialogResult.No)
                     {
                         this.Hide();
-                        GuestPage f3 = new GuestPage();
-                        f3.ShowDialog();
+                        if (Program.username == null)
+                        {
+                            GuestPage f3 = new GuestPage();
+                            f3.ShowDialog();
+                        }
+                        else
+                        {
+                            UserPage f3 = new UserPage();
+                            f3.ShowDialog();
+                        }
 
                     }
                 }
@@ -361,8 +376,16 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage f1 = new HomePage();
-            f1.Show();
+            if (Program.username == null)
+            {
+                GuestPage f3 = new GuestPage();
+                f3.ShowDialog();
+            }
+            else
+            {
+                UserPage f3 = new UserPage();
+                f3.ShowDialog();
+            }
         }
 
         public int DiagonalCheck(int[,] mat, int Row, int Col)// a function that checks the diagonal of four colors
