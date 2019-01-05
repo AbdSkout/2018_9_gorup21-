@@ -14,3 +14,5 @@ C:\Users\abd\Desktop\after\WindowsFormsApp1Tests\obj\Debug\WindowsFormsApp1Tests
 C:\Users\abd\Desktop\after\WindowsFormsApp1Tests\obj\Debug\WindowsFormsApp1Tests.csproj.CoreCompileInputs.cache
 C:\Users\abd\Desktop\after\WindowsFormsApp1Tests\obj\Debug\WindowsFormsApp1Tests.dll
 C:\Users\abd\Desktop\after\WindowsFormsApp1Tests\obj\Debug\WindowsFormsApp1Tests.pdb
+C:\Users\abd\Desktop\after\2018_9_gorup21-\WindowsFormsApp1Tests\obj\Debug\WindowsFormsApp1Tests.dll
+C:\Users\abd\Desktop\after\2018_9_gorup21-\WindowsFormsApp1Tests\obj\Debug\WindowsFormsApp1Tests.pdb
