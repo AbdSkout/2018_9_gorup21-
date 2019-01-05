@@ -96,7 +96,10 @@ namespace WindowsFormsApp1
                 {
                     Player = horizontalCheck(mat, matRow, matCol);//horizontal check function here
                 }
+                if(Player==0 && Tiecheck == 1)
+                {
 
+                }
 
 
 
@@ -191,6 +194,16 @@ namespace WindowsFormsApp1
                 blue = !blue;
             }
         }
+        public int Tiecheck(int[,] mat, int Row, int Col)
+        {
+            if (Row == 5)
+            {
+
+            }
+            return 0;
+        }
+
+
         public int horizontalCheck(int[,] mat, int Row, int Col)
         {
             int count = 0;
