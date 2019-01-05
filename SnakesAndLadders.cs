@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
     public partial class SnakesAndLadders : Form
     {
         static int helpx, helpy;
-        static int sumx = 0, sumy = 1;
+        static int sumx = 1, sumy = 1;
         static int time = 0;
         static int specail1 = 0;
         static int specail2 = 0;
@@ -123,6 +123,9 @@ namespace WindowsFormsApp1
 
             else
             {
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+
                 if (specail1 <= 2 && time / 2 > 2)
                 {
                     button2.Enabled = true;
@@ -133,9 +136,8 @@ namespace WindowsFormsApp1
                     button2.Enabled = false;
                     button2.Visible = false;
                 }
-                pictureBox2.Visible = true;
-                pictureBox3.Visible = false;
-                label3.Text = "we out ";
+                
+                
 
                 helpy = sumy;
                 sumy = c + sumy;
@@ -209,6 +211,7 @@ namespace WindowsFormsApp1
 
                 if (flag_pc != 1)
                     time++;
+
                 else
                 {
                     time += 2;
@@ -389,7 +392,7 @@ namespace WindowsFormsApp1
             {
                 pictureBox2.Visible = true;
                 pictureBox3.Visible = false;
-                label3.Text = "we out ";
+                
 
                 helpy = sumy;
                 sumy = c + sumy;
