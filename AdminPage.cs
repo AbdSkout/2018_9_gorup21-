@@ -57,5 +57,12 @@ namespace WindowsFormsApp1
             HomePage f1 = new HomePage();
             f1.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Block b = new Block();
+            this.Hide();
+            b.Show();
+        }
     }
 }
