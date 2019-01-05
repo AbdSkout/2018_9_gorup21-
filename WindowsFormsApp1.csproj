@@ -65,6 +65,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyScore.Designer.cs">
+      <DependentUpon>MyScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Read feed back.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyScore.resx">
+      <DependentUpon>MyScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Read feed back.resx">
       <DependentUpon>Read feed back.cs</DependentUpon>
