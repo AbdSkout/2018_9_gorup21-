@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         static int move = 0;//move show us to go ajead or go back
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
+        
 
         public SnakesAndLadders(string player2_name)
         {
@@ -37,7 +38,7 @@ namespace WindowsFormsApp1
 
         private void Form10_Load(object sender, EventArgs e)
         {
-            label1.Text = Program.nameingame;
+            label1.Text = Program.username;
             tableLayoutPanel1.Location = new Point(panel1.Location.X, panel1.Location.Y);//in order to be the panel and the tablepanel in the same location
             tableLayoutPanel1.Width = panel1.Width;//in order to be the width of the panel equal to the tablepanle 
             tableLayoutPanel1.Height = panel1.Height;//in order to be the height of the panel equal to the tablepanle 
@@ -143,6 +144,16 @@ namespace WindowsFormsApp1
             if (sumx == 100)
             {
                 DialogResult result = MessageBox.Show("player1 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(player2_name);
+                    sneak.ShowDialog();
+
+
+                }
+
             }
             if (sumy == 100)
             {
