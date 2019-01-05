@@ -218,7 +218,7 @@ namespace WindowsFormsApp1
             }
             if (mat[Row, Col] == player)
             {
-                if (Row == 0)
+                if (Row == 0)//tie option will occur just if we in the highest row.
                 {
                     for(int i=0; (i<7)&&(mat[0, i]==2 || mat[0, i] == 1); i++)
                     {
