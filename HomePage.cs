@@ -40,25 +40,31 @@ namespace WindowsFormsApp1
                     if (username == (textBox1.Text))
                     {
                         password = file.ReadLine();
-                        if (textBox2.Text != password)
+                    if (textBox2.Text != password)
+                    {
+                        label3.Visible = true;
+                        label3.Text = "wrong password!";
+                        break;
+                    }
+                    else if (textBox2.Text == "admin")
+                    {
+                        for (int i = 0; i < 2; i++)
                         {
-                            label3.Visible = true;
-                            label3.Text = "wrong password!";
-                            break;
+                            Program.nameingame = file.ReadLine();
+
                         }
-                        else if (textBox2.Text == "admin")
-                        {
+
                         this.Hide();
                         AdminPage f5 = new AdminPage();
                         f5.Show();
 
-                        }
-                        else
-                        {
-                            label3.Visible = true;
-                            label3.Text = "right password!";
+                    }
+                    else
+                    {
+                        label3.Visible = true;
+                        label3.Text = "right password!";
                         break;
-                        }
+                    }
 
 
 
