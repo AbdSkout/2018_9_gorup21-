@@ -196,11 +196,27 @@ namespace WindowsFormsApp1
         }
         public int Tiecheck(int[,] mat, int Row, int Col)
         {
-            if (Row == 5)
+            int count = 0;
+            int player = 2;//it is set to the blue color else it will be set to red if the last player is red
+            if (blue == false)
             {
-
+                player = 1;
             }
-            return 0;
+            if (mat[Row, Col] == player)
+            {
+                if (Row == 5)
+                {
+                    for(int i=0; (i<7)&&(mat[5, i]==2 || mat[5, i] == 1); i++)
+                    {
+                        count++;
+                    }
+                    if (count == 6)
+                    {
+                        return 1;
+                    }
+                }
+                return 0;
+            }
         }
 
 
