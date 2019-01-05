@@ -221,12 +221,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\1fa94b55757637f71c0f932d1f55101f.jpg" />
+    <None Include="img\images.png" />
+    <None Include="img\images.jpg" />
+    <None Include="img\Mystery-guest.jpg" />
     <Content Include="img\p1.png" />
     <Content Include="img\p2.png" />
     <Content Include="img\p3.png" />
     <Content Include="img\p4.png" />
     <Content Include="img\p5.png" />
     <Content Include="img\p6.png" />
+    <None Include="img\sign-up-.png" />
     <Content Include="img\snakes-ladders-board.jpg" />
     <None Include="Resources\images %281%29.jpg" />
     <None Include="Resources\images1.jpg" />
