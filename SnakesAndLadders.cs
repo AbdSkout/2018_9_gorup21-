@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
     public partial class SnakesAndLadders : Form
     {
         static int helpx, helpy;
-        static int sumx = 1, sumy = 1;
+        static int sumx = 0, sumy = 1;
         static int time = 0;
         static int specail1 = 0;
         static int specail2 = 0;
@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         static int move = 0;//move show us to go ajead or go back
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
+        string name;
         
 
         public SnakesAndLadders(string player2_name)
@@ -29,6 +30,8 @@ namespace WindowsFormsApp1
             label2.Text = player2_name;
             if (player2_name == "pc")
                 flag_pc = 1;
+
+            name = player2_name;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -148,24 +151,68 @@ namespace WindowsFormsApp1
                 if (result == DialogResult.Yes)
                 {
                     this.Hide();
-                    SnakesAndLadders sneak = new SnakesAndLadders(player2_name);
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
                     sneak.ShowDialog();
 
 
+                }
+                else
+                {
+                   
+                        this.Hide();
+                    if (Program.username == "")
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
                 }
 
             }
             if (sumy == 100)
             {
                 DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            }
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
+                    sneak.ShowDialog();
 
 
-            if (flag_pc != 1)
-                time++;
-            else
-            {
-                time += 2;
+                }
+                else
+                {
+
+                    this.Hide();
+                    if (Program.username == "")
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
+
+                }
+
+
+                if (flag_pc != 1)
+                    time++;
+                else
+                {
+                    time += 2;
+                }
             }
         }
         private int nextstep(int currentscore)
@@ -354,10 +401,67 @@ namespace WindowsFormsApp1
             if (sumx == 100)
             {
                 DialogResult result = MessageBox.Show("player1 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
+                    sneak.ShowDialog();
+
+
+                }
+                else
+                {
+
+                    this.Hide();
+                    if (Program.username == "")
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
+
+                }
             }
             if (sumy == 100)
             {
                 DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
+                    sneak.ShowDialog();
+
+
+                }
+                else
+                {
+
+                    this.Hide();
+                    if (Program.username == "")
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
+
+                }
+
+
+
+
             }
             if (flag_pc != 1) 
                 time++;
