@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
                     }
                 }
 
-file.Close();
+        file.Close();
 
             if(label3.Text== "right password!") {
                 
