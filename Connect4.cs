@@ -222,7 +222,7 @@ namespace WindowsFormsApp1
                                 return player;
                             }
                         }
-                        count--;
+                        count--;//in  the next if we will count the same square and we so we need to remove him from hear
                     }
                 }
                 flag = 1;
