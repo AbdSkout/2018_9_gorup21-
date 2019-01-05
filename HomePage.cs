@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
                 }
             }
 
-file.Close();
+        file.Close();
 
             if(label3.Text== "right password!") {
                 
@@ -149,8 +149,10 @@ file.Close();
             this.Hide();
             GuestPage f3 = new GuestPage();
             f3.Show();
-
-
+            Random rnd = new Random();
+           int c = rnd.Next(1, 100);
+            string guset = "guset" + c.ToString();
+            Program.nameingame = guset;
         }
         static bool check(string name)
         {
