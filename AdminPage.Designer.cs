@@ -37,6 +37,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -90,7 +91,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(11, 362);
+            this.button6.Location = new System.Drawing.Point(11, 340);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 24);
@@ -101,7 +102,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(11, 334);
+            this.button5.Location = new System.Drawing.Point(11, 313);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 23);
@@ -123,7 +124,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(11, 300);
+            this.button3.Location = new System.Drawing.Point(11, 280);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 29);
@@ -132,11 +133,22 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form5
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(11, 369);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 35);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "Block player";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -145,7 +157,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form5";
+            this.Name = "AdminPage";
             this.Text = "Form5";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -162,5 +174,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button7;
     }
 }
