@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
         static int specail1 = 0;
         static int specail2 = 0;
         static int c = 0;
+        int sp1 = 4;
+        int sp2 = 4;
         static int move = 0;//move show us to go ajead or go back
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
@@ -101,11 +103,12 @@ namespace WindowsFormsApp1
             {
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = true;
-                if (specail2 <= 2 && time / 2 > 2)
+                if ( sp1>0 )//specail2 <= 2 && time / 2 > 2)
                 {
                     
                     button2.Enabled = true;
                     button2.Visible = true;
+                    sp1--;
                 }
                 else
                 {
@@ -126,10 +129,11 @@ namespace WindowsFormsApp1
                 pictureBox2.Visible = true;
                 pictureBox3.Visible = false;
 
-                if (specail1 <= 2 && time / 2 > 2)
+                if (sp2>0) //specail1 <= 2 && time / 2 > 2)
                 {
                     button2.Enabled = true;
                     button2.Visible = true;
+                    sp2--;
                 }
                 else
                 {
@@ -148,7 +152,8 @@ namespace WindowsFormsApp1
             }
             if (sumx == 100)
             {
-                DialogResult result = MessageBox.Show("player1 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                string win = Program.nameingame;
+                DialogResult result = MessageBox.Show( win+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -162,7 +167,7 @@ namespace WindowsFormsApp1
                 {
                    
                         this.Hide();
-                    if (Program.username == "")
+                    if (Program.username == null)
                     {
                         GuestPage g = new GuestPage();
                         g.Show();
@@ -179,7 +184,8 @@ namespace WindowsFormsApp1
             }
             if (sumy == 100)
             {
-                DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                
+                DialogResult result = MessageBox.Show( name+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -417,7 +423,7 @@ namespace WindowsFormsApp1
                 {
 
                     this.Hide();
-                    if (Program.username == "")
+                    if (Program.username == null)
                     {
                         GuestPage g = new GuestPage();
                         g.Show();
@@ -447,7 +453,7 @@ namespace WindowsFormsApp1
                 {
 
                     this.Hide();
-                    if (Program.username == "")
+                    if (Program.username == null)
                     {
                         GuestPage g = new GuestPage();
                         g.Show();
@@ -550,6 +556,8 @@ namespace WindowsFormsApp1
             panel5.Visible = true;
             panel6.Visible = true;
 
+            button2.Visible = false;
+            button2.Enabled = false;
 
             Random rnd = new Random();
             c = rnd.Next(1, 7);
