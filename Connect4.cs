@@ -222,7 +222,7 @@ namespace WindowsFormsApp1
                                 return player;
                             }
                         }
-                        count--;//in  the next if we will count the same square and we so we need to remove him from hear
+                        count--;//in  the next if we will count the same square and we so we need to remove him from hear.
                     }
                 }
                 flag = 1;
@@ -252,14 +252,14 @@ namespace WindowsFormsApp1
         }
         public int VerticalCheck(int[,] mat, int Row, int Col)
         {
-            int player = 2;//it is set to the blue color else it will be set to red if the last player is red
+            int player = 2;//it is set to the blue color else it will be set to red if the last player is red.
             if (blue == false)
             {
                 player = 1;
             }
             int count = 0;
 
-            if (mat[Row, Col] == player)//checking if the color was send red and cheking in this func a vertical check if we have four 1's
+            if (mat[Row, Col] == player)//checking if the color was send red and cheking in this func a vertical check if we have four 1's.
             {
 
                 for (int i = Row; i < 6; i++)//we get the row and the col of the last element that has been entered and then we check  each row of the same col and the same with the blue
@@ -267,7 +267,7 @@ namespace WindowsFormsApp1
                     if (mat[i, Col] == player)
                     {
                         count++;
-                        if (count == 4)//if we reach four reds in a col which are constive then return 2 which is the color red for us 
+                        if (count == 4)//if we reach four reds in a col which are constive then return 2 which is the color red for us .
                         {
                             return player;
                         }
