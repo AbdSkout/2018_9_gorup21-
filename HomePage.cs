@@ -87,11 +87,34 @@ namespace WindowsFormsApp1
         file.Close();
 
             if(label3.Text== "right password!") {
-                
+
+                bool flag_block=false;
+                StreamReader s = new StreamReader("blacklist.txt");
+                string test = s.ReadLine();
+                if (test == textBox1.Text)
+                    flag_block = true;
+
+                while (test != "" && test!=null)
+                {
+                    test = s.ReadLine();
+                    if (test == textBox1.Text)
+                        flag_block = true;
+
+                }
                 this.Hide();
-                UserPage f4 = new UserPage();
-                Program.username = username;
-                f4.Show();
+                if (flag_block)
+                {
+                    you_are_blocked y = new you_are_blocked();
+                    y.Show();
+
+
+                }
+                else
+                {
+                    UserPage f4 = new UserPage();
+                    Program.username = username;
+                    f4.Show();
+                }
             }
 
 
