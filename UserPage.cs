@@ -60,6 +60,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Program.username = null;
             this.Hide();
             HomePage f1 = new HomePage();
             f1.Show();

@@ -44,11 +44,15 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Read_feed_back f1 = new Read_feed_back();
+            f1.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Program.username = null;
+            Program.nameingame= null;
             this.Hide();
             HomePage f1 = new HomePage();
             f1.Show();
