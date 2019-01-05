@@ -33,13 +33,13 @@ namespace WindowsFormsApp1
             string username, password;
             StreamReader file = new StreamReader("text.txt");
             username = file.ReadLine();
-            
 
-                while (username != null)
+
+            while (username != null)
+            {
+                if (username == (textBox1.Text))
                 {
-                    if (username == (textBox1.Text))
-                    {
-                        password = file.ReadLine();
+                    password = file.ReadLine();
                     if (textBox2.Text != password)
                     {
                         label3.Visible = true;
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
                     }
                     else if (textBox2.Text == "admin")
                     {
-                        for (int i = 0; i < 2; i++)
+                        for (int i = 0; i <= 2; i++)
                         {
                             Program.nameingame = file.ReadLine();
 
@@ -61,23 +61,28 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
+                        for (int i = 0; i <= 2; i++)
+                        {
+                            Program.nameingame = file.ReadLine();
+
+                        }
                         label3.Visible = true;
                         label3.Text = "right password!";
                         break;
-                       
-                    }
-
-
-
 
                     }
-                    else
-                    {
-                        while (username != "***")
-                            username = file.ReadLine();
-                        username = file.ReadLine();
-                    }
+
+
+
+
                 }
+                else
+                {
+                    while (username != "***")
+                        username = file.ReadLine();
+                    username = file.ReadLine();
+                }
+            }
 
         file.Close();
 

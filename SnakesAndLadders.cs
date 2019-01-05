@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
 
         private void Form10_Load(object sender, EventArgs e)
         {
-            label1.Text = Program.username;
+            label1.Text = Program.nameingame;
             tableLayoutPanel1.Location = new Point(panel1.Location.X, panel1.Location.Y);//in order to be the panel and the tablepanel in the same location
             tableLayoutPanel1.Width = panel1.Width;//in order to be the width of the panel equal to the tablepanle 
             tableLayoutPanel1.Height = panel1.Height;//in order to be the height of the panel equal to the tablepanle 
