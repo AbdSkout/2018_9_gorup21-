@@ -265,9 +265,7 @@ C:\Users\abd\Desktop\w\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\abd\Desktop\w\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Block.resources
 C:\Users\abd\Desktop\w\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.you_are_blocked.resources
 >>>>>>> 6e779ca1e1ffa0a833fb8f97c6aac1c1c1a4d5cd
-<<<<<<< HEAD
 C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Block.resources
 C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.you_are_blocked.resources
-=======
 C:\Users\abd\Desktop\w\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.MyScore.resources
 >>>>>>> 3b752a09c3d34388b750fc35bade9fce2b4f04af

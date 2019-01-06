@@ -153,5 +153,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HomePage f1 = new HomePage();
+            this.Hide();
+            f1.ShowDialog();
+        }
     }
 }
