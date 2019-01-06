@@ -48,7 +48,9 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MyScore f = new MyScore();
+            f.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -60,6 +62,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Program.username = null;
             this.Hide();
             HomePage f1 = new HomePage();
             f1.Show();

@@ -18,14 +18,14 @@ namespace WindowsFormsApp1
         bool blue = false; //blue is set to false if the next marker is red
         int[,] mat = new int[6, 7];//our mat that we are gonna use to determine who won
         //Making a tick for the score
-        private int ticks, mins = 0, secs = 0;
+        public int ticks, mins = 0, secs = 0;
 
         public Connect4()
         {
             InitializeComponent();
         }
 
-        private void Connect4_Load(object sender, EventArgs e)
+        public void Connect4_Load(object sender, EventArgs e)
         {
             this.Text = "Connect 4";
             this.BackColor = Color.SlateGray;
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
                 this.Controls.Add(gameButtons[i]);
             }
         }
-        private void ButtonHasBeenPressed(object sender, int index)
+        public void ButtonHasBeenPressed(object sender, int index)
         {
             // Get the button that the user pressed
             var pressedButton = (Button)sender;
@@ -148,6 +148,7 @@ namespace WindowsFormsApp1
                             Connect4 f10 = new Connect4();
                             f10.ShowDialog();
 
+<<<<<<< HEAD
 
                         }
                         else if (result == DialogResult.No)
@@ -155,6 +156,27 @@ namespace WindowsFormsApp1
                             this.Hide();
                             GuestPage f3 = new GuestPage();
                             f3.ShowDialog();
+=======
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        this.Hide();
+                        if (Program.username == null)
+                        {
+                            GuestPage f3 = new GuestPage();
+                            f3.ShowDialog();
+                        }
+                        else
+                        {
+                            UserPage f3 = new UserPage();
+                            f3.ShowDialog();
+                        }
+                    }
+                }
+                if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
+                {
+                    timer1.Stop();
+>>>>>>> ae94908ec110cacd9698349ba1e74557ca3021bc
 
                         }
                     }
@@ -191,6 +213,23 @@ namespace WindowsFormsApp1
                             Connect4 f10 = new Connect4();
                             f10.ShowDialog();
 
+<<<<<<< HEAD
+=======
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        this.Hide();
+                        if (Program.username == null)
+                        {
+                            GuestPage f3 = new GuestPage();
+                            f3.ShowDialog();
+                        }
+                        else
+                        {
+                            UserPage f3 = new UserPage();
+                            f3.ShowDialog();
+                        }
+>>>>>>> ae94908ec110cacd9698349ba1e74557ca3021bc
 
                         }
                         else if (result == DialogResult.No)
@@ -325,7 +364,7 @@ namespace WindowsFormsApp1
             return 0;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
         {
             ticks++;
             if (ticks < 10)
@@ -371,11 +410,19 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage f1 = new HomePage();
-            f1.Show();
+            if (Program.username == null)
+            {
+                GuestPage f3 = new GuestPage();
+                f3.ShowDialog();
+            }
+            else
+            {
+                UserPage f3 = new UserPage();
+                f3.ShowDialog();
+            }
         }
 
         public int DiagonalCheck(int[,] mat, int Row, int Col)// a function that checks the diagonal of four colors

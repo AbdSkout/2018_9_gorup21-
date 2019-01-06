@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Block.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block.Designer.cs">
+      <DependentUpon>Block.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connect4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,12 @@
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyScore.Designer.cs">
+      <DependentUpon>MyScore.cs</DependentUpon>
     </Compile>
     <Compile Include="Read feed back.cs">
       <SubType>Form</SubType>
@@ -121,6 +133,15 @@
     <Compile Include="specialAbility.Designer.cs">
       <DependentUpon>specialAbility.cs</DependentUpon>
     </Compile>
+    <Compile Include="you are blocked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="you are blocked.Designer.cs">
+      <DependentUpon>you are blocked.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Block.resx">
+      <DependentUpon>Block.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Connect4.resx">
       <DependentUpon>Connect4.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyScore.resx">
+      <DependentUpon>MyScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Read feed back.resx">
       <DependentUpon>Read feed back.cs</DependentUpon>
@@ -167,6 +191,9 @@
     <EmbeddedResource Include="specialAbility.resx">
       <DependentUpon>specialAbility.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="you are blocked.resx">
+      <DependentUpon>you are blocked.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,12 +221,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\1fa94b55757637f71c0f932d1f55101f.jpg" />
+    <None Include="img\images.png" />
+    <None Include="img\images.jpg" />
+    <None Include="img\Mystery-guest.jpg" />
     <Content Include="img\p1.png" />
     <Content Include="img\p2.png" />
     <Content Include="img\p3.png" />
     <Content Include="img\p4.png" />
     <Content Include="img\p5.png" />
     <Content Include="img\p6.png" />
+    <None Include="img\sign-up-.png" />
     <Content Include="img\snakes-ladders-board.jpg" />
     <None Include="Resources\images %281%29.jpg" />
     <None Include="Resources\images1.jpg" />
