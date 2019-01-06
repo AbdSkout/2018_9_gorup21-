@@ -96,67 +96,47 @@ namespace WindowsFormsApp1
                 {
                     Player = horizontalCheck(mat, matRow, matCol);//horizontal check function here
                 }
-                if (Player == 0)
+               // if(Player==0 && Tiecheck == 1)
+                //{
+
+                //}
+
+
+
+                if (Player == 1)//if we have red color then it prints it in label6 and changes the size and color to red and added a popup question box to know if the player wants to continue or not
                 {
-                    int tie = Tiecheck(mat, matRow, matCol);
-                    if (tie == 1)
+                    timer1.Stop();
+
+                    if (ticks < 10)
                     {
-                        timer1.Stop();
-                        DialogResult result = MessageBox.Show("ITS A TIE !!! Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            this.Hide();
-                            Connect4 f10 = new Connect4();
-                            f10.ShowDialog();
-
-
-                        }
+                        label4.Text = (ticks * 1000).ToString();//score is bigger under one minute
                     }
-
-
-
-                    if (Player == 1)//if we have red color then it prints it in label6 and changes the size and color to red and added a popup question box to know if the player wants to continue or not
+                    else if (ticks < 60)
                     {
-                        timer1.Stop();
+                        label4.Text = (ticks * 100).ToString();//score is bigger under one minute
 
-                        if (ticks < 10)
-                        {
-                            label4.Text = (ticks * 1000).ToString();//score is bigger under one minute
-                        }
-                        else if (ticks < 60)
-                        {
-                            label4.Text = (ticks * 100).ToString();//score is bigger under one minute
+                    }
+                    else if (ticks < 120)
+                    {
+                        label4.Text = (ticks * 10).ToString();//score out it decress
 
-                        }
-                        else if (ticks < 120)
-                        {
-                            label4.Text = (ticks * 10).ToString();//score out it decress
+                    }
+                    else
+                    {
+                        label4.Text = ticks.ToString();//score out the same one
 
-                        }
-                        else
-                        {
-                            label4.Text = ticks.ToString();//score out the same one
+                    }
+                    pictureBox2.Visible = false;//not showing the img of red cicrlce
+                    pictureBox1.Visible = true;//showing image of winner
 
-                        }
-                        pictureBox2.Visible = false;//not showing the img of red cicrlce
-                        pictureBox1.Visible = true;//showing image of winner
+                    DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.Hide();
+                        Connect4 f10 = new Connect4();
+                        f10.ShowDialog();
 
-                        DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            this.Hide();
-                            Connect4 f10 = new Connect4();
-                            f10.ShowDialog();
 
-<<<<<<< HEAD
-
-                        }
-                        else if (result == DialogResult.No)
-                        {
-                            this.Hide();
-                            GuestPage f3 = new GuestPage();
-                            f3.ShowDialog();
-=======
                     }
                     else if (result == DialogResult.No)
                     {
@@ -176,45 +156,37 @@ namespace WindowsFormsApp1
                 if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
                 {
                     timer1.Stop();
->>>>>>> ae94908ec110cacd9698349ba1e74557ca3021bc
 
-                        }
-                    }
-                    if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
+                    if (ticks < 10)//scores
                     {
-                        timer1.Stop();
+                        label5.Text = (ticks * 1000).ToString();//score is bigger under one minute
+                    }
+                    else if (ticks < 60)
+                    {
+                        label5.Text = (ticks * 100).ToString();//score is bigger under one minute
 
-                        if (ticks < 10)//scores
-                        {
-                            label5.Text = (ticks * 1000).ToString();//score is bigger under one minute
-                        }
-                        else if (ticks < 60)
-                        {
-                            label5.Text = (ticks * 100).ToString();//score is bigger under one minute
+                    }
+                    else if (ticks < 120)
+                    {
+                        label5.Text = (ticks * 10).ToString();//score out it decress
 
-                        }
-                        else if (ticks < 120)
-                        {
-                            label5.Text = (ticks * 10).ToString();//score out it decress
+                    }
+                    else
+                    {
+                        label5.Text = ticks.ToString();//score out the same one
 
-                        }
-                        else
-                        {
-                            label5.Text = ticks.ToString();//score out the same one
+                    }
+                    pictureBox3.Visible = false;//not showing the img of blue cicrlce
+                    pictureBox4.Visible = true;//showing image of winner
 
-                        }
-                        pictureBox3.Visible = false;//not showing the img of blue cicrlce
-                        pictureBox4.Visible = true;//showing image of winner
+                    DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.Hide();
+                        Connect4 f10 = new Connect4();
+                        f10.ShowDialog();
 
-                        DialogResult result = MessageBox.Show("Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            this.Hide();
-                            Connect4 f10 = new Connect4();
-                            f10.ShowDialog();
 
-<<<<<<< HEAD
-=======
                     }
                     else if (result == DialogResult.No)
                     {
@@ -229,25 +201,16 @@ namespace WindowsFormsApp1
                             UserPage f3 = new UserPage();
                             f3.ShowDialog();
                         }
->>>>>>> ae94908ec110cacd9698349ba1e74557ca3021bc
 
-                        }
-                        else if (result == DialogResult.No)
-                        {
-                            this.Hide();
-                            GuestPage f3 = new GuestPage();
-                            f3.ShowDialog();
-
-                        }
                     }
-
-                    // Flip our blue flag
-                    blue = !blue;
                 }
+
+                // Flip our blue flag
+                blue = !blue;
             }
         }
-
-        int Tiecheck(int[,] mat, int Row, int Col)
+        /* here you have to fix
+        public int Tiecheck(int[,] mat, int Row, int Col)
         {
             int count = 0;
             int player = 2;//it is set to the blue color else it will be set to red if the last player is red
@@ -268,10 +231,10 @@ namespace WindowsFormsApp1
                         return 1;
                     }
                 }
-            }
                 return 0;
+            }
         }
-        
+        */
         
         public int horizontalCheck(int[,] mat, int Row, int Col)
         {
