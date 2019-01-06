@@ -96,10 +96,23 @@ namespace WindowsFormsApp1
                 {
                     Player = horizontalCheck(mat, matRow, matCol);//horizontal check function here
                 }
-               // if(Player==0 && Tiecheck == 1)
-                //{
+                {
+                    int tie = Tiecheck(mat, matRow, matCol);
+                    if (tie == 1)
+                    {
+                        timer1.Stop();
+                        DialogResult result = MessageBox.Show("ITS A TIE !!! Do you want to continue playing?", "Connect 4", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            this.Hide();
+                            Connect4 f10 = new Connect4();
+                            f10.ShowDialog();
 
-                //}
+
+                        }
+                    }
+
+                }
 
 
 
@@ -209,8 +222,8 @@ namespace WindowsFormsApp1
                 blue = !blue;
             }
         }
-        /* here you have to fix
-        public int Tiecheck(int[,] mat, int Row, int Col)
+        
+        int Tiecheck(int[,] mat, int Row, int Col)
         {
             int count = 0;
             int player = 2;//it is set to the blue color else it will be set to red if the last player is red
@@ -220,22 +233,23 @@ namespace WindowsFormsApp1
             }
             if (mat[Row, Col] == player)
             {
-                if (Row == 5)
+                if (Row == 0)
                 {
-                    for(int i=0; (i<7)&&(mat[5, i]==2 || mat[5, i] == 1); i++)
+                    for(int i=0; (i<7)&&(mat[0, i]==2 || mat[0, i] == 1); i++)
                     {
                         count++;
                     }
-                    if (count == 6)
+                    if (count == 7)
                     {
                         return 1;
                     }
                 }
-                return 0;
             }
+                return 0;
         }
-        */
         
+        
+
         public int horizontalCheck(int[,] mat, int Row, int Col)
         {
             int count = 0;
