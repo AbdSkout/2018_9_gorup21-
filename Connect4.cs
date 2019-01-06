@@ -18,14 +18,14 @@ namespace WindowsFormsApp1
         bool blue = false; //blue is set to false if the next marker is red
         int[,] mat = new int[6, 7];//our mat that we are gonna use to determine who won
         //Making a tick for the score
-        private int ticks, mins = 0, secs = 0;
+        public int ticks, mins = 0, secs = 0;
 
         public Connect4()
         {
             InitializeComponent();
         }
 
-        private void Connect4_Load(object sender, EventArgs e)
+        public void Connect4_Load(object sender, EventArgs e)
         {
             this.Text = "Connect 4";
             this.BackColor = Color.SlateGray;
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
                 this.Controls.Add(gameButtons[i]);
             }
         }
-        private void ButtonHasBeenPressed(object sender, int index)
+        public void ButtonHasBeenPressed(object sender, int index)
         {
             // Get the button that the user pressed
             var pressedButton = (Button)sender;
@@ -96,7 +96,10 @@ namespace WindowsFormsApp1
                 {
                     Player = horizontalCheck(mat, matRow, matCol);//horizontal check function here
                 }
+               // if(Player==0 && Tiecheck == 1)
+                //{
 
+                //}
 
 
 
@@ -138,9 +141,16 @@ namespace WindowsFormsApp1
                     else if (result == DialogResult.No)
                     {
                         this.Hide();
-                        GuestPage f3 = new GuestPage();
-                        f3.ShowDialog();
-
+                        if (Program.username == null)
+                        {
+                            GuestPage f3 = new GuestPage();
+                            f3.ShowDialog();
+                        }
+                        else
+                        {
+                            UserPage f3 = new UserPage();
+                            f3.ShowDialog();
+                        }
                     }
                 }
                 if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
@@ -181,8 +191,16 @@ namespace WindowsFormsApp1
                     else if (result == DialogResult.No)
                     {
                         this.Hide();
-                        GuestPage f3 = new GuestPage();
-                        f3.ShowDialog();
+                        if (Program.username == null)
+                        {
+                            GuestPage f3 = new GuestPage();
+                            f3.ShowDialog();
+                        }
+                        else
+                        {
+                            UserPage f3 = new UserPage();
+                            f3.ShowDialog();
+                        }
 
                     }
                 }
@@ -191,6 +209,33 @@ namespace WindowsFormsApp1
                 blue = !blue;
             }
         }
+        /* here you have to fix
+        public int Tiecheck(int[,] mat, int Row, int Col)
+        {
+            int count = 0;
+            int player = 2;//it is set to the blue color else it will be set to red if the last player is red
+            if (blue == false)
+            {
+                player = 1;
+            }
+            if (mat[Row, Col] == player)
+            {
+                if (Row == 5)
+                {
+                    for(int i=0; (i<7)&&(mat[5, i]==2 || mat[5, i] == 1); i++)
+                    {
+                        count++;
+                    }
+                    if (count == 6)
+                    {
+                        return 1;
+                    }
+                }
+                return 0;
+            }
+        }
+        */
+        
         public int horizontalCheck(int[,] mat, int Row, int Col)
         {
             int count = 0;
@@ -222,10 +267,10 @@ namespace WindowsFormsApp1
                                 return player;
                             }
                         }
+                        count--;//in  the next if we will count the same square and we so we need to remove him from hear.
                     }
                 }
                 flag = 1;
-                count = 0;
                 if (check != 0)//if the player choice was one of the last left squares we cant count squares from there.
                 {
                     if (mat[Row, (check - 1)] == player)
@@ -252,14 +297,14 @@ namespace WindowsFormsApp1
         }
         public int VerticalCheck(int[,] mat, int Row, int Col)
         {
-            int player = 2;//it is set to the blue color else it will be set to red if the last player is red
+            int player = 2;//it is set to the blue color else it will be set to red if the last player is red.
             if (blue == false)
             {
                 player = 1;
             }
             int count = 0;
 
-            if (mat[Row, Col] == player)//checking if the color was send red and cheking in this func a vertical check if we have four 1's
+            if (mat[Row, Col] == player)//checking if the color was send red and cheking in this func a vertical check if we have four 1's.
             {
 
                 for (int i = Row; i < 6; i++)//we get the row and the col of the last element that has been entered and then we check  each row of the same col and the same with the blue
@@ -267,7 +312,7 @@ namespace WindowsFormsApp1
                     if (mat[i, Col] == player)
                     {
                         count++;
-                        if (count == 4)//if we reach four reds in a col which are constive then return 2 which is the color red for us 
+                        if (count == 4)//if we reach four reds in a col which are constive then return 2 which is the color red for us .
                         {
                             return player;
                         }
@@ -282,7 +327,7 @@ namespace WindowsFormsApp1
             return 0;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
         {
             ticks++;
             if (ticks < 10)
@@ -328,11 +373,19 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage f1 = new HomePage();
-            f1.Show();
+            if (Program.username == null)
+            {
+                GuestPage f3 = new GuestPage();
+                f3.ShowDialog();
+            }
+            else
+            {
+                UserPage f3 = new UserPage();
+                f3.ShowDialog();
+            }
         }
 
         public int DiagonalCheck(int[,] mat, int Row, int Col)// a function that checks the diagonal of four colors

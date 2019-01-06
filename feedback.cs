@@ -38,10 +38,24 @@ namespace WindowsFormsApp1
             write.WriteLine(richTextBox1.Text);
             write.WriteLine("***");
             write.Close();
+            UserPage f1 = new UserPage();
             this.Hide();
+            f1.ShowDialog();
             
 
 
+        }
+
+        private void feedback_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserPage u = new UserPage();
+            this.Hide();
+            u.Show();
         }
     }
 }

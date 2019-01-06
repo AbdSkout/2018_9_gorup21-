@@ -18,26 +18,34 @@ namespace WindowsFormsApp1
         static int specail1 = 0;
         static int specail2 = 0;
         static int c = 0;
+        int sp1 = 4;
+        int sp2 = 4;
         static int move = 0;//move show us to go ajead or go back
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
+        string name;
+        
 
-        public SnakesAndLadders(string player2_namer)
+        public SnakesAndLadders(string player2_name)
         {
             InitializeComponent();
-            label2.Text = player2_namer;
-            if (player2_namer == "pc")
+            label2.Text = player2_name;
+            if (player2_name == "pc")
                 flag_pc = 1;
+
+            name = player2_name;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Form10_Load(object sender, EventArgs e)
+        public void Form10_Load(object sender, EventArgs e)
         {
-            label1.Text = Program.username;
+            sumx = 1;
+            sumy = 1;
+            label1.Text = Program.nameingame;
             tableLayoutPanel1.Location = new Point(panel1.Location.X, panel1.Location.Y);//in order to be the panel and the tablepanel in the same location
             tableLayoutPanel1.Width = panel1.Width;//in order to be the width of the panel equal to the tablepanle 
             tableLayoutPanel1.Height = panel1.Height;//in order to be the height of the panel equal to the tablepanle 
@@ -69,17 +77,20 @@ namespace WindowsFormsApp1
 
                 }
             }
-            panel5.Location = matrix[0, 0];//put the first player in the beginning in the [0,0]
-            button2.Enabled = false;
-            button2.Visible = false;
+            panel6.Location = panel5.Location = matrix[0, 0];//put the first player in the beginning in the [0,0]
+            panel5.Visible = true;
+            panel6.Visible = true;
+
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        public void panel5_Paint(object sender, PaintEventArgs e)
         {
+            
+            
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        public void button1_Click_1(object sender, EventArgs e)
         {
             
             panel5.Visible = true;
@@ -97,11 +108,12 @@ namespace WindowsFormsApp1
             {
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = true;
-                if (specail2 <= 2 && time / 2 > 2)
+                if (sp1>0)//specail2 <= 2 && time / 2 > 2)
                 {
                     
                     button2.Enabled = true;
                     button2.Visible = true;
+                    sp1--;
                 }
                 else
                 {
@@ -119,19 +131,22 @@ namespace WindowsFormsApp1
 
             else
             {
-                if (specail1 <= 2 && time / 2 > 2)
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+
+                if (sp2>0) //specail1 <= 2 && time / 2 > 2)
                 {
                     button2.Enabled = true;
                     button2.Visible = true;
+                    sp2--;
                 }
                 else
                 {
                     button2.Enabled = false;
                     button2.Visible = false;
                 }
-                pictureBox2.Visible = true;
-                pictureBox3.Visible = false;
-                label3.Text = "we out ";
+                
+                
 
                 helpy = sumy;
                 sumy = c + sumy;
@@ -142,22 +157,80 @@ namespace WindowsFormsApp1
             }
             if (sumx == 100)
             {
-                DialogResult result = MessageBox.Show("player1 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                string win = Program.nameingame;
+                DialogResult result = MessageBox.Show( win + " win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
+                    sneak.ShowDialog();
+
+
+                }
+                else
+                {
+                   
+                        this.Hide();
+                    if (Program.username == null)
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
+                }
+
             }
             if (sumy == 100)
             {
-                DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                
+                DialogResult result = MessageBox.Show( name+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
+                    sneak.ShowDialog();
+
+
+                }
+                else
+                {
+
+                    this.Hide();
+                    if (Program.username == null)
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
+
+                }
+
+
+               
             }
-
-
             if (flag_pc != 1)
                 time++;
+
             else
             {
                 time += 2;
             }
         }
-        private int nextstep(int currentscore)
+        public int nextstep(int currentscore)
         {
             label6.Text = "from " + currentscore.ToString() + " ";
             switch (currentscore)
@@ -232,17 +305,17 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        public void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        public void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        public void timer2_Tick(object sender, EventArgs e)
         {
             if (helpy == 100)
             {
@@ -272,7 +345,12 @@ namespace WindowsFormsApp1
                 sumy = helpy;
                 timer2.Stop();
                 button1.Enabled = true;
-                return;
+                if (sp1 > 0)
+                {
+                    button2.Visible = true;
+                    button2.Enabled = true;
+                }
+                    return;
             }
             if (c == -1)
             {
@@ -284,29 +362,29 @@ namespace WindowsFormsApp1
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        public void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        public void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void timer3_Tick(object sender, EventArgs e)
+        public void timer3_Tick(object sender, EventArgs e)
         {
 
 
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             specialAbility special = new specialAbility();
             special.ShowDialog();
@@ -331,7 +409,7 @@ namespace WindowsFormsApp1
             {
                 pictureBox2.Visible = true;
                 pictureBox3.Visible = false;
-                label3.Text = "we out ";
+                
 
                 helpy = sumy;
                 sumy = c + sumy;
@@ -342,11 +420,68 @@ namespace WindowsFormsApp1
             }
             if (sumx == 100)
             {
-                DialogResult result = MessageBox.Show("player1 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show( Program.nameingame+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
+                    sneak.ShowDialog();
+
+
+                }
+                else
+                {
+
+                    this.Hide();
+                    if (Program.username == null)
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
+
+                }
             }
             if (sumy == 100)
             {
-                DialogResult result = MessageBox.Show("player2 win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show( name+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SnakesAndLadders sneak = new SnakesAndLadders(name);
+                    sneak.ShowDialog();
+
+
+                }
+                else
+                {
+
+                    this.Hide();
+                    if (Program.username == null)
+                    {
+                        GuestPage g = new GuestPage();
+                        g.Show();
+
+                    }
+                    else
+                    {
+                        UserPage g = new UserPage();
+                        g.Show();
+
+                    }
+
+                }
+
+
+
+
             }
             if (flag_pc != 1) 
                 time++;
@@ -356,14 +491,25 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            UserPage f1 = new UserPage();
-            f1.Show();
+            if (Program.username == null)
+            {
+                this.Hide();
+                GuestPage f1 = new GuestPage();
+                f1.Show();
+
+            }
+            else
+            {
+                this.Hide();
+                UserPage f1 = new UserPage();
+                f1.Show();
+            }
+
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
         {
 
             if (helpx == 100)
@@ -421,6 +567,8 @@ namespace WindowsFormsApp1
             panel5.Visible = true;
             panel6.Visible = true;
 
+            button2.Visible = false;
+            button2.Enabled = false;
 
             Random rnd = new Random();
             c = rnd.Next(1, 7);
@@ -432,7 +580,7 @@ namespace WindowsFormsApp1
             sumy = c + sumy;
             helpy = sumy - c;
             timer2.Start();
-
+            
         }
     }
 }
