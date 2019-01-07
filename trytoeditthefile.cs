@@ -19,15 +19,15 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EditScore();
+            EditScore("snake.txt");
         }
 
-        public void EditScore()
+        public void EditScore(string filename)
         {
-            string name = "yaser";
+            string name = Program.username;
             string[] allfile;
-            allfile = File.ReadAllLines("snake.txt");
-            StreamReader Read = new StreamReader("snake.txt");
+            allfile = File.ReadAllLines(filename);
+            StreamReader Read = new StreamReader(filename);
             string user = Read.ReadLine();
             string result = name ;
             int score=0,i=0;
@@ -56,16 +56,12 @@ namespace WindowsFormsApp1
 
 
                     score = int.Parse(user);
-                result =result + "\n" + score.ToString();
-                   // label1.Text = user;
-                    //-----return true;
+                 
 
                 }
 
             }
-            File.WriteAllLines("snaked.txt", allfile);
-            Read.Close();
-            File.WriteAllLines("snake.txt", allfile);
+            File.WriteAllLines(filename, allfile);
 
 
 

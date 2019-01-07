@@ -581,35 +581,47 @@ namespace WindowsFormsApp1
             timer2.Start();
             
         }
-        public void EditScore()
+        public void EditScore(string filename)
         {
             string name = Program.username;
-            StreamReader Read = new StreamReader("snake.txt");
+            string[] allfile;
+            allfile = File.ReadAllLines(filename);
+            StreamReader Read = new StreamReader(filename);
             string user = Read.ReadLine();
-
+            string result = name;
+            int score = 0, i = 0;
             if (user == name)
             {
-                Read.Close();
-                //------ return true;
+                user = Read.ReadLine(); i++;
+                score = int.Parse(user);
+                allfile[i] = (score + 12).ToString();
+
             }
+
 
             while (user != null)
             {
                 while (user != "***")
                 {
-                    user = Read.ReadLine();
+                    user = Read.ReadLine(); i++;
                 }
-                user = Read.ReadLine();
+                user = Read.ReadLine(); i++;
 
                 if (user == name)
                 {
-                    Read.Close();
-                    //-----return true;
+                    user = Read.ReadLine(); i++;
+                    score = int.Parse(user);
+                    allfile[i] = (score + 12).ToString();
+
+
+                    score = int.Parse(user);
+
 
                 }
 
             }
-            Read.Close();
+            File.WriteAllLines(filename, allfile);
+
 
 
 
