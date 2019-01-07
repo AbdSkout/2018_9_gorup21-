@@ -334,6 +334,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap set_of_vector_scenic_spotlights_1441_14 {
+            get {
+                object obj = ResourceManager.GetObject("set-of-vector-scenic-spotlights_1441-14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sign_up_ {
             get {
                 object obj = ResourceManager.GetObject("sign-up-", resourceCulture);

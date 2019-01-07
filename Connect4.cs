@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
 
         public void Connect4_Load(object sender, EventArgs e)
         {
+            
             this.Text = "Connect 4";
             this.BackColor = Color.SlateGray;
             timer1.Start();
@@ -400,6 +401,37 @@ namespace WindowsFormsApp1
                 UserPage f3 = new UserPage();
                 f3.ShowDialog();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            if (Program.username == null) //viewing the top 10 players in connect four
+            {
+                timer1.Stop();
+                DialogResult result = MessageBox.Show("This is page is only avaliable for users.Do you want to sign up?", "Top 10", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SignUp sign = new SignUp();
+                    sign.ShowDialog();
+
+
+                }
+                else
+                {
+                    this.Hide();
+                    Connect4 connect4 = new Connect4();
+                    connect4.ShowDialog();
+                }
+            }
+            else
+            {
+                this.Hide();
+                Top10 top10 = new Top10();
+                top10.ShowDialog();
+            }
+
         }
 
         public int DiagonalCheck(int[,] mat, int Row, int Col)// a function that checks the diagonal of four colors

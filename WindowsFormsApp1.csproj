@@ -107,6 +107,12 @@
     <Compile Include="GuestPage.Designer.cs">
       <DependentUpon>GuestPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Top10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top10.Designer.cs">
+      <DependentUpon>Top10.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GuestPage.resx">
       <DependentUpon>GuestPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top10.resx">
+      <DependentUpon>Top10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
@@ -231,6 +240,7 @@
     <Content Include="img\p5.png" />
     <Content Include="img\p6.png" />
     <None Include="img\sign-up-.png" />
+    <None Include="img\set-of-vector-scenic-spotlights_1441-14.jpg" />
     <Content Include="img\snakes-ladders-board.jpg" />
     <None Include="Resources\images %281%29.jpg" />
     <None Include="Resources\images1.jpg" />

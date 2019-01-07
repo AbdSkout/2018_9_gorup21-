@@ -43,6 +43,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -114,7 +115,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 39);
             this.button1.TabIndex = 14;
-            this.button1.Text = "Home";
+            this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -197,6 +198,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(781, 481);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 39);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Top 10";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Connect4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -204,6 +215,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1fa94b55757637f71c0f932d1f55101f;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(882, 560);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -244,5 +256,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
