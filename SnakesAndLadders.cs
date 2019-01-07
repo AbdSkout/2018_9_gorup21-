@@ -15,8 +15,7 @@ namespace WindowsFormsApp1
         static int helpx, helpy;
         static int sumx = 1, sumy = 1;
         static int time = 0;
-        static int specail1 = 0;
-        static int specail2 = 0;
+        
         static int c = 0;
         int sp1 = 4;
         int sp2 = 4;
