@@ -55,11 +55,21 @@ namespace WindowsFormsApp1
                 write.WriteLine(comboBox1.Text);
                 write.WriteLine(textBox4.Text);
                 write.WriteLine(textBox3.Text);
-                write.WriteLine("0");
                 write.WriteLine("***");
                 write.Close();
                 label6.Visible = false;
                 Flag = true;
+                StreamWriter writesnake = new StreamWriter("snake.txt", true);
+                writesnake.WriteLine(textBox1.Text);
+                writesnake.WriteLine("0");
+                writesnake.WriteLine("***");
+                writesnake.Close();
+                StreamWriter writeconnect = new StreamWriter("connect4.txt", true);
+                writeconnect.WriteLine(textBox1.Text);
+                writeconnect.WriteLine("0");
+                writeconnect.WriteLine("***");
+                writeconnect.Close();
+
 
             }
 
