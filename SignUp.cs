@@ -61,12 +61,12 @@ namespace WindowsFormsApp1
                 Flag = true;
                 StreamWriter writesnake = new StreamWriter("snake.txt", true);
                 writesnake.WriteLine(textBox1.Text);
-                writesnake.WriteLine("0");
+                writesnake.WriteLine(0);
                 writesnake.WriteLine("***");
                 writesnake.Close();
                 StreamWriter writeconnect = new StreamWriter("connect4.txt", true);
                 writeconnect.WriteLine(textBox1.Text);
-                writeconnect.WriteLine("0");
+                writeconnect.WriteLine(0);
                 writeconnect.WriteLine("***");
                 writeconnect.Close();
 

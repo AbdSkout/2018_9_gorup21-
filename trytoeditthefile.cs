@@ -24,20 +24,19 @@ namespace WindowsFormsApp1
 
         public void EditScore()
         {
-            string name = "yaser",allfile;
-            allfile = File.ReadAllText("snake.txt");
+            string name = "yaser";
+            string[] allfile;
+            allfile = File.ReadAllLines("snake.txt");
             StreamReader Read = new StreamReader("snake.txt");
             string user = Read.ReadLine();
             string result = name ;
-            int score=0;
+            int score=0,i=0;
             if (user == name)
             {
-                user = Read.ReadLine();
+                user = Read.ReadLine();i++;
                 score =int.Parse(user);
-                result =result +"\r\n"+ score.ToString();
-               label1.Text = result;
-                //------ return true;
-                //return;
+                allfile[i] = (score + 12).ToString();
+
             }
 
 
@@ -45,14 +44,17 @@ namespace WindowsFormsApp1
             {
                 while (user != "***")
                 {
-                    user = Read.ReadLine();
+                    user = Read.ReadLine();i++;
                 }
-                user = Read.ReadLine();
+                user = Read.ReadLine(); i++;
 
                 if (user == name)
                 {
-                    user = Read.ReadLine();
-                    
+                    user = Read.ReadLine(); i++;
+                score =int.Parse(user);
+                    allfile[i] = (score + 12).ToString();
+
+
                     score = int.Parse(user);
                 result =result + "\n" + score.ToString();
                    // label1.Text = user;
@@ -61,18 +63,10 @@ namespace WindowsFormsApp1
                 }
 
             }
+            File.WriteAllLines("snaked.txt", allfile);
             Read.Close();
-            allfile.Replace(name, "***");
-            string a = (score + 2).ToString();
-            File.WriteAllText("snakeq.txt", allfile);
-            StreamWriter write = new StreamWriter("snakeq.txt", true);
-            write.WriteLine(name);
-            write.WriteLine(a);
-            write.WriteLine("***");
-            write.Close();
-            //label1.Text = result;
+            File.WriteAllLines("snake.txt", allfile);
 
-            label1.Text = allfile;
 
 
 

@@ -1,5 +1,5 @@
 yaser
-123
+147
 ***
 ward
 245
@@ -26,11 +26,8 @@ afasasdggtrh
 0
 ***
 rami
-0
+24
 ***
 yaser
-125
-***
-yaser
-127
+149
 ***
