@@ -18,35 +18,45 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         Label[] Label = new Label[20];
+        string[] Tokens = null;//reading all the names and their scores from a file
+
         private void Top10_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.SlateGray;
-            string[] Tokens = File.ReadAllLines("Connect4Score.txt");//reading all the names and their scores from a file
+            Tokens = TakingScore("connect4.txt");//reading all the names and their scores from a file
 
-            //now we will split each name and score and put them in an arrays of strings for the names and in array of integers for the score
-            string[] Temp;//using split function on tokens and putting every name and his score in this and then putting them in a third array
             int i = 0;
             int j = 0;
-            string[] NamesAndScores = new string[20];//putting the score and the name in each index of this array of strings
-            while (i < Tokens.Length)
+            int size = Tokens.Length;
+            string[] NamesAndScores = new string[size-1];//putting the score and the name in each index of this array of strings
+            while (i < Tokens.Length)//taking out the "***" nd puting them in array
             {
-                Temp = Tokens[i].Split();
-                NamesAndScores[j] = Temp[0];
-                j++;
-                NamesAndScores[j] = Temp[1];
-                j++;
+                if (i % 3 == 0)
+                {
+                    NamesAndScores[j] = Tokens[i];
+                    j++;
+                }
+                else if (i % 3 == 1)
+                {
+                    NamesAndScores[j] = Tokens[i];
+                    j++;
+                }
+
                 i++;
             }
             i = 0;
             j = 0;
             int k = 0;
-           
-            long[] Scores = new long[10];
-            while (i < 20)//a loop top put to take the score and put them in an array
+            double NewSize = Convert.ToDouble(size - 1);//if the size is in odd number 
+            NewSize = Math.Floor(NewSize / 2);
+
+            long[] Scores = new long[Convert.ToInt32(NewSize)];
+            while (i < size-1)//a loop top put to take the score and put them in an array
             {
          
-                if(i%2==1)
+                if(i%2==1 )
                 {
+                  
                     Scores[k] = Convert.ToInt64(NamesAndScores[i]);
                     k++;
                 }
@@ -55,12 +65,92 @@ namespace WindowsFormsApp1
            
             Array.Sort<long>(Scores);//using a built inn fuc to sort them from small to bigger
             string[] str = SortNamesAndScores(NamesAndScores, Scores);//a function to match the right names with the right score after sorting
-            //so much indexx because there are a lot of things in the loops that print the labels
-            j = 9;
+            int count = 0;
+            for (i = 0; i < str.Length; i++)//for the time there is null in str and because in the Scores array well have 0 if there is nothing 
+            {   
+                if(str[i]!=null)
+                    count ++;
+            }
+            PrintingtoScreen(str, Scores, count);
+           
+        }
+        public string[]  SortNamesAndScores(string[] NamesAndScores,long [] Scores)
+        {
+            int size = (Tokens.Length) - 1;
+            double NewSize = Convert.ToDouble(size - 1);//if the size is in odd number 
+            NewSize = Math.Floor(NewSize / 2);
+            string[] str = new string[Convert.ToInt32(NewSize)];
+            int z = Convert.ToInt32(NewSize) - 1;
+            for(int i = z; i >= 0; i--)
+            {
+                for(int j = 0; j < size; j++)
+                {
+                    if(j%2==1 && Convert.ToInt64(NamesAndScores[j]) == Scores[i] )
+                    {
+                        if (z < 0)
+                        {
+                            break;
+                        }
+                        str[z] = NamesAndScores[j-1];
+                       
+                        z--;
+                    }
+                }
+            }
+            return str;
+        }
+        public string [] TakingScore(string filename)//editing the score in the connect 4 file
+        {
+            string name = Program.username;
+            string[] allfile;
+            allfile = File.ReadAllLines(filename);
+            StreamReader Read = new StreamReader(filename);
+            string user = Read.ReadLine();
+            string result = name;
+            int i = 0;
+            if (user == name)
+            {
+                user = Read.ReadLine(); i++;
+                Read.Close();
+            }
+
+
+            while ( user != null)
+            {
+                while ( user != "***")
+                {
+                    user = Read.ReadLine(); i++;
+                }
+                user = Read.ReadLine(); i++;
+
+                if (user == name)
+                {
+                    if (i > allfile.Length-1)
+                    {
+                        break;
+                    }
+                    user = Read.ReadLine(); i++;
+                    allfile[i] = ToString();
+
+                }
+
+            }
+            Read.Close();
+            return allfile;
+
+        }
+        public void PrintingtoScreen(string[] str,long [] Scores,int count)//prints the labels
+        {
+            int size = (Tokens.Length) - 1;
+            double NewSize = Convert.ToDouble(size - 1);//if the size is in odd number 
+            NewSize = Math.Floor(NewSize / 2);
+            int i=0,j,k;
+            //because  the str and the array well be sorted by smaller to bigger we need to take the last 10 numbers which is why j and y are decleard like that
+            j = Convert.ToInt32(NewSize)-1;
             k = 0;
             int c = 0;
             int x = 0;
-            int y = 9;
+            int y = Convert.ToInt32(NewSize) - 1;
 
             for (i = 0; i < Label.Length; i++)//printing the scores
             {
@@ -73,7 +163,7 @@ namespace WindowsFormsApp1
                     this.Label[i].Location = new System.Drawing.Point(130, 40 * x);
                     this.Label[i].Size = new System.Drawing.Size(150, 30);
                     this.Label[i].Font = new Font("Arial", 12, FontStyle.Regular);
-                    this.Label[i].ForeColor = Color.PeachPuff;
+                    this.Label[i].ForeColor = Color.BurlyWood;
                     this.Label[i].BackColor = Color.Transparent;
                     this.Label[i].Text = str[j];
                     c++;
@@ -87,8 +177,12 @@ namespace WindowsFormsApp1
                     this.Label[i].Location = new System.Drawing.Point(410, 40 * x);
                     this.Label[i].Size = new System.Drawing.Size(150, 30);
                     this.Label[i].Font = new Font("Arial", 12, FontStyle.Regular);
-                    this.Label[i].ForeColor = Color.PeachPuff;
+                    this.Label[i].ForeColor = Color.BurlyWood;
                     this.Label[i].BackColor = Color.Transparent;
+                    if (count !=0 && y == (size/2-1) - count)
+                    {
+                        break;
+                    }
                     this.Label[i].Text = Convert.ToString(Scores[y]);
                     k++;
                     y--;
@@ -96,24 +190,6 @@ namespace WindowsFormsApp1
                 this.Controls.Add(Label[i]);
 
             }
-        }
-        public string[]  SortNamesAndScores(string[] NamesAndScores,long [] Scores)
-        {
-            string[] str = new string[10];
-            int z = 9;
-            for(int i = 9; i >= 0; i--)
-            {
-                for(int j = 0; j < 20; j++)
-                {
-                    if(j%2==1 && Convert.ToInt64(NamesAndScores[j]) == Scores[i])
-                    {
-                        str[z] = NamesAndScores[j-1];
-                       
-                        z--;
-                    }
-                }
-            }
-            return str;
         }
     }
 }

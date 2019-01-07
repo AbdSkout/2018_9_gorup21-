@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.set_of_vector_scenic_spotlights_1441_14;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(839, 552);
             this.Controls.Add(this.label3);

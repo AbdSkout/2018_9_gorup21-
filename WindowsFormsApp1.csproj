@@ -242,6 +242,7 @@
     <None Include="img\images.png" />
     <None Include="img\images.jpg" />
     <None Include="img\Mystery-guest.jpg" />
+    <None Include="img\background.png" />
     <Content Include="img\p1.png" />
     <Content Include="img\p2.png" />
     <Content Include="img\p3.png" />

@@ -49,3 +49,4 @@ C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.Co
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.trytoeditthefile.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.trytoeditthefile.resources

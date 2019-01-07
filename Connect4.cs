@@ -111,35 +111,34 @@ namespace WindowsFormsApp1
 
 
                         }
+                        else if (result == DialogResult.No)
+                        {
+                            this.Hide();
+                            if (Program.username == null)
+                            {
+                                GuestPage f3 = new GuestPage();
+                                f3.ShowDialog();
+                            }
+                            else
+                            {
+                                UserPage f3 = new UserPage();
+                                f3.ShowDialog();
+                            }
+                        }
                     }
 
                 }
 
 
-
+                
                 if (Player == 1)//if we have red color then it prints it in label6 and changes the size and color to red and added a popup question box to know if the player wants to continue or not
                 {
                     timer1.Stop();
 
-                    if (ticks < 10)
-                    {
-                        label4.Text = (ticks * 1000).ToString();//score is bigger under one minute
-                    }
-                    else if (ticks < 60)
-                    {
-                        label4.Text = (ticks * 100).ToString();//score is bigger under one minute
+                    int score = Scorecalculate();
+                    label4.Text = score.ToString();
 
-                    }
-                    else if (ticks < 120)
-                    {
-                        label4.Text = (ticks * 10).ToString();//score out it decress
-
-                    }
-                    else
-                    {
-                        label4.Text = ticks.ToString();//score out the same one
-
-                    }
+                    EditScore("connect4.txt");
                     pictureBox2.Visible = false;//not showing the img of red cicrlce
                     pictureBox1.Visible = true;//showing image of winner
 
@@ -170,26 +169,8 @@ namespace WindowsFormsApp1
                 if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
                 {
                     timer1.Stop();
-
-                    if (ticks < 10)//scores
-                    {
-                        label5.Text = (ticks * 1000).ToString();//score is bigger under one minute
-                    }
-                    else if (ticks < 60)
-                    {
-                        label5.Text = (ticks * 100).ToString();//score is bigger under one minute
-
-                    }
-                    else if (ticks < 120)
-                    {
-                        label5.Text = (ticks * 10).ToString();//score out it decress
-
-                    }
-                    else
-                    {
-                        label5.Text = ticks.ToString();//score out the same one
-
-                    }
+                    int score = Scorecalculate();
+                    label5.Text = score.ToString();
                     pictureBox3.Visible = false;//not showing the img of blue cicrlce
                     pictureBox4.Visible = true;//showing image of winner
 
@@ -582,40 +563,8 @@ namespace WindowsFormsApp1
 
             return false;
         }
-        public void EditScore()
-        {
-            string name = Program.username;
-            StreamReader Read = new StreamReader("connect4.txt");
-            string user = Read.ReadLine();
-
-            if (user == name)
-            {
-                Read.Close();
-               //------ return true;
-            }
-
-            while (user != null)
-            {
-                while (user != "***")
-                {
-                    user = Read.ReadLine();
-                }
-                user = Read.ReadLine();
-
-                if (user == name)
-                {
-                    Read.Close();
-                    //-----return true;
-
-                }
-
-            }
-            Read.Close();
-
-
-
-        }
-        public void EditScore(string filename)
+ 
+        public void EditScore(string filename)//editing the score in the connect 4 file
         {
             string name = Program.username;
             string[] allfile;
@@ -623,13 +572,13 @@ namespace WindowsFormsApp1
             StreamReader Read = new StreamReader(filename);
             string user = Read.ReadLine();
             string result = name;
-            int score = 0, i = 0;
+            int  i = 0;
             if (user == name)
             {
                 user = Read.ReadLine(); i++;
-                score = int.Parse(user);
-                allfile[i] = (score + 12).ToString();
-
+               
+                allfile[i] = Scorecalculate().ToString();
+                Read.Close();
             }
 
 
@@ -644,21 +593,41 @@ namespace WindowsFormsApp1
                 if (user == name)
                 {
                     user = Read.ReadLine(); i++;
-                    score = int.Parse(user);
-                    allfile[i] = (score + 12).ToString();
-
-
-                    score = int.Parse(user);
-
+                    allfile[i] = Scorecalculate().ToString();
 
                 }
 
             }
+            Read.Close();
             File.WriteAllLines(filename, allfile);
 
+        }
+        public int Scorecalculate()//calculating the score
+        {
+            int score = 0;
+            //printing them out 
+            if (ticks < 10)//scores
+            {
+                score = (ticks * 1000);//score is bigger under one minute
+                
+            }
+            else if (ticks < 60)
+            {
+                score = (ticks * 100);//score is bigger under one minute
 
+            }
+            else if (ticks < 120)
+            {
+                score= (ticks * 10);//score out it decress
 
+            }
+            else
+            {
+                score = ticks;//score out the same one
 
+            }
+            
+            return score;
         }
     }
 }
