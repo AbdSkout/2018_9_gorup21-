@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace WindowsFormsApp1
 {
     public partial class SnakesAndLadders : Form
@@ -581,6 +581,39 @@ namespace WindowsFormsApp1
             helpy = sumy - c;
             timer2.Start();
             
+        }
+        public void EditScore()
+        {
+            string name = Program.username;
+            StreamReader Read = new StreamReader("connect4.txt");
+            string user = Read.ReadLine();
+
+            if (user == name)
+            {
+                Read.Close();
+                //------ return true;
+            }
+
+            while (user != null)
+            {
+                while (user != "***")
+                {
+                    user = Read.ReadLine();
+                }
+                user = Read.ReadLine();
+
+                if (user == name)
+                {
+                    Read.Close();
+                    //-----return true;
+
+                }
+
+            }
+            Read.Close();
+
+
+
         }
     }
 }
