@@ -584,7 +584,7 @@ namespace WindowsFormsApp1
         public void EditScore()
         {
             string name = Program.username;
-            StreamReader Read = new StreamReader("connect4.txt");
+            StreamReader Read = new StreamReader("snake.txt");
             string user = Read.ReadLine();
 
             if (user == name)
