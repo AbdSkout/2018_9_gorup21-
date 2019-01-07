@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace WindowsFormsApp1
 {
     public partial class SnakesAndLadders : Form
@@ -15,8 +15,7 @@ namespace WindowsFormsApp1
         static int helpx, helpy;
         static int sumx = 1, sumy = 1;
         static int time = 0;
-        static int specail1 = 0;
-        static int specail2 = 0;
+        
         static int c = 0;
         int sp1 = 4;
         int sp2 = 4;
@@ -581,6 +580,51 @@ namespace WindowsFormsApp1
             helpy = sumy - c;
             timer2.Start();
             
+        }
+        public void EditScore(string filename)
+        {
+            string name = Program.username;
+            string[] allfile;
+            allfile = File.ReadAllLines(filename);
+            StreamReader Read = new StreamReader(filename);
+            string user = Read.ReadLine();
+            string result = name;
+            int score = 0, i = 0;
+            if (user == name)
+            {
+                user = Read.ReadLine(); i++;
+                score = int.Parse(user);
+                allfile[i] = (score + 12).ToString();
+
+            }
+
+
+            while (user != null)
+            {
+                while (user != "***")
+                {
+                    user = Read.ReadLine(); i++;
+                }
+                user = Read.ReadLine(); i++;
+
+                if (user == name)
+                {
+                    user = Read.ReadLine(); i++;
+                    score = int.Parse(user);
+                    allfile[i] = (score + 12).ToString();
+
+
+                    score = int.Parse(user);
+
+
+                }
+
+            }
+            File.WriteAllLines(filename, allfile);
+
+
+
+
         }
     }
 }

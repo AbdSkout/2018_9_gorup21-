@@ -615,6 +615,50 @@ namespace WindowsFormsApp1
 
 
         }
+        public void EditScore(string filename)
+        {
+            string name = Program.username;
+            string[] allfile;
+            allfile = File.ReadAllLines(filename);
+            StreamReader Read = new StreamReader(filename);
+            string user = Read.ReadLine();
+            string result = name;
+            int score = 0, i = 0;
+            if (user == name)
+            {
+                user = Read.ReadLine(); i++;
+                score = int.Parse(user);
+                allfile[i] = (score + 12).ToString();
 
+            }
+
+
+            while (user != null)
+            {
+                while (user != "***")
+                {
+                    user = Read.ReadLine(); i++;
+                }
+                user = Read.ReadLine(); i++;
+
+                if (user == name)
+                {
+                    user = Read.ReadLine(); i++;
+                    score = int.Parse(user);
+                    allfile[i] = (score + 12).ToString();
+
+
+                    score = int.Parse(user);
+
+
+                }
+
+            }
+            File.WriteAllLines(filename, allfile);
+
+
+
+
+        }
     }
 }

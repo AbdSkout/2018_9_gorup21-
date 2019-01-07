@@ -23,3 +23,29 @@ C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\Wind
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Top10.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.exe
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Block.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Connect4.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.feedback.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.HomePage.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.MyScore.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Read_feed_back.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.SnakesAndLadders.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ChoosingPlayer.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.SignUp.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.GuestPage.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Top10.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.UserPage.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.AdminPage.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ForgotPassword.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.specialAbility.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.you_are_blocked.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.trytoeditthefile.resources
