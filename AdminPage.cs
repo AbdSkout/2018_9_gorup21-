@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         {
             Connect4 s = new Connect4();
             this.Hide();
-            
+            s.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)
