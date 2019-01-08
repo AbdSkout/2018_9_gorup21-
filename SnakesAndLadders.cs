@@ -419,6 +419,7 @@ namespace WindowsFormsApp1
             }
             if (sumx == 100)
             {
+                EditScore("snake.txt");
                 DialogResult result = MessageBox.Show( Program.nameingame+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
@@ -594,7 +595,7 @@ namespace WindowsFormsApp1
             {
                 user = Read.ReadLine(); i++;
                 score = int.Parse(user);
-                allfile[i] = (score + 12).ToString();
+                allfile[i] = (score + sumx).ToString();
 
             }
 
@@ -611,7 +612,7 @@ namespace WindowsFormsApp1
                 {
                     user = Read.ReadLine(); i++;
                     score = int.Parse(user);
-                    allfile[i] = (score + 12).ToString();
+                    allfile[i] = (score + sumx).ToString();
 
 
                     score = int.Parse(user);
@@ -619,7 +620,7 @@ namespace WindowsFormsApp1
 
                 }
 
-            }
+            }Read.Close();
             File.WriteAllLines(filename, allfile);
 
 
