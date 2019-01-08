@@ -19,7 +19,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Connect4 s = new Connect4();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
