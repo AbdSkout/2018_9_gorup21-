@@ -572,12 +572,13 @@ namespace WindowsFormsApp1
             StreamReader Read = new StreamReader(filename);
             string user = Read.ReadLine();
             string result = name;
+            int score;
             int  i = 0;
             if (user == name)
             {
                 user = Read.ReadLine(); i++;
-               
-                allfile[i] = Scorecalculate().ToString();
+                score = int.Parse(user);
+                allfile[i] = (score+Scorecalculate()).ToString();
                 Read.Close();
             }
 
@@ -593,8 +594,8 @@ namespace WindowsFormsApp1
                 if (user == name)
                 {
                     user = Read.ReadLine(); i++;
-                    allfile[i] = Scorecalculate().ToString();
-
+                    score = int.Parse(user);
+                    allfile[i] = (score + Scorecalculate()).ToString();
                 }
 
             }

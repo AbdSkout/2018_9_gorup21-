@@ -156,6 +156,7 @@ namespace WindowsFormsApp1
             }
             if (sumx == 100)
             {
+                EditScore("snake.txt");
                 string win = Program.nameingame;
                 DialogResult result = MessageBox.Show( win + " win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -188,7 +189,8 @@ namespace WindowsFormsApp1
             }
             if (sumy == 100)
             {
-                
+                EditScore("snake.txt");
+
                 DialogResult result = MessageBox.Show( name+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
@@ -451,6 +453,7 @@ namespace WindowsFormsApp1
             }
             if (sumy == 100)
             {
+                EditScore("snake.txt");
                 DialogResult result = MessageBox.Show( name+" win \n Do you want to continue playing?", "snakes and ladders", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {

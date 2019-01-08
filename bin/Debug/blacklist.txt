@@ -1,4 +1,2 @@
+yad
 a
-abd
-zed
-mohamed
