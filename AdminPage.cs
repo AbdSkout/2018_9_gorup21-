@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Connect4 s = new Connect4();
+            this.Hide();
             
         }
 
