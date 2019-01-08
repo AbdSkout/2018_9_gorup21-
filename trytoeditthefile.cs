@@ -61,6 +61,7 @@ namespace WindowsFormsApp1
                 }
 
             }
+            Read.Close();
             File.WriteAllLines(filename, allfile);
 
 
@@ -70,7 +71,42 @@ namespace WindowsFormsApp1
 
         private void trytoeditthefile_Load(object sender, EventArgs e)
         {
-
+            ReadAndShowData();
+        }
+        private void ReadAndShowData()
+        {
+            //1st you must create columns to dgv, like:
+            //and so on...
+            StreamReader sr = new StreamReader("connect4.txt");
+                int i=0;
+            bool flag = false;
+                string line=sr.ReadLine(),l;
+                DataTable table = new DataTable();
+                table.Columns.Add("name");
+                table.Columns.Add("score");
+        a:
+            while (line != null)
+            {
+                if (line != "***")
+                {
+                    l = sr.ReadLine(); i++;
+                    table.Rows.Add(line, l);
+                }
+                line = sr.ReadLine();
+                i++;
+            }
+            sr.Close();
+            if (flag == false)
+            {
+                flag = true;
+                table.Rows.Add("*******", "*******");
+                sr = new StreamReader("snake.txt");
+                line = sr.ReadLine();
+                i = 0;
+                goto a;
+            }
+            else
+                dataGridView1.DataSource = table;
         }
     }
 }
