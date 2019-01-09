@@ -63,5 +63,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminPage p = new AdminPage();
+            this.Hide();
+            p.ShowDialog();
+        }
     }
 }
