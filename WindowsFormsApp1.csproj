@@ -84,6 +84,12 @@
     <Compile Include="Read feed back.Designer.cs">
       <DependentUpon>Read feed back.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultSheet.Designer.cs">
+      <DependentUpon>ResultSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Read feed back.resx">
       <DependentUpon>Read feed back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultSheet.resx">
+      <DependentUpon>ResultSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowUsers.resx">
       <DependentUpon>ShowUsers.cs</DependentUpon>

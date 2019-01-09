@@ -77,3 +77,4 @@ C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.CoreComp
 C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ShowUsers.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ResultSheet.resources
