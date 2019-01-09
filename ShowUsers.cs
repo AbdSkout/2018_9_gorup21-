@@ -43,6 +43,9 @@ namespace WindowsFormsApp1
             }
             sr.Close();
             dataGridView1.DataSource = table;
+            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 12F, GraphicsUnit.Pixel);
+
+
         }
         private void ShowUsers_Load(object sender, EventArgs e)
         {
@@ -52,6 +55,11 @@ namespace WindowsFormsApp1
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
