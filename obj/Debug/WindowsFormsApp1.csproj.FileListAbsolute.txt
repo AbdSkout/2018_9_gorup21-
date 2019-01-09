@@ -76,3 +76,4 @@ C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.Generate
 C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ShowUsers.resources

@@ -75,8 +75,6 @@ namespace WindowsFormsApp1
         }
         private void ReadAndShowData()
         {
-            //1st you must create columns to dgv, like:
-            //and so on...
             StreamReader sr = new StreamReader("connect4.txt");
                 int i=0;
             bool flag = false;
