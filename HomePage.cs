@@ -299,6 +299,7 @@ namespace WindowsFormsApp1
                         flag_block = true;
 
                 }
+                s.Close();
                 this.Hide();
                 if (flag_block)
                 {
