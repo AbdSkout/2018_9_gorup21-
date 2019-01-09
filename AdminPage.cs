@@ -38,6 +38,9 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            ShowUsers s = new ShowUsers();
+            this.Hide();
+            s.ShowDialog();
 
         }
 
