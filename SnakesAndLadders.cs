@@ -593,19 +593,11 @@ namespace WindowsFormsApp1
                     score = int.Parse(user);
                     allfile[i] = (score + sumx).ToString();
 
-
                     score = int.Parse(user);
-
-
                 }
-
             }
             Read.Close();
             File.WriteAllLines(filename, allfile);
-
-
-
-
         }
     }
 }
