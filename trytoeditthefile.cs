@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
                 }
                 user = Read.ReadLine(); i++;
 
-                if (user == name)
+                if (user != null && user == name)
                 {
                     user = Read.ReadLine(); i++;
                 score =int.Parse(user);

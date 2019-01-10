@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         private void Top10_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.SlateGray;
-            Tokens = TakingScore("connect4.txt");//reading all the names and their scores from a file
+            Tokens = TakingScore("snake.txt");//reading all the names and their scores from a file
 
             int i = 0;
             int j = 0;
