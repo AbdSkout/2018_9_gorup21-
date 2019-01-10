@@ -245,6 +245,7 @@ namespace WindowsFormsApp1
                     }
                     else if (textBox2.Text == "admin")
                     {
+                        Program.username = textBox1.Text;
                         Program.isadmin = true;
                         for (int i = 0; i <= 2; i++)
                         {
