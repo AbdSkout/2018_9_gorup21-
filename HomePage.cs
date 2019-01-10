@@ -344,6 +344,7 @@ namespace WindowsFormsApp1
             int c = rnd.Next(1, 100);
             string guset = "guset" + c.ToString();
             Program.nameingame = guset;
+            
         }
     }
 }

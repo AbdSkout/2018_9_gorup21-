@@ -137,7 +137,7 @@
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
             this.label3.Location = new System.Drawing.Point(174, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 13);
+            this.label3.Size = new System.Drawing.Size(17, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "W";
             this.label3.Visible = false;
@@ -148,7 +148,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Mystery_guest;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(464, 190);
+            this.pictureBox4.Location = new System.Drawing.Point(421, 190);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(134, 50);
             this.pictureBox4.TabIndex = 12;
@@ -159,7 +159,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.images7;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(433, 106);
+            this.pictureBox3.Location = new System.Drawing.Point(404, 106);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(190, 50);
             this.pictureBox3.TabIndex = 11;
@@ -171,7 +171,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.images6;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(54, 150);
+            this.pictureBox2.Location = new System.Drawing.Point(60, 190);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(198, 50);
             this.pictureBox2.TabIndex = 10;
@@ -182,7 +182,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.sign_up_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(428, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(399, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 50);
             this.pictureBox1.TabIndex = 9;
