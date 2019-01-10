@@ -106,3 +106,5 @@ C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.csproj.GenerateResource
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.exe
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ResultSheet.resources
+C:\Users\user\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ShowUsers.resources

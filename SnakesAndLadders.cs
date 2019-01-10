@@ -588,6 +588,10 @@ namespace WindowsFormsApp1
         public void EditScore(string filename)
         {
             string name = Program.username;
+            if (name == null)
+            {
+                return;
+            }
             string[] allfile;
             allfile = File.ReadAllLines(filename);
             StreamReader Read = new StreamReader(filename);
