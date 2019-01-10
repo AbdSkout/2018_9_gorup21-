@@ -58,6 +58,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Program.isadmin = false;
             Program.username = null;
             Program.nameingame= null;
             this.Hide();
