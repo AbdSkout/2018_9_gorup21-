@@ -599,7 +599,8 @@ namespace WindowsFormsApp1
 
                 }
 
-            }Read.Close();
+            }
+            Read.Close();
             File.WriteAllLines(filename, allfile);
 
 
