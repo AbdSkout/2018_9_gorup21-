@@ -560,10 +560,37 @@ namespace WindowsFormsApp1
             helpx += move;
             c--;
 
-        } 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Program.username == null) //viewing the top 10 players in connect four
+            {
+                timer1.Stop();
+                DialogResult result = MessageBox.Show("This is page is only avaliable for users.Do you want to sign up?", "Top 10", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SignUp sign = new SignUp();
+                    sign.ShowDialog();
 
 
-
+                }
+                else
+                {
+                    this.Hide();
+                    SnakesAndLadders snakes = new SnakesAndLadders(name);
+                    snakes.ShowDialog();
+                }
+            }
+            else
+            {
+                timer1.Stop();
+                this.Hide();
+                Top10 top10 = new Top10("snake");
+                top10.ShowDialog();
+            }
+        }
 
         public void nextpc()
         {

@@ -13,8 +13,10 @@ namespace WindowsFormsApp1
 {
     public partial class Top10 : Form
     {
-        public Top10()
+        string filename1;//for taking the name of a file
+        public Top10(string filename)
         {
+            filename1 = filename;
             InitializeComponent();
         }
         Label[] Label = new Label[20];
@@ -23,7 +25,8 @@ namespace WindowsFormsApp1
         private void Top10_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.SlateGray;
-            Tokens = TakingScore("snake.txt");//reading all the names and their scores from a file
+        
+            Tokens = TakingScore(filename1+".txt");//reading all the names and their scores from a file
 
             int i = 0;
             int j = 0;

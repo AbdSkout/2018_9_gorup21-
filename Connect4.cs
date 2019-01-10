@@ -417,7 +417,7 @@ namespace WindowsFormsApp1
             {
                 timer1.Stop();
                 this.Hide();
-                Top10 top10 = new Top10();
+                Top10 top10 = new Top10("connect4");
                 top10.ShowDialog();
             }
 
