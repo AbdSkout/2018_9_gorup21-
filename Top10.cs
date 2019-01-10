@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
         public string[]  SortNamesAndScores(string[] NamesAndScores,long [] Scores)
         {
             int size = (Tokens.Length) - 1;
-            double NewSize = Convert.ToDouble(size - 1);//if the size is in odd number 
+            double NewSize = Convert.ToDouble(size );//if the size is in odd number 
             NewSize = Math.Floor(NewSize / 2);
             string[] str = new string[Convert.ToInt32(NewSize)];
             int z = Convert.ToInt32(NewSize) - 1;
@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
                         break;
                     }
                     user = Read.ReadLine(); i++;
-                    allfile[i] = ToString();
+                    allfile[i] = user.ToString();
 
                 }
 
@@ -142,7 +142,7 @@ namespace WindowsFormsApp1
         public void PrintingtoScreen(string[] str,long [] Scores,int count)//prints the labels
         {
             int size = (Tokens.Length) - 1;
-            double NewSize = Convert.ToDouble(size - 1);//if the size is in odd number 
+            double NewSize = Convert.ToDouble(size );//if the size is in odd number 
             NewSize = Math.Floor(NewSize / 2);
             int i=0,j,k;
             //because  the str and the array well be sorted by smaller to bigger we need to take the last 10 numbers which is why j and y are decleard like that

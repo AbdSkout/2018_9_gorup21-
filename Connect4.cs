@@ -408,6 +408,7 @@ namespace WindowsFormsApp1
             }
             else
             {
+                timer1.Stop();
                 this.Hide();
                 Top10 top10 = new Top10();
                 top10.ShowDialog();
@@ -591,7 +592,7 @@ namespace WindowsFormsApp1
                 }
                 user = Read.ReadLine(); i++;
 
-                if (user == name)
+                if (user != null && user == name)
                 {
                     user = Read.ReadLine(); i++;
                     score = int.Parse(user);
