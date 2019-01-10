@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     public partial class Top10 : Form
     {
         string filename1;//for taking the name of a file
+       
         public Top10(string filename)
         {
             filename1 = filename;
@@ -24,6 +25,7 @@ namespace WindowsFormsApp1
 
         private void Top10_Load(object sender, EventArgs e)
         {
+            this.Text = filename1 + " Top 10";
             this.BackColor = Color.SlateGray;
         
             Tokens = TakingScore(filename1+".txt");//reading all the names and their scores from a file
@@ -192,6 +194,22 @@ namespace WindowsFormsApp1
                 }
                 this.Controls.Add(Label[i]);
 
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (filename1 == "connect4")
+            {
+                this.Hide();
+                Connect4 connect = new Connect4();
+                connect.ShowDialog();
+            }
+            else if (filename1 == "snake")
+            {
+                this.Hide();
+                ChoosingPlayer snake = new ChoosingPlayer();
+                snake.ShowDialog();
             }
         }
     }
