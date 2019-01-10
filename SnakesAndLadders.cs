@@ -170,20 +170,9 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                   
-                        this.Hide();
-                    if (Program.username == null)
-                    {
-                        GuestPage g = new GuestPage();
-                        g.Show();
-
-                    }
-                    else
-                    {
-                        UserPage g = new UserPage();
-                        g.Show();
-
-                    }
+                    this.Hide();
+                    ChoosingPlayer choose = new ChoosingPlayer();
+                    choose.ShowDialog();
                 }
 
             }
@@ -203,25 +192,13 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-
                     this.Hide();
-                    if (Program.username == null)
-                    {
-                        GuestPage g = new GuestPage();
-                        g.Show();
-
-                    }
-                    else
-                    {
-                        UserPage g = new UserPage();
-                        g.Show();
-
-                    }
-
+                    ChoosingPlayer choose = new ChoosingPlayer();
+                    choose.ShowDialog();
                 }
 
 
-               
+
             }
             if (flag_pc != 1)
                 time++;
@@ -434,21 +411,9 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-
                     this.Hide();
-                    if (Program.username == null)
-                    {
-                        GuestPage g = new GuestPage();
-                        g.Show();
-
-                    }
-                    else
-                    {
-                        UserPage g = new UserPage();
-                        g.Show();
-
-                    }
-
+                    ChoosingPlayer choose = new ChoosingPlayer();
+                    choose.ShowDialog();
                 }
             }
             if (sumy == 100)
@@ -465,21 +430,9 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-
                     this.Hide();
-                    if (Program.username == null)
-                    {
-                        GuestPage g = new GuestPage();
-                        g.Show();
-
-                    }
-                    else
-                    {
-                        UserPage g = new UserPage();
-                        g.Show();
-
-                    }
-
+                    ChoosingPlayer choose = new ChoosingPlayer();
+                    choose.ShowDialog();
                 }
 
 
@@ -496,19 +449,11 @@ namespace WindowsFormsApp1
 
         public void button3_Click(object sender, EventArgs e)
         {
-            if (Program.username == null)
-            {
-                this.Hide();
-                GuestPage f1 = new GuestPage();
-                f1.Show();
 
-            }
-            else
-            {
-                this.Hide();
-                UserPage f1 = new UserPage();
-                f1.Show();
-            }
+            this.Hide();
+            ChoosingPlayer f1 = new ChoosingPlayer();
+            f1.Show();
+        
 
         }
 

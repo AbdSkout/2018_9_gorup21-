@@ -154,16 +154,22 @@ namespace WindowsFormsApp1
                     else if (result == DialogResult.No)
                     {
                         this.Hide();
-                        if (Program.username == null)
+                        if (Program.isadmin==true)
                         {
-                            GuestPage f3 = new GuestPage();
-                            f3.ShowDialog();
+                            AdminPage Page = new AdminPage();
+                            Page.ShowDialog();
                         }
                         else
-                        {
-                            UserPage f3 = new UserPage();
-                            f3.ShowDialog();
-                        }
+                            if (Program.username == null)
+                            {
+                                GuestPage f3 = new GuestPage();
+                                f3.ShowDialog();
+                            }
+                            else
+                            {
+                                UserPage f3 = new UserPage();
+                                f3.ShowDialog();
+                            }
                     }
                 }
                 if (Player == 2)//if we have blue color then it prints it in label6 and changes the size and color to blue
@@ -375,7 +381,6 @@ namespace WindowsFormsApp1
             if (Program.isadmin == true)
             {
                 AdminPage page = new AdminPage();
-                this.Hide();
                 page.ShowDialog();
             }
             else 
