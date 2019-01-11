@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
 
         public void Connect4_Load(object sender, EventArgs e)
         {
-            
+            label1.Text = Program.nameingame;
             this.Text = "Connect 4";
             this.BackColor = Color.SlateGray;
             timer1.Start();
