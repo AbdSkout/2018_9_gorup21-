@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
                 pictureBox1.Visible = true;
 
             }
-            label3.Text = richTextBox1.Text;
+            
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {

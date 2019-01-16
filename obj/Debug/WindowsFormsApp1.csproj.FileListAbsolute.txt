@@ -164,3 +164,4 @@ C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.cspr
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form1.resources
