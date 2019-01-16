@@ -101,41 +101,10 @@ namespace WindowsFormsApp1
         }
         public string [] TakingScore(string filename)//editing the score in the connect 4 file
         {
-            string name = Program.username;
+            
             string[] allfile;
             allfile = File.ReadAllLines(filename);
-            StreamReader Read = new StreamReader(filename);
-            string user = Read.ReadLine();
-            string result = name;
-            int i = 0;
-            if (user == name)
-            {
-                user = Read.ReadLine(); i++;
-                Read.Close();
-            }
-
-
-            while ( user != null)
-            {
-                while ( user != "***")
-                {
-                    user = Read.ReadLine(); i++;
-                }
-                user = Read.ReadLine(); i++;
-
-                if (user == name)
-                {
-                    if (i > allfile.Length-1)
-                    {
-                        break;
-                    }
-                    user = Read.ReadLine(); i++;
-                    allfile[i] = user.ToString();
-
-                }
-
-            }
-            Read.Close();
+            
             return allfile;
 
         }
@@ -156,7 +125,7 @@ namespace WindowsFormsApp1
             {
                 this.Label[i] = new Label();
 
-                if (i % 2 == 0)
+                if (j>=0 && i % 2 == 0)
                 {
                     x = c + 1;//for location
                     this.Label[i].Visible = true;
@@ -169,7 +138,7 @@ namespace WindowsFormsApp1
                     c++;
                     j--;//for index in the string
                 }
-                else
+                else if(y>=0 && i%2==1)
                 {
                     x = k + 1;
 

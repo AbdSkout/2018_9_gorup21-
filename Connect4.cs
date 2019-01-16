@@ -581,12 +581,13 @@ namespace WindowsFormsApp1
                 score = int.Parse(user);
                 allfile[i] = (score+Scorecalculate()).ToString();
                 Read.Close();
+                goto end;
             }
 
 
             while (user != null)
             {
-                while (user != "***")
+                while (user != null && user != "***")
                 {
                     user = Read.ReadLine(); i++;
                 }
@@ -601,6 +602,7 @@ namespace WindowsFormsApp1
 
             }
             Read.Close();
+            end:
             File.WriteAllLines(filename, allfile);
 
         }

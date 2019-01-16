@@ -134,3 +134,5 @@ C:\Users\abd\Desktop\New folder (2)\New folder\2018_9_gorup21-\obj\Debug\Windows
 C:\Users\abd\Desktop\New folder (2)\New folder\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\abd\Desktop\New folder (2)\New folder\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\abd\Desktop\New folder (2)\New folder\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ResultSheet.resources
+C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.ShowUsers.resources

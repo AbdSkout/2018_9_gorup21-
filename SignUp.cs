@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             {
                 label6.Visible = true;
                 label6.Text = "This User Name is already exists";
-                
+                Flag = false;
                 
 
 
@@ -169,6 +169,11 @@ namespace WindowsFormsApp1
             HomePage f1 = new HomePage();
             this.Hide();
             f1.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
