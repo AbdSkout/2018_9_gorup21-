@@ -191,5 +191,20 @@ namespace WindowsFormsApp1
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (Program.username == null)
+            {
+                GuestPage f3 = new GuestPage();
+                f3.ShowDialog();
+            }
+            else
+            {
+                UserPage f3 = new UserPage();
+                f3.ShowDialog();
+            }
+        }
     }
 }
