@@ -62,6 +62,7 @@ namespace WindowsFormsApp1
         {
             Program.username = null;
             Program.nameingame= null;
+            Program.isadmin = false;
             this.Hide();
             HomePage f1 = new HomePage();
             f1.Show();
