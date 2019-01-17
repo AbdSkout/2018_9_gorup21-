@@ -496,6 +496,14 @@ namespace WindowsFormsApp1
 
         public void button3_Click(object sender, EventArgs e)
         {
+            if (Program.isadmin==true)
+            {
+                this.Hide();
+                AdminPage f1 = new AdminPage();
+                f1.Show();
+
+            }
+            else
             if (Program.username == null)
             {
                 this.Hide();

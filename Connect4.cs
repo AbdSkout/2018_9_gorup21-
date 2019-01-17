@@ -372,6 +372,12 @@ namespace WindowsFormsApp1
         public void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            if (Program.isadmin==true)
+            {
+                AdminPage adminPage = new AdminPage();
+                adminPage.ShowDialog();
+            }
+            else
             if (Program.username == null)
             {
                 GuestPage f3 = new GuestPage();

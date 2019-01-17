@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
     {
         public static string username=null;
         public static string nameingame=null;
-
+        public static bool isadmin = false;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
