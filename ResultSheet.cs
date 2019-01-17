@@ -99,5 +99,12 @@ namespace WindowsFormsApp1
             snkl.Close();
             dataGridView1.DataSource = table;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminPage adminPage = new AdminPage();
+            adminPage.ShowDialog();
+        }
     }
 }
