@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         }
         private void Form6_Load(object sender, EventArgs e)
         {
-            StreamReader file = new StreamReader("text.txt");
+            StreamReader file = new StreamReader("users.txt");
             string name = file.ReadLine();
            string temp = file.ReadLine();
             
