@@ -205,7 +205,7 @@ namespace WindowsFormsApp1
             }
         }
         
-        int Tiecheck(int[,] mat, int Row, int Col)
+        public int Tiecheck(int[,] mat, int Row, int Col)
         {
             int count = 0;
             int player = 2;//it is set to the blue color else it will be set to red if the last player is red

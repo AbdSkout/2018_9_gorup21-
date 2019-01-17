@@ -65,6 +65,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

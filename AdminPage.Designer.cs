@@ -159,6 +159,7 @@
             this.Controls.Add(this.button1);
             this.Name = "AdminPage";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.AdminPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

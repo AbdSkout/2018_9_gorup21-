@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         Label[] Label = new Label[20];
-        string[] Tokens = null;//reading all the names and their scores from a file
+       public string[] Tokens = null;//reading all the names and their scores from a file
 
         private void Top10_Load(object sender, EventArgs e)
         {
@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
         }
         public string[]  SortNamesAndScores(string[] NamesAndScores,long [] Scores)
         {
+           
             int size = (Tokens.Length) - 1;
             double NewSize = Convert.ToDouble(size );//if the size is in odd number 
             NewSize = Math.Floor(NewSize / 2);

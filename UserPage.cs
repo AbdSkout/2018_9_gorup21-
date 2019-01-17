@@ -73,5 +73,10 @@ namespace WindowsFormsApp1
             Form1 f = new Form1();
             f.Show();
         }
+
+        private void UserPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

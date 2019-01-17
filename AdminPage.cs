@@ -71,5 +71,10 @@ namespace WindowsFormsApp1
             this.Hide();
             b.Show();
         }
+
+        private void AdminPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -58,7 +58,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(501, 161);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 82);
             this.button2.TabIndex = 8;
@@ -83,7 +83,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(137, 161);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 82);
             this.button1.TabIndex = 6;
@@ -93,7 +93,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(11, 343);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(104, 28);
             this.button5.TabIndex = 13;
@@ -104,7 +104,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(11, 313);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 24);
             this.button4.TabIndex = 12;
@@ -115,7 +115,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(11, 437);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 11;
@@ -163,6 +163,7 @@
             this.Controls.Add(this.button1);
             this.Name = "UserPage";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.UserPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

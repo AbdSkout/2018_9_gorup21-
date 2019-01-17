@@ -28,5 +28,10 @@ namespace WindowsFormsApp1
             string trackBar = Convert.ToString(trackBar1.Value);
             chose.Text = trackBar;
         }
+
+        private void specialAbility_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

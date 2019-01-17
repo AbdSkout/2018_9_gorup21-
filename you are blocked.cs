@@ -23,5 +23,10 @@ namespace WindowsFormsApp1
             this.Hide();
             f1.ShowDialog();
         }
+
+        private void you_are_blocked_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
