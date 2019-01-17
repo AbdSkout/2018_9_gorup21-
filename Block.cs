@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             {
                 if (r == textBox1.Text)
                 {
-                    label1.Text = "this player alredy blocd";
+                    label1.Text = "this player alredy band";
                     test = false;
 
                     break;
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
                 label1.Visible = true;
 
             }
-            else if (test == false && label1.Text == "this player alredy blocd")
+            else if (test == false && label1.Text == "this player alredy band")
             {
                 label1.Visible = true;
                 
