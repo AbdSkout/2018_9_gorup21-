@@ -48,7 +48,6 @@ C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.Ge
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.trytoeditthefile.resources
 C:\Users\מוחמד אבו מוח\Desktop\githere\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.trytoeditthefile.resources
 C:\Users\user\Desktop\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\user\Desktop\2018_9_gorup21-\bin\Debug\WindowsFormsApp1.exe
@@ -165,3 +164,4 @@ C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.cspr
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form1.resources
