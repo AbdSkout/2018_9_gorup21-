@@ -46,7 +46,9 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            ResultSheet resultSheet = new ResultSheet();
+            this.Hide();
+            resultSheet.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
