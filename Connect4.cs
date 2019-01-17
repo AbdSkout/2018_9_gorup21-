@@ -410,7 +410,8 @@ namespace WindowsFormsApp1
             {
                 timer1.Stop();
                 this.Hide();
-                Top10 top10 = new Top10();
+                string filename = "connect4";
+                Top10 top10 = new Top10(filename);
                 top10.ShowDialog();
             }
 

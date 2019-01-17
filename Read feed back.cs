@@ -64,8 +64,7 @@ namespace WindowsFormsApp1
                 i++;
              }
              end = start + i;
-             label1.Text = s[end];
-             label2.Text = s[start];
+       
              for (int x=start ; x <=(end-1); x++)
              {
                 feed = s[x] + feed;
@@ -135,8 +134,7 @@ namespace WindowsFormsApp1
             {
                 feed = s[x] + feed;
             }
-            textBox1.Text = s[name];
-            textBox2.Text = feed;
+    
             feed = "";
             }
            

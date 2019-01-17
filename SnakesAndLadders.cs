@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         static int move = 0;//move show us to go ajead or go back
         int flag_pc = 0;
         Point[,] matrix = new Point[10, 10];
-        string name;
+         string name;
         
 
         public SnakesAndLadders(string player2_name)
@@ -560,10 +560,38 @@ namespace WindowsFormsApp1
             helpx += move;
             c--;
 
-        } 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Program.username == null) //viewing the top 10 players in connect four
+            {
+                timer1.Stop();
+                DialogResult result = MessageBox.Show("This is page is only avaliable for users.Do you want to sign up?", "Top 10", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    SignUp sign = new SignUp();
+                    sign.ShowDialog();
 
 
-
+                }
+                else
+                {
+                    this.Hide();
+                    SnakesAndLadders connect4 = new SnakesAndLadders(name);
+                    connect4.ShowDialog();
+                }
+            }
+            else
+            {
+                timer1.Stop();
+                this.Hide();
+                string filename = "snake";
+                Top10 top10 = new Top10(filename);
+                top10.ShowDialog();
+            }
+        }
 
         public void nextpc()
         {

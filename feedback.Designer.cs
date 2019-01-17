@@ -72,7 +72,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.images3;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(977, 420);
+            this.pictureBox1.Location = new System.Drawing.Point(619, 282);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 77);
             this.pictureBox1.TabIndex = 6;
@@ -85,16 +85,16 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(583, 244);
+            this.label2.Location = new System.Drawing.Point(616, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 15);
+            this.label2.Size = new System.Drawing.Size(143, 15);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Empty Feedback";
+            this.label2.Text = "Send the feedback";
             this.label2.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(647, 437);
+            this.button1.Location = new System.Drawing.Point(31, 484);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 23);
             this.button1.TabIndex = 8;
@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 519);
+            this.ClientSize = new System.Drawing.Size(812, 519);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

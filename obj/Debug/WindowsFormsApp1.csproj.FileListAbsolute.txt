@@ -94,7 +94,6 @@ C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.ChoosingPlayer.resource
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.SignUp.resources
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.GuestPage.resources
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.Top10.resources
-C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.trytoeditthefile.resources
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.UserPage.resources
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.AdminPage.resources
 C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.ForgotPassword.resources
@@ -165,3 +164,4 @@ C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.exe
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\abd\Desktop\git_number1\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\RamiLenovo\Desktop\2018_9_gorup21-\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\yoooo\Desktop\Github\obj\Debug\WindowsFormsApp1.Help_page.resources

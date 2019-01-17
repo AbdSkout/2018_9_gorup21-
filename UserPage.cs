@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            Help_page f = new Help_page();
             f.Show();
         }
 

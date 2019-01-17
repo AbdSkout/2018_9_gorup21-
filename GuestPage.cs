@@ -42,5 +42,11 @@ namespace WindowsFormsApp1
             ChoosingPlayer f1 = new ChoosingPlayer();
             f1.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Help_page f = new Help_page();
+            f.Show();
+        }
     }
 }

@@ -114,10 +114,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(11, 437);
+            this.button3.Location = new System.Drawing.Point(11, 417);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 19);
+            this.button3.Size = new System.Drawing.Size(56, 30);
             this.button3.TabIndex = 11;
             this.button3.Text = "logout";
             this.button3.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 72F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(176, -8);
+            this.label3.Location = new System.Drawing.Point(124, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(461, 117);
@@ -138,9 +138,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(732, 331);
+            this.button6.Location = new System.Drawing.Point(576, 331);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(75, 40);
             this.button6.TabIndex = 15;
             this.button6.Text = "how to play";
             this.button6.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(807, 468);
+            this.ClientSize = new System.Drawing.Size(663, 468);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
@@ -162,7 +162,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "UserPage";
-            this.Text = "Form4";
+            this.Text = "User";
             this.Load += new System.EventHandler(this.UserPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

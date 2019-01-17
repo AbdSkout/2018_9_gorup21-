@@ -76,5 +76,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Help_page f = new Help_page();
+            f.Show();
+        }
     }
 }

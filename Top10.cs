@@ -13,17 +13,19 @@ namespace WindowsFormsApp1
 {
     public partial class Top10 : Form
     {
-        public Top10()
+        public Top10(string files)
         {
             InitializeComponent();
+            filename = files;
         }
         Label[] Label = new Label[20];
-       public string[] Tokens = null;//reading all the names and their scores from a file
+        string filename;
+        public string[] Tokens = null;//reading all the names and their scores from a file
 
         private void Top10_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.SlateGray;
-            Tokens = TakingScore("connect4.txt");//reading all the names and their scores from a file
+            Tokens = TakingScore(filename+".txt");//reading all the names and their scores from a file
 
             int i = 0;
             int j = 0;
@@ -164,16 +166,21 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
-            if (Program.username == null)
+            if (filename == "connect4")
             {
-                GuestPage f3 = new GuestPage();
-                f3.ShowDialog();
+               
+                    Connect4 f3 = new Connect4();
+                    f3.ShowDialog();
+               
             }
-            else
-            {
-                UserPage f3 = new UserPage();
+            else if(filename == "snake") {
+               
+                ChoosingPlayer f3 = new ChoosingPlayer();
                 f3.ShowDialog();
+                
+
             }
         }
     }

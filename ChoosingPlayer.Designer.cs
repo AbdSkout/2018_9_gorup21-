@@ -51,7 +51,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(480, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "player 2 Name:";
             this.label2.Visible = false;
@@ -212,7 +212,7 @@
             this.Controls.Add(this.button1);
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "ChoosingPlayer";
-            this.Text = "Form12";
+            this.Text = "Choosing a Player";
             this.Load += new System.EventHandler(this.Form12_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
