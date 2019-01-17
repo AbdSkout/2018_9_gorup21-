@@ -172,6 +172,13 @@ namespace WindowsFormsApp1
                 {
                    
                         this.Hide();
+                    if (Program.isadmin == true)
+                    {
+                        AdminPage adminPage = new AdminPage();
+                        adminPage.ShowDialog();
+                    }
+                    else
+
                     if (Program.username == null)
                     {
                         GuestPage g = new GuestPage();
@@ -205,6 +212,12 @@ namespace WindowsFormsApp1
                 {
 
                     this.Hide();
+                    if (Program.isadmin == true)
+                    {
+                        AdminPage adminPage = new AdminPage();
+                        adminPage.ShowDialog();
+                    }
+                    else
                     if (Program.username == null)
                     {
                         GuestPage g = new GuestPage();
@@ -436,6 +449,12 @@ namespace WindowsFormsApp1
                 {
 
                     this.Hide();
+                    if (Program.isadmin == true)
+                    {
+                        AdminPage adminPage = new AdminPage();
+                        adminPage.ShowDialog();
+                    }
+                    else
                     if (Program.username == null)
                     {
                         GuestPage g = new GuestPage();
@@ -467,6 +486,12 @@ namespace WindowsFormsApp1
                 {
 
                     this.Hide();
+                    if (Program.isadmin == true)
+                    {
+                        AdminPage adminPage = new AdminPage();
+                        adminPage.ShowDialog();
+                    }
+                    else
                     if (Program.username == null)
                     {
                         GuestPage g = new GuestPage();
