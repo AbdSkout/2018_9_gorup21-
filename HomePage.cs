@@ -228,9 +228,16 @@ namespace WindowsFormsApp1
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             string username, password;
+            label3.Visible = false;
             StreamReader file = new StreamReader("users.txt");
             username = file.ReadLine();
 
+            if (!(check(textBox1.Text)))
+            {
+
+                label3.Text = "this user doesn't exist";
+                label3.Visible = true;
+            }
 
             while (username != null)
             {
