@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         }
         private void ReadAndShowData()
         {
-            StreamReader sr = new StreamReader("text.txt");
+            StreamReader sr = new StreamReader("users.txt");
             int i = 0;
             string line = ".", l;
             DataTable table = new DataTable();

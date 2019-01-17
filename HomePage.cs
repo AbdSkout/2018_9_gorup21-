@@ -257,7 +257,7 @@ namespace WindowsFormsApp1
                             Program.nameingame = file.ReadLine();
 
                         }
-
+                        Program.username = username;
                         this.Hide();
                         AdminPage f5 = new AdminPage();
                         f5.Show();
