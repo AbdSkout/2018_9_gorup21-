@@ -12,12 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class Block : Form
     {
+       public bool Test;
         public Block()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             label1.Text = "";
 
@@ -67,21 +68,31 @@ namespace WindowsFormsApp1
            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                Test = false;
+            }
+
+
+        }
+
+        public void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             AdminPage f = new AdminPage();
             this.Hide();
             f.ShowDialog();
+        }
+
+        public void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

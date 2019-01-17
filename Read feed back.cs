@@ -75,43 +75,7 @@ namespace WindowsFormsApp1
             }
 
 
-            /*
-          StreamReader file = new StreamReader("feedback.txt");
-          button1.Visible = true;
-          int i = 0;
-          feed ="";
-          while (i < c)
-          {
-              read =file.ReadLine();
-              if (read == "***")
-                  i++;
-
-
-          }
-          read = file.ReadLine();
-          textBox1.Text = read;
-          while (read != "***" && read!="" &&read!=null)
-          {
-              read = file.ReadLine();
-              if (read != "***")
-                  feed = feed + read;
-
-          }
-          textBox2.Text = feed;
-
-
-
-          if (textBox1.Text=="")
-          {
-              textBox2.Text = "No feed back";
-              button2.Visible = false;
-
-          }
-          else
-          {
-              c++;
-          }
-         */
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -175,48 +139,7 @@ namespace WindowsFormsApp1
             textBox2.Text = feed;
             feed = "";
             }
-            /*
-             StreamReader other = new StreamReader("feedback.txt");
-             button2.Visible = true;
-             int i = 0;
-             if (c <1)
-             {
-                 textBox2.Text = "No feed back";
-                 textBox1.Text = "";
-                 button1.Visible = false;
-
-             }
-             else
-             {
-
-                 feed = "";
-                 c--;
-
-                 while (i < (c - 1))
-                 {
-                     read = other.ReadLine();
-                     if (read == "***")
-                         i++;
-                 }
-                 read = other.ReadLine();
-                 textBox1.Text = read;
-
-
-                 while (read!= "***" && read!="")
-                 {
-
-                     read = other.ReadLine();
-                     if (read != "***")
-                         feed = feed + read;
-
-                 }
-                 textBox2.Text = feed;
-
-
-
-             }
-             other.Close();
-             */
+           
 
 
 

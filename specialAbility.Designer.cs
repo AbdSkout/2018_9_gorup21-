@@ -37,10 +37,9 @@
             // 
             // btnAdvance
             // 
-            this.btnAdvance.Location = new System.Drawing.Point(333, 267);
-            this.btnAdvance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdvance.Location = new System.Drawing.Point(222, 174);
             this.btnAdvance.Name = "btnAdvance";
-            this.btnAdvance.Size = new System.Drawing.Size(112, 35);
+            this.btnAdvance.Size = new System.Drawing.Size(75, 23);
             this.btnAdvance.TabIndex = 10;
             this.btnAdvance.Text = "Advance";
             this.btnAdvance.UseVisualStyleBackColor = true;
@@ -50,10 +49,9 @@
             // 
             this.chose.AutoSize = true;
             this.chose.Font = new System.Drawing.Font("Monotype Corsiva", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chose.Location = new System.Drawing.Point(215, 110);
-            this.chose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.chose.Location = new System.Drawing.Point(143, 71);
             this.chose.Name = "chose";
-            this.chose.Size = new System.Drawing.Size(31, 39);
+            this.chose.Size = new System.Drawing.Size(22, 26);
             this.chose.TabIndex = 9;
             this.chose.Text = "1";
             // 
@@ -61,36 +59,38 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(77, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 78);
+            this.label1.Size = new System.Drawing.Size(188, 52);
             this.label1.TabIndex = 8;
             this.label1.Text = "How many squares do \r\nyou wish to advance?";
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(174, 152);
+            this.trackBar1.Location = new System.Drawing.Point(116, 99);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.trackBar1.Maximum = 6;
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 69);
+            this.trackBar1.Size = new System.Drawing.Size(69, 45);
             this.trackBar1.TabIndex = 7;
             this.trackBar1.Value = 1;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // specialAbility
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(501, 422);
+            this.ClientSize = new System.Drawing.Size(334, 274);
             this.Controls.Add(this.btnAdvance);
             this.Controls.Add(this.chose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trackBar1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "specialAbility";
             this.Text = "specialAbility";
+            this.Load += new System.EventHandler(this.specialAbility_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

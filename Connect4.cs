@@ -205,7 +205,7 @@ namespace WindowsFormsApp1
             }
         }
         
-        int Tiecheck(int[,] mat, int Row, int Col)
+        public int Tiecheck(int[,] mat, int Row, int Col)
         {
             int count = 0;
             int player = 2;//it is set to the blue color else it will be set to red if the last player is red
@@ -581,12 +581,13 @@ namespace WindowsFormsApp1
                 score = int.Parse(user);
                 allfile[i] = (score+Scorecalculate()).ToString();
                 Read.Close();
+                goto end;
             }
 
 
             while (user != null)
             {
-                while (user != "***")
+                while (user != null && user != "***")
                 {
                     user = Read.ReadLine(); i++;
                 }
@@ -601,6 +602,7 @@ namespace WindowsFormsApp1
 
             }
             Read.Close();
+            end:
             File.WriteAllLines(filename, allfile);
 
         }

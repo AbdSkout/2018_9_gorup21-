@@ -67,5 +67,16 @@ namespace WindowsFormsApp1
             HomePage f1 = new HomePage();
             f1.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+        }
+
+        private void UserPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         public void button1_Click(object sender, EventArgs e)
         {
             string username, password;
-            StreamReader file = new StreamReader("text.txt");
+            StreamReader file = new StreamReader("users.txt");
             username = file.ReadLine();
 
 
@@ -179,7 +179,7 @@ namespace WindowsFormsApp1
         }
         public bool check(string name)
         {
-            StreamReader Read = new StreamReader("text.txt");
+            StreamReader Read = new StreamReader("users.txt");
             string user = Read.ReadLine();
 
 
@@ -228,7 +228,7 @@ namespace WindowsFormsApp1
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             string username, password;
-            StreamReader file = new StreamReader("text.txt");
+            StreamReader file = new StreamReader("users.txt");
             username = file.ReadLine();
 
 

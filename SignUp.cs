@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             {
                 label6.Visible = true;
                 label6.Text = "This User Name is already exists";
-                
+                Flag = false;
                 
 
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
             else if(textBox1.Text != "" && textBox2.Text != "" && textBox4.Text != "" && textBox3.Text != "" && comboBox1.Text != "")
             {
-                StreamWriter write = new StreamWriter("text.txt", true);
+                StreamWriter write = new StreamWriter("users.txt", true);
                 write.WriteLine(textBox1.Text);
                 write.WriteLine(textBox2.Text);
                 write.WriteLine(comboBox1.Text);
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1
 
        static bool check(string name)
         {
-            StreamReader Read = new StreamReader("text.txt");
+            StreamReader Read = new StreamReader("users.txt");
             string user = Read.ReadLine();
 
             if (user == name)
@@ -169,6 +169,11 @@ namespace WindowsFormsApp1
             HomePage f1 = new HomePage();
             this.Hide();
             f1.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
