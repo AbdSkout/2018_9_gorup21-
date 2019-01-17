@@ -132,12 +132,6 @@
     <Compile Include="Top10.Designer.cs">
       <DependentUpon>Top10.cs</DependentUpon>
     </Compile>
-    <Compile Include="trytoeditthefile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="trytoeditthefile.Designer.cs">
-      <DependentUpon>trytoeditthefile.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,9 +205,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Top10.resx">
       <DependentUpon>Top10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="trytoeditthefile.resx">
-      <DependentUpon>trytoeditthefile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
