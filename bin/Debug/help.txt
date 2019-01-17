@@ -5,5 +5,9 @@ dsfdsfasdfsdfsdfewrewrqqwerwerwerwer
 ewrweqrwerwerwer
 ***
 here cocnet4
-wwe theasdwqweeqwewqeqweqewqewqewq
-asdfwsssszxxxnx aswwad
+1-The game can be played by two players on the same computer
+2-In order to play you just push any suqare you want and the last unchanged-
+-square will turn to the color of your player
+3-you can win by collecting 4 of the same color in any direction you want
+4-if you are a user you will get scores if you win-
+- and maybe you will be one the top 10 players ;)
